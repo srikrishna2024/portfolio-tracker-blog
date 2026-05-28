@@ -1,0 +1,32 @@
+title: "Personal Portfolio Tracker"
+description: "A local-first financial planning app for serious Indian investors — your data stays on your machine."
+url: "https://srikrishna2024.github.io"
+baseurl: "/portfolio-tracker-blog"
+
+author:
+  name: Krishna
+
+timezone: Asia/Kolkata
+lang: en
+
+# Build
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:year/:month/:slug/
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - "*.py"
+  - ".published.json"
+  - "01_introduction.md"
+  - "02_product_features.md"
+  - "03_security_privacy.md"
+  - "Gemfile"
+  - "Gemfile.lock"

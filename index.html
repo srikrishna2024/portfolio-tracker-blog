@@ -1,0 +1,29 @@
+---
+layout: default
+title: Personal Portfolio Tracker
+---
+
+<section class="hero">
+  <h1>Your finances.<br><span>Your machine.</span></h1>
+  <p>A local-first financial planning app for serious Indian investors — mutual funds, EPF, NPS, PPF, goals, and tax in one place. Your data never leaves your computer.</p>
+  <div class="hero-badges">
+    <span class="badge">Local PostgreSQL</span>
+    <span class="badge">No cloud sync</span>
+    <span class="badge">AI-powered analysis</span>
+    <span class="badge">Windows &amp; Mac</span>
+    <span class="badge">Indian markets</span>
+  </div>
+</section>
+
+<p class="section-label">Latest posts</p>
+
+<ul class="post-list">
+  {% for post in site.posts %}
+  <li>
+    <div class="post-date">{{ post.date | date: "%B %-d, %Y" }}</div>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    {% if post.subtitle %}<p class="excerpt">{{ post.subtitle }}</p>{% endif %}
+    <a class="read-more" href="{{ post.url | relative_url }}">Read &rarr;</a>
+  </li>
+  {% endfor %}
+</ul>

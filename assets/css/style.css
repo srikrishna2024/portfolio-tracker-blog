@@ -511,6 +511,20 @@ nav a.nav-cta:hover { background: #0284c7; color: #fff !important; }
 }
 .disclaimer-banner strong { color: #92400e; }
 
+/* ── No recommendation notice ───────────────────────────────── */
+.no-reco-notice {
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-size: 0.85rem;
+  color: #0c4a6e;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.no-reco-notice strong { color: #075985; }
+
 /* ── Trust bar ───────────────────────────────────────────────── */
 .trust-bar {
   display: flex; align-items: stretch;

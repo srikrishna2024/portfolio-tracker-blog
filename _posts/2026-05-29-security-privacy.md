@@ -2,7 +2,7 @@
 layout: post
 title: "Your Financial Data Stays on Your Machine — Here's How"
 subtitle: "How the app keeps your data private and how you can verify it yourself"
-date: 2026-05-30
+date: 2026-05-29
 tags: [personal finance, privacy, security, local-first, india]
 ---
 

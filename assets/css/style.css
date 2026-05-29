@@ -843,3 +843,14 @@ nav a.nav-cta:hover { background: #0284c7; color: #fff !important; }
 @media (max-width: 800px) {
   .home-posts-layout { grid-template-columns: 1fr; }
 }
+
+/* ── Risk grid (real-risks page) ─────────────────────────────── */
+.risk-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+.risk-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 22px; }
+.risk-card.visible-risk { border-top: 4px solid #94a3b8; }
+.risk-card.real-risk { border-top: 4px solid #f87171; }
+.risk-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 12px; }
+.risk-card ul { margin: 0 0 12px 1.2em; }
+.risk-card li { font-size: 0.87rem; color: var(--muted); line-height: 1.65; margin-bottom: 5px; }
+.risk-note { font-size: 0.82rem; color: var(--muted); font-style: italic; margin: 8px 0 0; background: var(--surface2); padding: 8px 12px; border-radius: 6px; }
+@media (max-width: 700px) { .risk-grid { grid-template-columns: 1fr; } }

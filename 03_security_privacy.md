@@ -124,11 +124,11 @@ One security concern that came up after launch: some antivirus engines flagged t
 
 The software's core logic is compiled into protected binary files before distribution. This protects the source code, but it caused heuristic detection in a small number of antivirus engines.
 
-Originally BitDefender and several related products were affected. BitDefender has resolved their detection. Currently only **ALYac and VIPRE** still show the flag — they share an engine with BitDefender and are expected to update shortly.
+Originally BitDefender and several related products were affected. BitDefender has resolved their detection. Currently only **VIPRE** still show the flag — they share an engine with BitDefender and are expected to update shortly.
 
-**Current VirusTotal status:** 65 out of 67 engines clean, including Windows Defender, Kaspersky, Sophos, McAfee, BitDefender, ESET, Avast, and AVG.
+**Current VirusTotal status:** 65 out of 66 engines clean, including Windows Defender, Kaspersky, Sophos, McAfee, BitDefender, ESET, Avast, and AVG.
 
-**If ALYac or VIPRE is blocking the software:** add the folder as an exclusion — standard AV feature, takes about 30 seconds:
+**If VIPRE is blocking the software:** add the folder as an exclusion — standard AV feature, takes about 30 seconds:
 
 - **Windows Defender**: Settings → Windows Security → Virus & threat protection → Manage settings → Exclusions → Add an exclusion → Folder → select your app folder
 - **BitDefender**: Open BitDefender → Protection → Antivirus → Settings → Manage Exceptions → Add Exception → your app folder

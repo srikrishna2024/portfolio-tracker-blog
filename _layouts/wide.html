@@ -31,17 +31,33 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>{{ site.title }} &mdash; {{ site.description }}</p>
-      <p style="margin-top:8px;">Questions? <a href="{{ '/contact/' | relative_url }}">Get in touch</a></p>
-      <p class="footer-links">
-        <a href="{{ '/terms/' | relative_url }}">Terms and Conditions</a>
-        <span class="footer-sep">·</span>
-        <a href="{{ '/refund-policy/' | relative_url }}">Refund Policy</a>
-        <span class="footer-sep">·</span>
-        <a href="{{ '/system-requirements/' | relative_url }}">System Requirements</a>
-        <span class="footer-sep">·</span>
-        <a href="{{ '/faq/' | relative_url }}">FAQ</a>
-      </p>
+      <div class="footer-columns">
+        <div class="footer-col">
+          <div class="footer-col-label">Learn</div>
+          <a href="{{ '/why-this-tool/' | relative_url }}">Why This Tool?</a>
+          <a href="{{ '/why-privacy/' | relative_url }}">Why Privacy Matters</a>
+          <a href="{{ '/blind-spot/' | relative_url }}">The Indian Investor's Blind Spot</a>
+          <a href="{{ '/is-this-right-for-you/' | relative_url }}">Is This Right for You?</a>
+          <a href="{{ '/day-one/' | relative_url }}">What You Can Do on Day 1</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-label">Use</div>
+          <a href="{{ '/getting-started/' | relative_url }}">Getting Started</a>
+          <a href="{{ '/system-requirements/' | relative_url }}">System Requirements</a>
+          <a href="{{ '/faq/' | relative_url }}">FAQ</a>
+          <a href="{{ '/blog/' | relative_url }}">Blog</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-label">Legal</div>
+          <a href="{{ '/terms/' | relative_url }}">Terms and Conditions</a>
+          <a href="{{ '/refund-policy/' | relative_url }}">Refund Policy</a>
+          <a href="{{ '/contact/' | relative_url }}">Contact</a>
+          <a href="{{ '/get-the-app/' | relative_url }}">Purchase</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>{{ site.title }} &mdash; {{ site.description }}</p>
+      </div>
     </div>
   </footer>
 </body>

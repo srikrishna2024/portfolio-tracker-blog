@@ -120,19 +120,17 @@ The license check happens locally. There is no activation server, no phone-home,
 
 ## The Antivirus False Positive (Resolved)
 
-One security concern that came up after launch: some antivirus engines flagged the app's compiled files as malware. This was a false positive, and **BitDefender's Malware Research Team has since confirmed the file is clean** — the detection will be removed in their next signature update.
+One security concern that came up after launch: some antivirus engines flagged the app's compiled files as malware. This was a false positive, and **BitDefender's Malware Research Team has since confirmed the file is clean** — the detection is now clear.
 
 Here's the background. The app's core logic (calculations, analytics engine, tax engine) is compiled into native binary files using Nuitka before distribution. Nuitka translates Python to C and compiles it to a `.pyd` binary. These binaries protect the source code — buyers can't read the algorithms.
 
 The false positive arose because certain antivirus engines use heuristic detection: they flag files based on structural patterns rather than known malicious signatures. Nuitka-compiled binaries have a specific structure that triggers these heuristics.
 
-The affected engines were **BitDefender** and ~7 products that share its signature database: ALYac, Arcabit, Emsisoft, eScan, GData, VIPRE.
+Originally BitDefender and ~7 products sharing its engine were affected. BitDefender has now confirmed the file is clean and their detection is clear. Currently only **ALYac and VIPRE** (which share BitDefender's engine) still show the flag and are expected to update shortly.
 
-**Current VirusTotal status:** 59 out of 67 engines clean. The clean engines include Windows Defender, Kaspersky, Sophos, McAfee, ESET, Avast, AVG, and all major scanners.
+**Current VirusTotal status:** 65 out of 67 engines clean, including Windows Defender, Kaspersky, Sophos, McAfee, BitDefender, ESET, Avast, and AVG.
 
-**If you use BitDefender and still see the warning:** open BitDefender → Settings → Update → **Check for Updates** to pull the latest definitions, which will include the fix.
-
-**If any AV is still blocking the app:** add the app folder as an exclusion — this is a standard AV feature and takes about 30 seconds:
+**If ALYac or VIPRE is blocking the software:** add the folder as an exclusion — standard AV feature, takes about 30 seconds:
 
 - **Windows Defender**: Settings → Windows Security → Virus & threat protection → Manage settings → Exclusions → Add an exclusion → Folder → select your app folder
 - **BitDefender**: Open BitDefender → Protection → Antivirus → Settings → Manage Exceptions → Add Exception → your app folder

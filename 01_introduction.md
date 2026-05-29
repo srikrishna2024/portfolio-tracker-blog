@@ -102,7 +102,7 @@ The app is written entirely in Python. The database backend is PostgreSQL. The U
 
 The core logic — calculations, analytics, tax engine — is compiled into native binaries using Nuitka before distribution. Buyers don't get source code; they get a working app.
 
-This has one known side effect: Nuitka-compiled binaries trigger false positives on BitDefender and a handful of AV engines that share its signature database. 59 out of 67 engines on VirusTotal are clean, including Windows Defender, Kaspersky, Sophos, and McAfee. Every release ships with a SHA256 integrity fingerprint so buyers can verify the files are untampered.
+This has one known side effect: Nuitka-compiled binaries trigger false positives on BitDefender and a handful of AV engines that share its signature database. 65 out of 67 engines on VirusTotal are clean, including Windows Defender, Kaspersky, Sophos, McAfee, and BitDefender. Every release ships with a SHA256 integrity fingerprint so buyers can verify the files are untampered.
 
 ---
 

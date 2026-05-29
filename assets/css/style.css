@@ -341,3 +341,72 @@ nav a.nav-cta:hover { background: #0284c7; color: #fff !important; }
 .get-app-faq a { color: var(--accent); text-decoration: none; }
 .get-app-faq a:hover { text-decoration: underline; }
 
+/* ── Legal pages (Terms, Refund) ─────────────────────────────── */
+.legal-page { padding: 56px 0; }
+.legal-header { margin-bottom: 40px; padding-bottom: 28px; border-bottom: 1px solid var(--border); }
+.legal-header h1 { font-size: 1.8rem; font-weight: 800; letter-spacing: -0.03em; }
+.legal-updated { color: var(--muted); font-size: 0.9rem; margin-top: 6px; }
+.legal-body h2 {
+  font-size: 1.05rem; font-weight: 700; color: var(--text);
+  margin: 2em 0 0.6em; padding-top: 1.5em; border-top: 1px solid var(--border);
+}
+.legal-body h2:first-child { border-top: none; padding-top: 0; }
+.legal-body p { font-size: 0.95rem; color: var(--muted); line-height: 1.75; margin-bottom: 0.8em; }
+.legal-body ul { margin: 0.4em 0 1em 1.4em; }
+.legal-body li { font-size: 0.95rem; color: var(--muted); line-height: 1.7; margin-bottom: 0.4em; }
+.legal-body a { color: var(--accent); text-decoration: none; }
+.legal-body a:hover { text-decoration: underline; }
+
+/* ── System requirements page ────────────────────────────────── */
+.sysreq-page { padding: 56px 0; }
+.sysreq-header { margin-bottom: 40px; padding-bottom: 28px; border-bottom: 1px solid var(--border); }
+.sysreq-header h1 { font-size: 1.8rem; font-weight: 800; letter-spacing: -0.03em; }
+.sysreq-header p { color: var(--muted); margin-top: 8px; font-size: 1.05rem; }
+.sysreq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 48px; }
+.sysreq-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 28px;
+}
+.sysreq-platform { font-size: 1.05rem; font-weight: 700; color: var(--text); margin-bottom: 20px; }
+.sysreq-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.sysreq-table tr { border-bottom: 1px solid var(--border); }
+.sysreq-table tr:last-child { border-bottom: none; }
+.sysreq-table td { padding: 9px 0; vertical-align: top; line-height: 1.5; }
+.sysreq-label { color: var(--muted); font-weight: 600; width: 40%; padding-right: 12px; }
+.sysreq-section { margin-bottom: 40px; }
+.sysreq-section h2 { font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 14px; }
+.sysreq-section p { font-size: 0.95rem; color: var(--muted); line-height: 1.75; margin-bottom: 12px; }
+.sysreq-section ul { margin: 0 0 12px 1.4em; }
+.sysreq-section li { font-size: 0.95rem; color: var(--muted); line-height: 1.7; margin-bottom: 6px; }
+.sysreq-section a { color: var(--accent); text-decoration: none; }
+.sysreq-section a:hover { text-decoration: underline; }
+.sysreq-cta { padding: 32px 0 8px; display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.sysreq-cta p { font-size: 1rem; font-weight: 600; color: var(--text); margin: 0; }
+
+/* ── Support scope table (Terms page) ───────────────────────── */
+.support-scope {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  margin: 16px 0 20px;
+}
+.support-col {
+  border-radius: 10px; padding: 20px;
+}
+.in-scope { background: #f0fdf4; border: 1px solid #bbf7d0; }
+.out-scope { background: #fef2f2; border: 1px solid #fecaca; }
+.support-col-header {
+  font-weight: 700; font-size: 0.9rem; margin-bottom: 12px; color: var(--text);
+}
+.support-col ul { margin: 0 0 0 1.2em; }
+.support-col li { font-size: 0.88rem; line-height: 1.6; margin-bottom: 5px; color: #475569; }
+@media (max-width: 600px) { .support-scope { grid-template-columns: 1fr; } }
+
+/* ── Footer links ────────────────────────────────────────────── */
+.footer-links { margin-top: 12px; font-size: 0.82rem; }
+.footer-links a { color: var(--muted); text-decoration: none; }
+.footer-links a:hover { color: var(--accent); }
+.footer-sep { color: var(--border); margin: 0 8px; }
+
+@media (max-width: 600px) {
+  .sysreq-grid { grid-template-columns: 1fr; }
+  .sysreq-cta { flex-direction: column; align-items: flex-start; }
+}
+

@@ -57,12 +57,36 @@ nav a:hover { color: var(--text); }
 /* ── Footer ──────────────────────────────────────────────────── */
 .site-footer {
   border-top: 1px solid var(--border);
-  padding: 32px 0; margin-top: 80px;
-  color: var(--muted); font-size: 0.85rem; text-align: center;
+  margin-top: 80px;
   background: var(--surface2);
 }
-.site-footer a { color: var(--accent); text-decoration: none; }
-.site-footer a:hover { text-decoration: underline; }
+.footer-inner {
+  max-width: 1200px; margin: 0 auto; padding: 48px 32px 24px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.footer-col { display: flex; flex-direction: column; gap: 9px; }
+.footer-col-label {
+  font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.12em; color: var(--accent2); margin-bottom: 4px;
+}
+.footer-col a { font-size: 0.83rem; color: var(--muted); text-decoration: none; line-height: 1.4; }
+.footer-col a:hover { color: var(--accent); }
+.footer-bottom {
+  border-top: 1px solid var(--border); padding-top: 20px;
+  font-size: 0.8rem; color: var(--muted); text-align: center;
+}
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 580px) {
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-inner { padding: 32px 16px 20px; }
+}
 
 /* ── Home page ───────────────────────────────────────────────── */
 .hero {
@@ -772,22 +796,6 @@ nav a.nav-cta:hover { background: #0284c7; color: #fff !important; }
   .content-cta-buttons { flex-direction: column; }
 }
 
-/* ── Footer columns ──────────────────────────────────────────── */
-.footer-columns {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 32px; margin-bottom: 28px; text-align: left;
-}
-.footer-col { display: flex; flex-direction: column; gap: 8px; }
-.footer-col-label {
-  font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 0.1em; color: var(--accent2); margin-bottom: 4px;
-}
-.footer-col a { font-size: 0.85rem; color: var(--muted); text-decoration: none; }
-.footer-col a:hover { color: var(--accent); }
-.footer-bottom { border-top: 1px solid var(--border); padding-top: 20px; font-size: 0.82rem; color: var(--muted); text-align: center; }
-@media (max-width: 600px) {
-  .footer-columns { grid-template-columns: 1fr 1fr; }
-}
 
 /* ── Fit philosophy box ──────────────────────────────────────── */
 .fit-philosophy {

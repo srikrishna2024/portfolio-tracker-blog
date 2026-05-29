@@ -11,7 +11,9 @@ title: Contact
     <div class="contact-icon">✉️</div>
     <div>
       <h3>Email</h3>
-      <a href="mailto:srikrishnablr2022@gmail.com">srikrishnablr2022@gmail.com</a>
+      <span id="email-reveal">
+        <button onclick="revealEmail()" style="background:var(--accent);color:#fff;border:none;padding:8px 18px;border-radius:6px;font-size:0.9rem;font-weight:600;cursor:pointer;">Show email address</button>
+      </span>
     </div>
   </div>
 
@@ -20,3 +22,12 @@ title: Contact
     For setup issues, please include your operating system (Windows or Mac) and a brief description of the problem.
   </p>
 </div>
+
+<script>
+function revealEmail() {
+  var u = 'srikrishnablr2022';
+  var d = 'gmail.com';
+  var el = document.getElementById('email-reveal');
+  el.innerHTML = '<a href="mailto:' + u + '@' + d + '">' + u + '@' + d + '</a>';
+}
+</script>

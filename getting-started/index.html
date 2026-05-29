@@ -21,22 +21,26 @@ title: Getting Started
       <div class="gs-prereq-card">
         <div class="gs-prereq-icon">🐍</div>
         <div>
-          <strong>Python 3.14.x (exactly)</strong>
-          <p>The software requires <strong>Python 3.14.x specifically</strong> — not 3.11, 3.12, or 3.13. Download from <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">python.org</a>. Run the installer and tick <strong>"Add Python to PATH"</strong> before clicking Install.</p>
+          <strong>Python 3.14 or newer</strong>
+          <p>Download from <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">python.org</a>. Run the installer.</p>
+          <p><strong>Windows:</strong> on the first screen, tick <strong>"Add Python to PATH"</strong> before clicking Install.</p>
+          <p><strong>Mac:</strong> download the macOS .pkg installer and run it, or use Homebrew: <code>brew install python@3.14</code></p>
         </div>
       </div>
       <div class="gs-prereq-card">
         <div class="gs-prereq-icon">🗄️</div>
         <div>
           <strong>PostgreSQL 13 or newer</strong>
-          <p>The local database that stores your financial data. Download from <a href="https://www.postgresql.org/download/" target="_blank" rel="noopener">postgresql.org</a>. Run the installer with all defaults. <strong>Write down the password</strong> you set — you will need it once during setup.</p>
+          <p>Download from <a href="https://www.postgresql.org/download/" target="_blank" rel="noopener">postgresql.org</a>. Run the installer and click Next on every screen keeping all defaults.</p>
+          <p>On the <strong>Password</strong> screen, set a password for the <code>postgres</code> superuser. <strong>Write it down</strong> — the Setup Wizard asks for it once.</p>
+          <p>Leave the port as <strong>5432</strong> (default). You do not need to open pgAdmin.</p>
         </div>
       </div>
       <div class="gs-prereq-card">
         <div class="gs-prereq-icon">🌐</div>
         <div>
           <strong>A web browser</strong>
-          <p>Chrome, Edge, Firefox, or Safari. The software opens in your browser at a local address. No browser account or sign-in is required — it is connecting to your own machine, not the internet.</p>
+          <p>Chrome, Edge, Firefox, or Safari. The software opens in your browser at a local address. No browser account or sign-in is required — it connects to your own machine, not the internet.</p>
         </div>
       </div>
     </div>
@@ -131,7 +135,7 @@ title: Getting Started
         </table>
       </div>
 
-      <p>Click <strong>Begin Setup</strong>. The wizard runs five steps automatically and shows a green tick for each one. If any step fails, the message tells you exactly what to fix. The most common cause is a wrong PostgreSQL password — re-enter it and try again.</p>
+      <p>Click <strong>Begin Setup</strong>. The wizard runs all steps automatically and shows a green tick for each one. It also installs everything else the software needs — you do not need to install anything manually beyond Python and PostgreSQL. If any step fails, the message tells you exactly what to fix. The most common cause is a wrong PostgreSQL password — re-enter it and try again.</p>
     </div>
   </div>
 

@@ -798,3 +798,35 @@ nav a.nav-cta:hover { background: #0284c7; color: #fff !important; }
 .fit-philosophy h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 14px; }
 .fit-philosophy p { font-size: 0.92rem; color: var(--muted); line-height: 1.8; margin-bottom: 10px; }
 .fit-philosophy p:last-child { margin-bottom: 0; }
+
+/* ── Goal-based investing effects ────────────────────────────── */
+.gbi-effects { display: flex; flex-direction: column; gap: 16px; margin: 20px 0; }
+.gbi-effect { display: flex; gap: 18px; align-items: flex-start; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; }
+.gbi-effect-num { width: 32px; height: 32px; border-radius: 50%; background: var(--accent2); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; flex-shrink: 0; margin-top: 2px; }
+.gbi-effect h3 { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.gbi-effect p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; margin: 0; }
+
+/* Content table */
+.content-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 16px 0; }
+.content-table th { background: var(--surface2); padding: 10px 14px; font-weight: 700; color: var(--text); border: 1px solid var(--border); text-align: left; }
+.content-table td { padding: 10px 14px; border: 1px solid var(--border); color: var(--muted); vertical-align: top; line-height: 1.55; }
+.content-table tr:nth-child(even) td { background: var(--bg); }
+.content-table strong { color: var(--text); }
+
+/* Cost cards (churn page) */
+.cost-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0; }
+.cost-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 22px; }
+.cost-icon { font-size: 1.5rem; margin-bottom: 12px; }
+.cost-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+.cost-card p { font-size: 0.86rem; color: var(--muted); line-height: 1.65; margin: 0; }
+
+/* Gap patterns (SIP returns page) */
+.gap-patterns { display: flex; flex-direction: column; gap: 14px; margin: 20px 0; }
+.gap-pattern { display: flex; gap: 18px; align-items: flex-start; background: var(--surface); border: 1px solid var(--border); border-left: 4px solid #f87171; border-radius: 0 10px 10px 0; padding: 18px 20px; }
+.pattern-num { width: 28px; height: 28px; border-radius: 50%; background: #f87171; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; flex-shrink: 0; margin-top: 2px; }
+.gap-pattern h3 { font-size: 0.92rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.gap-pattern p { font-size: 0.87rem; color: var(--muted); line-height: 1.65; margin: 0; }
+
+@media (max-width: 700px) {
+  .cost-cards { grid-template-columns: 1fr; }
+}

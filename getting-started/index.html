@@ -1,0 +1,239 @@
+---
+layout: default
+title: Getting Started
+---
+
+<div class="gs-page">
+
+  <div class="gs-header">
+    <div class="legal-header-icon">🚀</div>
+    <h1>Getting Started</h1>
+    <p>From purchase to your first portfolio health score — a complete step-by-step guide.</p>
+    <div class="gs-time-badge">⏱️ Total time: about 20–30 minutes, mostly waiting for downloads</div>
+  </div>
+
+  <!-- Before you begin -->
+  <div class="gs-section">
+    <h2>Before You Begin</h2>
+    <p>You will need two free programs installed on your computer before the software will work. Download and install them first — the setup wizard inside the software checks for both.</p>
+
+    <div class="gs-prereq-grid">
+      <div class="gs-prereq-card">
+        <div class="gs-prereq-icon">🐍</div>
+        <div>
+          <strong>Python 3.11 or newer</strong>
+          <p>The software runs on Python. Download from <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">python.org</a>. Run the installer and tick <strong>"Add Python to PATH"</strong> before clicking Install.</p>
+        </div>
+      </div>
+      <div class="gs-prereq-card">
+        <div class="gs-prereq-icon">🗄️</div>
+        <div>
+          <strong>PostgreSQL 13 or newer</strong>
+          <p>The local database that stores your financial data. Download from <a href="https://www.postgresql.org/download/" target="_blank" rel="noopener">postgresql.org</a>. Run the installer with all defaults. <strong>Write down the password</strong> you set — you will need it once during setup.</p>
+        </div>
+      </div>
+      <div class="gs-prereq-card">
+        <div class="gs-prereq-icon">🌐</div>
+        <div>
+          <strong>A web browser</strong>
+          <p>Chrome, Edge, Firefox, or Safari. The software opens in your browser at a local address. No browser account or sign-in is required — it is connecting to your own machine, not the internet.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="gs-note warning">
+      <strong>🛡️ Antivirus notice:</strong> Some antivirus programs may flag the software files when you unzip the download. This is a confirmed false positive — BitDefender's security team has verified the files are clean. Before unzipping, add the destination folder as an exclusion in your antivirus. Step-by-step instructions for Windows Defender, BitDefender, and others are in the Setup Wizard inside the software. See the <a href="{{ '/faq/' | relative_url }}">FAQ</a> for more detail.
+    </div>
+  </div>
+
+  <!-- Step 1 -->
+  <div class="gs-step-block">
+    <div class="gs-step-num">1</div>
+    <div class="gs-step-content">
+      <h2>Unzip the download</h2>
+      <p class="gs-step-time">⏱️ 2 minutes</p>
+      <p>Unzip the file you received to a permanent folder on your computer. Choose a location where it will stay — not your Downloads folder.</p>
+      <div class="gs-platform-grid">
+        <div class="gs-platform-card">
+          <div class="gs-platform-label">🪟 Windows</div>
+          <p>Suggested location: <code>C:\pages_app</code></p>
+          <p>Right-click the zip file → Extract All → choose the destination.</p>
+        </div>
+        <div class="gs-platform-card">
+          <div class="gs-platform-label">🍎 Mac</div>
+          <p>Suggested location: your home folder → <code>~/pages_app</code></p>
+          <p>Double-click the zip file to extract it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="gs-step-block">
+    <div class="gs-step-num">2</div>
+    <div class="gs-step-content">
+      <h2>Launch the software</h2>
+      <p class="gs-step-time">⏱️ 2 minutes</p>
+      <p>Inside the extracted folder, open the <strong>launcher</strong> folder for your platform.</p>
+
+      <div class="gs-platform-grid">
+        <div class="gs-platform-card">
+          <div class="gs-platform-label">🪟 Windows</div>
+          <p>Open <code>launcher\windows\</code></p>
+          <ol>
+            <li>Double-click <strong>Start DB.bat</strong> — Windows will ask for permission, click Yes</li>
+            <li>Double-click <strong>Start App.bat</strong> — your browser opens automatically</li>
+          </ol>
+          <p class="gs-tip">If the .bat files flash and disappear, use <strong>launch.pyw</strong> instead — a graphical window with Start / Stop buttons.</p>
+        </div>
+        <div class="gs-platform-card">
+          <div class="gs-platform-label">🍎 Mac</div>
+          <p>Open <code>launcher/mac/</code></p>
+          <ol>
+            <li>First time only: double-click <strong>setup_mac_permissions.command</strong> (right-click → Open if Mac blocks it)</li>
+            <li>Double-click <strong>start_db.command</strong></li>
+            <li>Double-click <strong>start_app.command</strong> — your browser opens automatically</li>
+          </ol>
+          <p class="gs-tip">If the .command files won't open, use <strong>launch_gui.command</strong> instead.</p>
+        </div>
+      </div>
+
+      <p>Your browser opens at <code>http://localhost:8501</code>. You will see the Home page. This address is your own computer — nothing is going to the internet.</p>
+    </div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="gs-step-block">
+    <div class="gs-step-num">3</div>
+    <div class="gs-step-content">
+      <h2>Run the Setup Wizard</h2>
+      <p class="gs-step-time">⏱️ 5 minutes</p>
+      <p>From the Home page, click <strong>Admin → Setup Wizard</strong>. The wizard asks for four things:</p>
+
+      <div class="gs-table-wrap">
+        <table class="gs-table">
+          <tr>
+            <td>📧 <strong>License email</strong></td>
+            <td>The email address you used when purchasing</td>
+          </tr>
+          <tr>
+            <td>🔑 <strong>License key</strong></td>
+            <td>Shown in the purchase confirmation email</td>
+          </tr>
+          <tr>
+            <td>🗄️ <strong>PostgreSQL password</strong></td>
+            <td>The password you wrote down during PostgreSQL installation</td>
+          </tr>
+          <tr>
+            <td>🔐 <strong>Reset passphrase</strong></td>
+            <td>Create one yourself (e.g. <code>MyFinance2025</code>) and write it down — this protects your settings page</td>
+          </tr>
+        </table>
+      </div>
+
+      <p>Click <strong>Begin Setup</strong>. The wizard runs five steps automatically and shows a green tick for each one. If any step fails, the message tells you exactly what to fix. The most common cause is a wrong PostgreSQL password — re-enter it and try again.</p>
+    </div>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="gs-step-block">
+    <div class="gs-step-num">4</div>
+    <div class="gs-step-content">
+      <h2>Download fund data</h2>
+      <p class="gs-step-time">⏱️ 10–20 minutes (mostly waiting)</p>
+      <p>Before you can import your portfolio, the software needs to download the full list of mutual fund schemes and their historical NAV prices from AMFI. This happens once and takes 10–20 minutes depending on your internet speed.</p>
+      <ol>
+        <li>Go to <strong>NAV Data Manager → Data Pipeline</strong></li>
+        <li>Click <strong>Weekly Maintenance</strong></li>
+        <li>A progress bar shows each step. Wait for it to complete.</li>
+      </ol>
+      <p>After this first download, daily updates take 2–5 minutes using the <strong>Daily Refresh</strong> button on the same page.</p>
+    </div>
+  </div>
+
+  <!-- Step 5 -->
+  <div class="gs-step-block">
+    <div class="gs-step-num">5</div>
+    <div class="gs-step-content">
+      <h2>Import your portfolio</h2>
+      <p class="gs-step-time">⏱️ 5 minutes</p>
+      <p>Go to <strong>Data Import</strong> and import your statements.</p>
+
+      <div class="gs-import-grid">
+        <div class="gs-import-card">
+          <div class="gs-import-label">📄 Mutual funds</div>
+          <p>Go to <strong>Data Import → Equity Import</strong>. Upload your CAMS PDF or MF Central PDF / Excel. The software reads all your transactions automatically. Review the preview, then confirm.</p>
+          <p class="gs-tip">To download your statement: CAMS → camsonline.com | MF Central → mfcentral.com → CAS Download</p>
+        </div>
+        <div class="gs-import-card">
+          <div class="gs-import-label">🏦 EPF / NPS / PPF / Super</div>
+          <p>Go to <strong>Data Import → Debt Import</strong>. Each tab handles one instrument type. Upload the statement PDF or CSV from your provider.</p>
+          <p class="gs-tip">EPF: UMANG app PDF | NPS: NSDL CRA statement | PPF: account statement PDF</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 6 -->
+  <div class="gs-step-block">
+    <div class="gs-step-num">6</div>
+    <div class="gs-step-content">
+      <h2>Set up your goals</h2>
+      <p class="gs-step-time">⏱️ 5 minutes</p>
+      <ol>
+        <li>Go to <strong>Goal Planning → Create a Goal</strong></li>
+        <li>Describe each goal in plain English — for example: <em>"Save ₹50 lakhs for my daughter's college in 12 years"</em> or <em>"Build a ₹2 crore retirement corpus in 20 years"</em></li>
+        <li>Go to <strong>Goal Planning → Goal Fund Manager</strong> and map your funds to each goal</li>
+        <li>Open <strong>Goal Planning → Goal Dashboard</strong> to see your portfolio health score</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Done -->
+  <div class="gs-done-block">
+    <div class="gs-done-icon">🎉</div>
+    <div>
+      <h2>You are set up</h2>
+      <p>Your portfolio is imported, your goals are mapped, and your health score is live. From here, your daily routine is simple: start the software, click Daily Refresh, and check your dashboard.</p>
+    </div>
+  </div>
+
+  <!-- Everyday use -->
+  <div class="gs-section">
+    <h2>Your Daily Routine</h2>
+    <div class="gs-platform-grid">
+      <div class="gs-platform-card">
+        <div class="gs-platform-label">🪟 Windows — every day</div>
+        <ol>
+          <li>Double-click <strong>Start DB.bat</strong></li>
+          <li>Double-click <strong>Start App.bat</strong></li>
+          <li>NAV Data Manager → Data Pipeline → <strong>Daily Refresh</strong></li>
+          <li>Check Goal Planning → Goal Dashboard</li>
+          <li>When done: <strong>Stop App.bat</strong> then <strong>Stop DB.bat</strong></li>
+        </ol>
+      </div>
+      <div class="gs-platform-card">
+        <div class="gs-platform-label">🍎 Mac — every day</div>
+        <ol>
+          <li>Double-click <strong>start_db.command</strong></li>
+          <li>Double-click <strong>start_app.command</strong></li>
+          <li>NAV Data Manager → Data Pipeline → <strong>Daily Refresh</strong></li>
+          <li>Check Goal Planning → Goal Dashboard</li>
+          <li>When done: <strong>stop_app.command</strong> then <strong>stop_db.command</strong></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- Backup reminder -->
+  <div class="gs-note info">
+    <strong>💾 Back up your data regularly.</strong> Go to <strong>Admin → Backup</strong> after any major import or update, and copy the backup file to Google Drive, OneDrive, or an external drive. Your data lives only on your machine — if the drive fails without a backup, the data cannot be recovered.
+  </div>
+
+  <div class="gs-footer-links">
+    <a href="{{ '/faq/' | relative_url }}" class="btn-secondary">Common questions</a>
+    <a href="{{ '/system-requirements/' | relative_url }}" class="btn-secondary">System requirements</a>
+    <a href="{{ '/contact/' | relative_url }}" class="btn-secondary">Need help? Contact me</a>
+  </div>
+
+</div>

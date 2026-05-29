@@ -405,8 +405,52 @@ nav a.nav-cta:hover { background: #0284c7; color: #fff !important; }
 .footer-links a:hover { color: var(--accent); }
 .footer-sep { color: var(--border); margin: 0 8px; }
 
+/* ── Legal header icon ───────────────────────────────────────── */
+.legal-header-icon { font-size: 1.8rem; margin-bottom: 10px; }
+
+/* ── Violation list (Terms page) ─────────────────────────────── */
+.violation-list { list-style: none; margin: 12px 0 16px; }
+.violation-list li {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 8px 0; border-bottom: 1px solid var(--border);
+  font-size: 0.95rem; color: var(--muted); line-height: 1.6;
+}
+.violation-list li:last-child { border-bottom: none; }
+.violation-icon { font-size: 0.9rem; flex-shrink: 0; margin-top: 2px; }
+
+/* ── FAQ icon in question heading ────────────────────────────── */
+.faq-icon { margin-right: 8px; font-size: 1rem; }
+
+/* ── Contact hints ───────────────────────────────────────────── */
+.contact-hints { margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
+.contact-hint {
+  display: flex; align-items: flex-start; gap: 16px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; padding: 18px 20px;
+}
+.hint-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+.contact-hint strong { display: block; font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.contact-hint p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin: 0; }
+
+/* ── Get the App checklist ───────────────────────────────────── */
+.getapp-checklist {
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 12px; padding: 28px; margin-top: 8px;
+}
+.getapp-checklist h2 { font-size: 1rem; font-weight: 700; margin-bottom: 20px; color: var(--text); }
+.getapp-check-items { display: flex; flex-direction: column; gap: 16px; }
+.getapp-check-item {
+  display: flex; align-items: flex-start; gap: 14px;
+}
+.getapp-check-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+.getapp-check-item strong { display: block; font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 3px; }
+.getapp-check-item p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin: 0; }
+.getapp-check-item a { color: var(--accent); text-decoration: none; }
+.getapp-check-item a:hover { text-decoration: underline; }
+
 @media (max-width: 600px) {
   .sysreq-grid { grid-template-columns: 1fr; }
   .sysreq-cta { flex-direction: column; align-items: flex-start; }
+  .support-scope { grid-template-columns: 1fr; }
 }
 

@@ -1,0 +1,103 @@
+---
+layout: default
+title: Release Fingerprints
+---
+
+<div class="content-page">
+  <div class="content-header">
+    <div class="legal-header-icon">🔐</div>
+    <h1>Release Fingerprints</h1>
+    <p class="content-lead">Every release of Personal Portfolio Tracker ships with a SHA256 fingerprint — a unique code that proves the files you received are exactly the files that were published. This page is the public record.</p>
+  </div>
+
+  <div class="content-section">
+    <h2>How to verify your copy</h2>
+    <ol>
+      <li>Open the software and go to <strong>Admin → Privacy Audit</strong></li>
+      <li>Scroll to <strong>Section 4: Code Integrity</strong></li>
+      <li>The software computes the fingerprint of the files on your machine and shows it</li>
+      <li>Compare it to the fingerprint listed here for your version</li>
+    </ol>
+    <p>If the fingerprints match, your copy is untampered. If they do not match, do not use that copy — re-download from the original link in your purchase email.</p>
+    <p>This check runs entirely offline. Nothing is sent anywhere.</p>
+  </div>
+
+  <div class="content-section">
+    <h2>Published fingerprints</h2>
+    <p>Fingerprints are published here at the time of each release and cannot be retroactively modified. The git history of this page is the immutable timestamp.</p>
+
+    <table class="content-table fingerprint-table">
+      <thead>
+        <tr>
+          <th>Version</th>
+          <th>Release date</th>
+          <th>SHA256 fingerprint</th>
+          <th>GitHub tag</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="fp-current">
+          <td><strong>v7.0.2</strong> <span class="fp-badge">latest</span></td>
+          <td>2026-05-28</td>
+          <td><code class="fp-code">e25f1b6f5ac4c346f7340f989b01934366708c4e907eb372d3f746c56f5f6f00</code></td>
+          <td><a href="https://github.com/srikrishna2024/pages_agentic_upgrade/releases/tag/v7.0.2" target="_blank" rel="noopener">v7.0.2</a></td>
+        </tr>
+        <tr>
+          <td>v7.0.1</td>
+          <td>2026-05-28</td>
+          <td><code class="fp-code">1f589e8516cd8f63cc04031a35d365b18fdde9e3d7e45dcc5d787b3f17a9c88c</code></td>
+          <td><a href="https://github.com/srikrishna2024/pages_agentic_upgrade/releases/tag/v7.0.1" target="_blank" rel="noopener">v7.0.1</a></td>
+        </tr>
+        <tr>
+          <td>v7.0.0</td>
+          <td>2026-05-27</td>
+          <td><code class="fp-code">6ddd5e948648aa94e7de5fa22cd2dc8bf919bcffd81522bc74db351bd69464ae</code></td>
+          <td><a href="https://github.com/srikrishna2024/pages_agentic_upgrade/releases/tag/v7.0.0" target="_blank" rel="noopener">v7.0.0</a></td>
+        </tr>
+        <tr>
+          <td>v6.2.9</td>
+          <td>2026-05-27</td>
+          <td><code class="fp-code">47867c92dacb2b61f5bbdae097c8449b47a5468e29042318e36d66636f0e94dc</code></td>
+          <td><a href="https://github.com/srikrishna2024/pages_agentic_upgrade/releases/tag/v6.2.9" target="_blank" rel="noopener">v6.2.9</a></td>
+        </tr>
+        <tr>
+          <td>v6.2.8</td>
+          <td>2026-05-26</td>
+          <td><code class="fp-code">d28b59fde57edb9c79fb17985e80c823004ebc4db355c2eb14bd6aebbcc7d218</code></td>
+          <td><a href="https://github.com/srikrishna2024/pages_agentic_upgrade/releases/tag/v6.2.8" target="_blank" rel="noopener">v6.2.8</a></td>
+        </tr>
+        <tr>
+          <td>v6.2.7</td>
+          <td>2026-05-26</td>
+          <td><code class="fp-code">7171c76ab182233fbaea7db2655558b64b975a3dbc255f4c88c65b3e8f8664db</code></td>
+          <td><a href="https://github.com/srikrishna2024/pages_agentic_upgrade/releases/tag/v6.2.7" target="_blank" rel="noopener">v6.2.7</a></td>
+        </tr>
+        <tr>
+          <td>v6.2.6</td>
+          <td>2026-05-25</td>
+          <td><code class="fp-code">08a556d13ac2667e9ede61bd9dca46fa46fd31ef9bccdedb8170e9fcb8bb8d39</code></td>
+          <td><a href="https://github.com/srikrishna2024/pages_agentic_upgrade/releases/tag/v6.2.6" target="_blank" rel="noopener">v6.2.6</a></td>
+        </tr>
+        <tr>
+          <td>v6.2.5</td>
+          <td>2026-05-24</td>
+          <td><code class="fp-code">a2104a3951049e117c661453b5f6f7a6c094b22f35e5becdbf33786a13b8294d</code></td>
+          <td><a href="https://github.com/srikrishna2024/pages_agentic_upgrade/releases/tag/v6.2.5" target="_blank" rel="noopener">v6.2.5</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="content-section">
+    <h2>Why this page exists</h2>
+    <p>The fingerprint in your purchase email proves what you received at delivery. This page proves what was published at release time. Together they establish a chain: developer published X, buyer received X, buyer's machine holds X.</p>
+    <p>If someone were to claim the software was modified after distribution, three independent timestamped records would need to agree: the GitHub release tag (cryptographic commit hash), this public page (git-timestamped), and the buyer's purchase email. Tampering with all three simultaneously is not feasible.</p>
+    <p>The git history of this page is itself immutable — every update is a new commit with a verifiable timestamp. You can inspect it at the blog's GitHub repository.</p>
+  </div>
+
+  <div class="content-section">
+    <h2>For developers</h2>
+    <p>After each release, update this page by adding a new row to the table with the version, date, and fingerprint from <code>generate_checksums.py</code>. Then commit and push — the commit timestamp becomes the public proof of when the fingerprint was published.</p>
+  </div>
+
+</div>

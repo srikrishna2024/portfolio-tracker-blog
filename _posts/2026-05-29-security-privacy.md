@@ -1,18 +1,18 @@
 ---
 layout: post
-title: "Your Financial Data Stays on Your Machine — Here's How"
+title: "Your Financial Data Stays on Your Machine. Here's How"
 subtitle: "How Personal Portfolio Tracker keeps your data private and how you can verify it yourself"
 date: 2026-05-29
 tags: [personal finance, privacy, security, local-first, india]
 ---
 
-Privacy claims are easy to make. This post explains what Personal Portfolio Tracker actually does — and how you can verify it yourself rather than taking it on trust.
+Privacy claims are easy to make. This post explains what Personal Portfolio Tracker actually does. You can verify it yourself rather than taking it on trust.
 
 ---
 
 ## No Cloud, No Server
 
-Personal Portfolio Tracker is desktop software that runs entirely on your Windows or Mac computer. There is no mobile app, no backend server, no database hosted somewhere else, and no company storing your transactions. Your browser connects to `localhost` — your own machine — not to the internet.
+Personal Portfolio Tracker is desktop software that runs entirely on your Windows or Mac computer. There is no mobile app, no backend server, no database hosted somewhere else, and no company storing your transactions. Your browser connects to `localhost`, your own machine, not to the internet.
 
 This means:
 
@@ -27,7 +27,7 @@ This means:
 
 The software includes a built-in Privacy Audit page (under Admin) that gives you live evidence of what's happening on your machine while it runs.
 
-It shows you the active network connections from the software — and when AI features are off, the only connections are between your browser and your own computer. You can watch this in real time. There is nothing to take on faith.
+It shows you the active network connections from the software. When AI features are off, the only connections are between your browser and your own computer. You can watch this in real time. There is nothing to take on faith.
 
 ---
 
@@ -53,15 +53,15 @@ AI features are off by default. If you never enable them, no data leaves your ma
 
 ## File Integrity Verification
 
-Every release ships with a fingerprint — a unique code that represents the exact files in that release. This fingerprint is printed in your purchase confirmation email.
+Every release ships with a fingerprint, a unique code that represents the exact files in that release. This fingerprint is printed in your purchase confirmation email.
 
-The Privacy Audit page lets you verify that the files on your machine match that fingerprint. If anything had been tampered with after distribution, the numbers wouldn't match. This check runs entirely offline — it doesn't contact any server.
+The Privacy Audit page lets you verify that the files on your machine match that fingerprint. If anything had been tampered with after distribution, the numbers wouldn't match. This check runs entirely offline. It doesn't contact any server.
 
 ---
 
 ## Antivirus Notice
 
-Some antivirus programs flag the software's compiled files as suspicious when you first unzip it. This is a confirmed false positive — BitDefender's Malware Research Team has reviewed the files and confirmed they are clean. The detection is now clear.
+Some antivirus programs flag the software's compiled files as suspicious when you first unzip it. This is a confirmed false positive. BitDefender's Malware Research Team has reviewed the files and confirmed they are clean. The detection is now clear.
 
 If you see a warning, update your antivirus definitions. The Setup Wizard inside the software has step-by-step instructions for adding the folder as an exclusion in Windows Defender, BitDefender, and other AV products.
 
@@ -69,7 +69,7 @@ If you see a warning, update your antivirus definitions. The Setup Wizard inside
 
 ## Your Backup, Your Control
 
-Your data backup is a file you create and store wherever you choose — your own hard drive, an encrypted USB, Google Drive. There is no automatic sync to any service. You decide where your financial history lives.
+Your data backup is a file you create and store wherever you choose: your own hard drive, an encrypted USB, Google Drive. There is no automatic sync to any service. You decide where your financial history lives.
 
 ---
 

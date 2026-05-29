@@ -1,20 +1,20 @@
 ---
 layout: post
 title: "What Personal Portfolio Tracker Helps You Do"
-subtitle: "A plain-English tour of every section — what it shows you and what decisions it helps you make"
+subtitle: "A plain-English tour of every section. What it shows you and what decisions it helps you make"
 date: 2026-05-29
 tags: [personal finance, mutual funds, india, goal planning, tax]
 ---
 
-This post walks through each section of Personal Portfolio Tracker, the desktop software for Windows and Mac. No technical details — just what each part shows you and how it helps.
+This post walks through each section of Personal Portfolio Tracker, the desktop software for Windows and Mac. No technical details. Just what each part shows you and how it helps.
 
 ---
 
 ## Import Your Full Portfolio
 
-Most portfolio tools only see what's in your CAMS or MF Central statement — your mutual funds. They miss the other half of most Indian investors' portfolios: EPF, NPS, PPF, and Superannuation.
+Most portfolio tools only see what's in your CAMS or MF Central statement: your mutual funds. They miss the other half of most Indian investors' portfolios: EPF, NPS, PPF, and Superannuation.
 
-Personal Portfolio Tracker imports all of it. Upload your CAMS PDF, your MF Central statement, your EPF passbook from UMANG, your NPS statement from NSDL, your PPF statement — and everything lands in one place with no manual re-entry.
+Personal Portfolio Tracker imports all of it. Upload your CAMS PDF, your MF Central statement, your EPF passbook from UMANG, your NPS statement from NSDL, your PPF statement. Everything lands in one place with no manual re-entry.
 
 ---
 
@@ -28,7 +28,7 @@ Once your data is in, you get a complete view of where you stand today.
 
 **Portfolio Analysis** shows how your money is spread across fund categories and how your overall portfolio has performed year by year against the NIFTY 50 TRI benchmark.
 
-**Rolling Returns** shows how your returns have varied depending on when you entered — not just a single number, but the full range of outcomes across different time periods.
+**Rolling Returns** shows how your returns have varied depending on when you entered. Not just a single number, but the full range of outcomes across different time periods.
 
 ---
 
@@ -36,11 +36,11 @@ Once your data is in, you get a complete view of where you stand today.
 
 This is what separates Personal Portfolio Tracker from a standard portfolio tool.
 
-You create goals — retirement, your child's college, a house down payment — and map your funds to each one. From that point, every calculation becomes goal-specific. The software tells you whether your current SIP is enough, how large the gap is, and what you need to do differently.
+You create goals (retirement, your child's college, a house down payment) and map your funds to each one. From that point, every calculation becomes goal-specific. The software tells you whether your current SIP is enough, how large the gap is, and what you need to do differently.
 
 The **Goal Dashboard** shows a Portfolio Health Score for your overall portfolio, plus a progress card for each goal. If a goal is at risk, it tells you why and by how much.
 
-The **Annual Review** section is designed for April each year — it summarises your goal progress year-on-year, flags any funds underperforming their benchmark, and identifies tax harvesting opportunities for the year ahead.
+The **Annual Review** section is designed for April each year. It summarises your goal progress year-on-year, flags any funds underperforming their benchmark, and identifies tax harvesting opportunities for the year ahead.
 
 The **Decision Log** lets you record why you bought, sold, or held a position. Over time, it helps you identify patterns in your own investment behaviour.
 
@@ -52,7 +52,7 @@ Before adding a fund to your portfolio, or when reviewing what you already hold,
 
 **Fund Performance** shows rolling returns, consistency (how often does the fund beat its benchmark?), and how the fund behaves in up and down markets separately.
 
-**Risk Analysis** uses the Ulcer Index — a measure of how deep and how long drawdowns last, which is more meaningful than standard deviation for most investors.
+**Risk Analysis** uses the Ulcer Index, a measure of how deep and how long drawdowns last, which is more meaningful than standard deviation for most investors.
 
 **Factor Analysis** answers a question that's often overlooked: does this fund actually behave the way its category label suggests? A fund marketed as a large-cap active fund should be meaningfully different from the index. If it isn't, you're paying active fees for index-like results.
 
@@ -60,7 +60,7 @@ Before adding a fund to your portfolio, or when reviewing what you already hold,
 
 ## Retirement Planning
 
-The **Retirement Planner** takes your current age, target retirement age, expected monthly expenses, and current savings — and shows you the corpus you need and the monthly SIP required to reach it.
+The **Retirement Planner** takes your current age, target retirement age, expected monthly expenses, and current savings. It shows you the corpus you need and the monthly SIP required to reach it.
 
 The **Bucket Strategy Simulator** models what happens in retirement itself. You split your corpus into three buckets with different risk levels, and the simulator shows how long each lasts, when you'd need to move money between them, and whether the corpus survives to your target age.
 
@@ -68,7 +68,7 @@ The **Bucket Strategy Simulator** models what happens in retirement itself. You 
 
 ## Tax Corner
 
-The Tax Corner calculates your actual tax liability — LTCG and STCG — using the correct FIFO method, handling the ₹1.25 lakh annual exemption and the 2018 grandfathering rules automatically.
+The Tax Corner calculates your actual tax liability (LTCG and STCG) using the correct FIFO method, handling the ₹1.25 lakh annual exemption and the 2018 grandfathering rules automatically.
 
 The **Tax Optimizer** identifies harvesting opportunities: positions you can redeem to book gains within the annual exemption, reducing future tax liability at no cost today.
 
@@ -82,7 +82,7 @@ The Alert Center monitors your portfolio continuously and flags things that need
 
 ## AI Features (Optional)
 
-If you enable AI, you can ask plain-English questions about your portfolio — *"Which of my funds has the highest tracking error?"* or *"Am I on track for retirement?"* — and get answers backed by your actual data.
+If you enable AI, you can ask plain-English questions about your portfolio: *"Which of my funds has the highest tracking error?"* or *"Am I on track for retirement?"* You get answers backed by your actual data.
 
 The AI also powers the goal recommendations, annual review summaries, and fund replacement suggestions. Everything is opt-in; the AI features can be left off entirely with no loss of core functionality.
 

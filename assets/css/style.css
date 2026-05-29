@@ -225,4 +225,119 @@ nav a:hover { color: var(--text); }
   .post-header h1 { font-size: 1.5rem; }
   .container { padding: 0 16px; }
   .contact-card { flex-direction: column; align-items: flex-start; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .steps { gap: 24px; }
+  nav a.nav-cta { display: none; }
 }
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-block; padding: 11px 24px;
+  background: var(--accent); color: #fff;
+  border-radius: 8px; font-weight: 700; font-size: 0.95rem;
+  text-decoration: none; transition: background 0.15s;
+}
+.btn-primary:hover { background: #0284c7; }
+.btn-secondary {
+  display: inline-block; padding: 11px 24px;
+  background: var(--surface); color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px; font-weight: 600; font-size: 0.95rem;
+  text-decoration: none; transition: border-color 0.15s;
+}
+.btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+.btn-large { padding: 14px 32px; font-size: 1.05rem; }
+
+.hero-cta { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+
+/* ── Nav CTA ─────────────────────────────────────────────────── */
+nav a.nav-cta {
+  background: var(--accent); color: #fff !important;
+  padding: 6px 14px; border-radius: 6px; font-weight: 700;
+  margin-left: 24px;
+}
+nav a.nav-cta:hover { background: #0284c7; color: #fff !important; }
+
+/* ── Section blocks ──────────────────────────────────────────── */
+.section-block { margin-bottom: 64px; }
+
+/* ── How it works ────────────────────────────────────────────── */
+.steps { display: flex; flex-direction: column; gap: 20px; }
+.step {
+  display: flex; gap: 20px; align-items: flex-start;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: 24px;
+}
+.step-num {
+  width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+  background: var(--accent); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 1rem;
+}
+.step h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; color: var(--text); }
+.step p { font-size: 0.92rem; color: var(--muted); line-height: 1.6; margin: 0; }
+
+/* ── Feature grid ────────────────────────────────────────────── */
+.feature-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
+}
+.feature-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: 24px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.feature-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 16px rgba(14,165,233,0.08);
+}
+.feature-icon { font-size: 1.6rem; margin-bottom: 12px; }
+.feature-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+.feature-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin: 0; }
+
+/* ── FAQ page ────────────────────────────────────────────────── */
+.faq-page { padding: 56px 0; }
+.faq-header { margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+.faq-header h1 { font-size: 1.8rem; font-weight: 800; letter-spacing: -0.03em; }
+.faq-header p { color: var(--muted); margin-top: 8px; font-size: 1.05rem; }
+.faq-list { display: flex; flex-direction: column; }
+.faq-item {
+  padding: 28px 0; border-bottom: 1px solid var(--border);
+}
+.faq-item:last-child { border-bottom: none; }
+.faq-item h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+.faq-item p { font-size: 0.95rem; color: var(--muted); line-height: 1.7; margin: 0; }
+.faq-item a { color: var(--accent); text-decoration: none; }
+.faq-item a:hover { text-decoration: underline; }
+
+/* ── Get the App page ────────────────────────────────────────── */
+.get-app-page { padding: 56px 0; }
+.get-app-header { margin-bottom: 40px; }
+.get-app-header h1 { font-size: 1.8rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 10px; }
+.get-app-header p { font-size: 1.05rem; color: var(--muted); }
+.pricing-card {
+  background: var(--surface); border: 2px solid var(--accent);
+  border-radius: 16px; padding: 36px; margin-bottom: 40px;
+}
+.pricing-top { margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+.pricing-label {
+  font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--accent); margin-bottom: 8px;
+}
+.pricing-desc { font-size: 0.95rem; color: var(--muted); line-height: 1.6; }
+.pricing-features { list-style: none; margin: 0 0 28px; }
+.pricing-features li {
+  padding: 8px 0; border-bottom: 1px solid var(--border);
+  font-size: 0.95rem; color: var(--text);
+}
+.pricing-features li:last-child { border-bottom: none; }
+.pricing-cta { text-align: center; padding-top: 8px; }
+.pricing-note { margin-top: 14px; font-size: 0.85rem; color: var(--muted); }
+.get-app-faq {
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 12px; padding: 28px;
+}
+.get-app-faq h2 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
+.get-app-faq p { font-size: 0.95rem; color: var(--muted); line-height: 1.7; margin: 0; }
+.get-app-faq a { color: var(--accent); text-decoration: none; }
+.get-app-faq a:hover { text-decoration: underline; }
+

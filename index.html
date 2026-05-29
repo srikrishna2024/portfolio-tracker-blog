@@ -5,7 +5,7 @@ title: Personal Portfolio Tracker
 
 <section class="hero">
   <h1>Your finances.<br><span>Your machine.</span></h1>
-  <p>A local-first financial planning app for serious Indian investors — mutual funds, EPF, NPS, PPF, goals, and tax in one place. Your data never leaves your computer.</p>
+  <p>A financial planning app for serious Indian investors — mutual funds, EPF, NPS, PPF, goals, and tax in one place. Your data never leaves your computer.</p>
   <div class="hero-badges">
     <span class="badge">Local database</span>
     <span class="badge">No cloud sync</span>
@@ -13,17 +13,98 @@ title: Personal Portfolio Tracker
     <span class="badge">Windows &amp; Mac</span>
     <span class="badge">Indian markets</span>
   </div>
+  <div class="hero-cta">
+    <a href="{{ '/get-the-app/' | relative_url }}" class="btn-primary">Get the App &rarr;</a>
+    <a href="{{ '/faq/' | relative_url }}" class="btn-secondary">Common questions</a>
+  </div>
 </section>
 
-<p class="section-label">Latest posts</p>
+<!-- ── How it works ─────────────────────────────────────────── -->
+<div class="section-block">
+  <p class="section-label">How it works</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div>
+        <h3>Import your statements</h3>
+        <p>Upload your CAMS or MF Central PDF. Add EPF, NPS, PPF, and Superannuation statements too. Everything lands in one place — no manual entry.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div>
+        <h3>Map funds to your goals</h3>
+        <p>Create goals — retirement, education, a house — and link your investments to each one. The app tracks progress towards every goal separately.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div>
+        <h3>Track, analyse, and act</h3>
+        <p>See your health score, spot underperformers, check your tax position, and get alerts when something needs attention. Review once a quarter or once a year.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-<ul class="post-list">
-  {% for post in site.posts %}
-  <li>
-    <div class="post-date">{{ post.date | date: "%B %-d, %Y" }}</div>
-    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-    {% if post.subtitle %}<p class="excerpt">{{ post.subtitle }}</p>{% endif %}
-    <a class="read-more" href="{{ post.url | relative_url }}">Read &rarr;</a>
-  </li>
-  {% endfor %}
-</ul>
+<!-- ── Feature cards ────────────────────────────────────────── -->
+<div class="section-block">
+  <p class="section-label">What you get</p>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🎯</div>
+      <h3>Goal-based tracking</h3>
+      <p>Map your investments to specific goals. See exactly how much you need, how much you have, and whether your monthly SIP is on track.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📥</div>
+      <h3>Full portfolio import</h3>
+      <p>Import mutual funds from CAMS or MF Central, plus EPF, NPS, PPF, and Superannuation — all instruments together in one view.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📊</div>
+      <h3>Portfolio health score</h3>
+      <p>A single score that reflects goal progress, fund reliability, and concentration risk — not just returns.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔬</div>
+      <h3>Fund analysis</h3>
+      <p>Compare funds, check rolling returns, measure downside risk, and verify whether a fund behaves the way its label suggests.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">💰</div>
+      <h3>Tax calculations</h3>
+      <p>Accurate LTCG and STCG using the FIFO method. Identify harvesting opportunities to reduce next year's tax bill.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔔</div>
+      <h3>Alerts &amp; monitoring</h3>
+      <p>Automated alerts for goal drift, fund underperformance, concentration risk, and tax deadlines — so nothing slips through.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🏖️</div>
+      <h3>Retirement planning</h3>
+      <p>Project your retirement corpus, calculate the SIP you need, and simulate how long your savings will last in retirement.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🛡️</div>
+      <h3>Complete privacy</h3>
+      <p>Your data is stored on your own computer. The app includes a built-in privacy audit that shows you live proof — no cloud, no tracking.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── Latest posts ──────────────────────────────────────────── -->
+<div class="section-block">
+  <p class="section-label">Latest posts</p>
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li>
+      <div class="post-date">{{ post.date | date: "%B %-d, %Y" }}</div>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      {% if post.subtitle %}<p class="excerpt">{{ post.subtitle }}</p>{% endif %}
+      <a class="read-more" href="{{ post.url | relative_url }}">Read &rarr;</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

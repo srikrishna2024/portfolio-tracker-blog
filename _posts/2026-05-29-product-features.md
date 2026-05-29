@@ -6,15 +6,15 @@ date: 2026-05-29
 tags: [personal finance, mutual funds, india, goal planning, tax]
 ---
 
-This post walks through each section of the app. No technical details — just what each part shows you and how it helps.
+This post walks through each section of Personal Portfolio Tracker, the desktop software for Windows and Mac. No technical details — just what each part shows you and how it helps.
 
 ---
 
 ## Import Your Full Portfolio
 
-Most portfolio apps only see what's in your CAMS or MF Central statement — your mutual funds. They miss the other half of most Indian investors' portfolios: EPF, NPS, PPF, and Superannuation.
+Most portfolio tools only see what's in your CAMS or MF Central statement — your mutual funds. They miss the other half of most Indian investors' portfolios: EPF, NPS, PPF, and Superannuation.
 
-This app imports all of it. Upload your CAMS PDF, your MF Central statement, your EPF passbook from UMANG, your NPS statement from NSDL, your PPF statement — and everything lands in one place with no manual re-entry.
+Personal Portfolio Tracker imports all of it. Upload your CAMS PDF, your MF Central statement, your EPF passbook from UMANG, your NPS statement from NSDL, your PPF statement — and everything lands in one place with no manual re-entry.
 
 ---
 
@@ -34,13 +34,13 @@ Once your data is in, you get a complete view of where you stand today.
 
 ## Goal Planning
 
-This is what separates the app from a standard portfolio tracker.
+This is what separates Personal Portfolio Tracker from a standard portfolio tool.
 
-You create goals — retirement, your child's college, a house down payment — and map your funds to each one. From that point, every calculation becomes goal-specific. The app tells you whether your current SIP is enough, how large the gap is, and what you need to do differently.
+You create goals — retirement, your child's college, a house down payment — and map your funds to each one. From that point, every calculation becomes goal-specific. The software tells you whether your current SIP is enough, how large the gap is, and what you need to do differently.
 
 The **Goal Dashboard** shows a Portfolio Health Score for your overall portfolio, plus a progress card for each goal. If a goal is at risk, it tells you why and by how much.
 
-The **Annual Review** page is designed for April each year — it summarises your goal progress year-on-year, flags any funds underperforming their benchmark, and identifies tax harvesting opportunities for the year ahead.
+The **Annual Review** section is designed for April each year — it summarises your goal progress year-on-year, flags any funds underperforming their benchmark, and identifies tax harvesting opportunities for the year ahead.
 
 The **Decision Log** lets you record why you bought, sold, or held a position. Over time, it helps you identify patterns in your own investment behaviour.
 
@@ -88,4 +88,4 @@ The AI also powers the goal recommendations, annual review summaries, and fund r
 
 ---
 
-The next post covers how the app keeps your financial data private and secure.
+The next post covers how Personal Portfolio Tracker keeps your financial data private and secure.

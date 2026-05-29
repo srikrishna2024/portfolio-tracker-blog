@@ -120,13 +120,11 @@ The license check happens locally. There is no activation server, no phone-home,
 
 ## The Antivirus False Positive (Resolved)
 
-One security concern that came up after launch: some antivirus engines flagged the app's compiled files as malware. This was a false positive, and **BitDefender's Malware Research Team has since confirmed the file is clean** — the detection is now clear.
+One security concern that came up after launch: some antivirus engines flagged the software's compiled files as malware. This was a false positive — BitDefender's Malware Research Team confirmed the files are clean and their detection is now clear.
 
-Here's the background. The app's core logic (calculations, analytics engine, tax engine) is compiled into native binary files using Nuitka before distribution. Nuitka translates Python to C and compiles it to a `.pyd` binary. These binaries protect the source code — buyers can't read the algorithms.
+The software's core logic is compiled into protected binary files before distribution. This protects the source code, but it caused heuristic detection in a small number of antivirus engines.
 
-The false positive arose because certain antivirus engines use heuristic detection: they flag files based on structural patterns rather than known malicious signatures. Nuitka-compiled binaries have a specific structure that triggers these heuristics.
-
-Originally BitDefender and ~7 products sharing its engine were affected. BitDefender has now confirmed the file is clean and their detection is clear. Currently only **ALYac and VIPRE** (which share BitDefender's engine) still show the flag and are expected to update shortly.
+Originally BitDefender and several related products were affected. BitDefender has resolved their detection. Currently only **ALYac and VIPRE** still show the flag — they share an engine with BitDefender and are expected to update shortly.
 
 **Current VirusTotal status:** 65 out of 67 engines clean, including Windows Defender, Kaspersky, Sophos, McAfee, BitDefender, ESET, Avast, and AVG.
 
@@ -175,7 +173,7 @@ The backup file should be treated like a financial document — copy it to a sec
 | File integrity verification | ✅ SHA256 fingerprint, fully offline |
 | License system | ✅ HMAC, no activation server |
 | Antivirus false positives | ⚠️ BitDefender family — add exclusion |
-| Source code protection | ✅ Nuitka-compiled binaries |
+| Source code protection | ✅ Compiled binaries (source not included in distribution) |
 | Security audit tool | ✅ Built into the app |
 
 Privacy is not a promise in the terms of service. It's a property you can verify yourself, in the app, right now.

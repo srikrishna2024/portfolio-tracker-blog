@@ -892,3 +892,33 @@ nav a.nav-cta:hover { background: #0284c7; color: #fff !important; }
   padding: 1px 6px; border-radius: 999px;
   margin-left: 6px; vertical-align: middle; font-family: var(--font-sans);
 }
+
+/* ── Formula box ─────────────────────────────────────────────── */
+.formula-box {
+  background: var(--surface); border: 1px solid var(--border);
+  border-left: 4px solid var(--accent2); border-radius: 0 10px 10px 0;
+  padding: 20px 24px; margin: 20px 0; text-align: center;
+}
+.formula {
+  font-size: 1.05rem; font-family: var(--font-sans);
+  color: var(--text); font-weight: 600;
+}
+.formula-frac {
+  display: inline-flex; flex-direction: column;
+  align-items: center; vertical-align: middle; margin: 0 6px;
+}
+.formula-num {
+  border-bottom: 2px solid var(--text); padding-bottom: 3px; margin-bottom: 3px;
+  font-size: 0.92rem;
+}
+.formula-den { font-size: 0.92rem; }
+.formula-note { font-size: 0.8rem; color: var(--muted); margin: 10px 0 0; font-style: italic; }
+
+/* ── Callout box ─────────────────────────────────────────────── */
+.callout-box {
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 8px; padding: 12px 18px;
+  font-size: 0.85rem; color: var(--muted); line-height: 1.6;
+  margin: 16px 0;
+}
+.callout-box strong { color: var(--text); }

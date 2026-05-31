@@ -73,6 +73,8 @@ nav a:hover { color: var(--text); }
 .footer-col-label {
   font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
   letter-spacing: 0.12em; color: var(--accent2); margin-bottom: 4px;
+  background: transparent !important;
+  -webkit-text-fill-color: var(--accent2);
 }
 .footer-col a { font-size: 0.83rem; color: var(--muted); text-decoration: none; line-height: 1.4; }
 .footer-col a:hover { color: var(--accent); }
@@ -922,3 +924,15 @@ nav a.nav-cta:hover { background: #0284c7; color: #fff !important; }
   margin: 16px 0;
 }
 .callout-box strong { color: var(--text); }
+
+/* ── Home full layout (main content + sidebar) ───────────────── */
+.home-full-layout {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 48px;
+  align-items: start;
+}
+.home-full-main { min-width: 0; }
+@media (max-width: 900px) {
+  .home-full-layout { grid-template-columns: 1fr; }
+}

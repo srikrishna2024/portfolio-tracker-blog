@@ -1,0 +1,16 @@
+<!-- _includes/tool-callout.html -->
+<!-- Usage: {% include tool-callout.html feature="Goal Dashboard" benefit="Track whether every goal is on track" %} -->
+<!-- Or with multiple features: {% include tool-callout.html features=page.tool_features %} -->
+
+{% if include.feature %}
+<div class="tool-callout">
+  <div class="tool-callout-header">
+    <span class="tool-callout-icon">🛠️</span>
+    <strong>How Personal Portfolio Tracker helps with this</strong>
+  </div>
+  <div class="tool-callout-body">
+    <span class="tool-callout-feature">{{ include.feature }}</span>
+    {% if include.benefit %}<span class="tool-callout-benefit">{{ include.benefit }}</span>{% endif %}
+  </div>
+</div>
+{% endif %}

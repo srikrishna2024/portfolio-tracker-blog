@@ -999,3 +999,31 @@ nav a.nav-cta:hover { background: #0284c7; color: #fff !important; }
 .topic-card a:hover { color: var(--accent); }
 @media (max-width: 900px) { .topic-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .topic-grid { grid-template-columns: 1fr; } }
+
+/* ── Tool callout ────────────────────────────────────────────── */
+.tool-callout {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-left: 5px solid #16a34a;
+  border-radius: 0 10px 10px 0;
+  padding: 18px 22px;
+  margin: 40px 0 24px;
+}
+.tool-callout-header {
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 14px;
+}
+.tool-callout-icon { font-size: 1.1rem; }
+.tool-callout-header strong { font-size: 0.9rem; font-weight: 700; color: #166534; }
+.tool-callout-body { display: flex; flex-direction: column; gap: 10px; }
+.tool-callout-feature {
+  display: inline-block;
+  background: #166534; color: #fff;
+  font-size: 0.8rem; font-weight: 700;
+  padding: 3px 12px; border-radius: 999px;
+  width: fit-content;
+}
+.tool-callout-benefit {
+  font-size: 0.88rem; color: #166534; line-height: 1.6;
+  display: block;
+}

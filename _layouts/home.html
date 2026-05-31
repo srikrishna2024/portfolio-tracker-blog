@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
+      <nav>
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/blog/' | relative_url }}">Blog</a>
+        <a href="{{ '/getting-started/' | relative_url }}">Getting Started</a>
+        <a href="{{ '/faq/' | relative_url }}">FAQ</a>
+        <a href="{{ '/get-the-app/' | relative_url }}" class="nav-cta">Purchase</a>
+        <a href="{{ '/contact/' | relative_url }}">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="home-layout-outer">
+    <main class="home-layout-main">
+      {{ content }}
+    </main>
+    <aside class="home-layout-sidebar">
+      {% include sidebar.html %}
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <div class="footer-col-label">About the Tool</div>
+          <a href="{{ '/why-this-tool/' | relative_url }}">Why This Tool?</a>
+          <a href="{{ '/why-privacy/' | relative_url }}">Why Privacy Matters</a>
+          <a href="{{ '/blind-spot/' | relative_url }}">The Indian Investor's Blind Spot</a>
+          <a href="{{ '/is-this-right-for-you/' | relative_url }}">Is This Right for You?</a>
+          <a href="{{ '/day-one/' | relative_url }}">What You Can Do on Day 1</a>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col-label">Investing Philosophy</div>
+          <a href="{{ '/goal-based-investing/' | relative_url }}">Goal-Based Investing</a>
+          <a href="{{ '/how-much-is-enough/' | relative_url }}">How Much Is Enough?</a>
+          <a href="{{ '/withdrawal-rate/' | relative_url }}">Withdrawal Rate in Retirement</a>
+          <a href="{{ '/annual-review/' | relative_url }}">The Annual Review</a>
+          <a href="{{ '/equity-debt-split/' | relative_url }}">The Right Equity-Debt Split</a>
+          <a href="{{ '/real-equity-percentage/' | relative_url }}">Your Real Equity Percentage</a>
+          <a href="{{ '/glide-path/' | relative_url }}">The Glide Path</a>
+          <a href="{{ '/rebalancing/' | relative_url }}">Rebalancing: When to Act</a>
+          <a href="{{ '/sip-step-up/' | relative_url }}">The SIP Step-Up Strategy</a>
+          <a href="{{ '/career-is-your-best-investment/' | relative_url }}">Your Career Is Your Best Investment</a>
+          <a href="{{ '/myth-of-perfect-fund/' | relative_url }}">The Myth of the Perfect Fund</a>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col-label">Behaviour and Risk</div>
+          <a href="{{ '/cost-of-churn/' | relative_url }}">The True Cost of Churn</a>
+          <a href="{{ '/sip-returns-gap/' | relative_url }}">Why Your SIP Returns Are Lower</a>
+          <a href="{{ '/staying-invested/' | relative_url }}">Staying Invested Through Corrections</a>
+          <a href="{{ '/real-risks/' | relative_url }}">The Real Risks in Investing</a>
+          <a href="{{ '/stop-checking/' | relative_url }}">Stop Checking Every Day</a>
+          <a href="{{ '/fomo-fund/' | relative_url }}">The FOMO Fund Problem</a>
+          <a href="{{ '/loss-aversion/' | relative_url }}">Loss Aversion Explained</a>
+          <a href="{{ '/trust-your-instinct/' | relative_url }}">When to Trust Your Instinct</a>
+          <a href="{{ '/ignoring-noise/' | relative_url }}">How to Ignore Financial Noise</a>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col-label">Getting Started</div>
+          <a href="{{ '/getting-started/' | relative_url }}">Setup Guide</a>
+          <a href="{{ '/system-requirements/' | relative_url }}">System Requirements</a>
+          <a href="{{ '/faq/' | relative_url }}">FAQ</a>
+          <a href="{{ '/blog/' | relative_url }}">Blog</a>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col-label">Purchase and Legal</div>
+          <a href="{{ '/get-the-app/' | relative_url }}">Purchase</a>
+          <a href="{{ '/contact/' | relative_url }}">Contact</a>
+          <a href="{{ '/terms/' | relative_url }}">Terms and Conditions</a>
+          <a href="{{ '/refund-policy/' | relative_url }}">Refund Policy</a>
+          <a href="{{ '/release-fingerprints/' | relative_url }}">Release Fingerprints</a>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>Personal Portfolio Tracker &mdash; Desktop financial planning software for serious Indian investors. Your data stays on your machine.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

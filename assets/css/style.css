@@ -936,3 +936,37 @@ nav a.nav-cta:hover { background: #0284c7; color: #fff !important; }
 @media (max-width: 900px) {
   .home-full-layout { grid-template-columns: 1fr; }
 }
+
+/* ── Home dedicated layout ───────────────────────────────────── */
+.home-layout-outer {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 0;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  align-items: start;
+}
+.home-layout-main {
+  min-width: 0;
+  padding-right: 40px;
+}
+.home-layout-sidebar {
+  position: sticky;
+  top: 72px;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+/* override inner sidebar element positioning */
+.home-layout-sidebar .sidebar {
+  position: static;
+}
+@media (max-width: 900px) {
+  .home-layout-outer { grid-template-columns: 1fr; padding: 0 16px; }
+  .home-layout-main { padding-right: 0; }
+  .home-layout-sidebar { display: none; }
+}

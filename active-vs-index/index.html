@@ -18,10 +18,17 @@ title: Active Funds vs Index Funds - Do You Get What You Pay For?
   </div>
 
   <div class="content-section">
-    <h2>What the data shows globally — and in India</h2>
-    <p>The S&P SPIVA report (which tracks active fund performance against benchmarks across markets) consistently shows that over 10-year periods, 80 to 90% of active large-cap funds in most markets underperform their benchmark index after fees.</p>
-    <p>India is different in one important way: Indian markets have historically been less efficient than US markets, particularly in mid and small cap segments. Less analyst coverage, more retail participation, and information asymmetries create genuine opportunities for skilled stock pickers. Indian active large-cap funds have a worse record than mid-cap funds for this reason — large-cap stocks are well-covered and harder to find an edge on.</p>
-    <p>But even in India, the SPIVA data shows that most large-cap active funds underperform the NIFTY 100 TRI over rolling 5-year periods. The percentage that outperform shrinks further when you extend to 10 years.</p>
+    <h2>What the data in your own database shows</h2>
+    <p>You do not need to rely on external research reports. Personal Portfolio Tracker downloads NAV history for every mutual fund from AMFI — going back 10 to 15 years for established funds. That data is sitting in your local database right now. You can run the Consistency Screener on any category and see the distribution yourself.</p>
+    <p>What you will typically find when you run it:</p>
+    <ul>
+      <li>In most categories, the distribution of 3Y consistency scores spreads from around 30% to 90%. The median fund sits close to 50% — barely better than a coin flip.</li>
+      <li>The funds at the top of the consistency ranking tend to stay near the top across different rolling periods. Persistence of skill is real but rare.</li>
+      <li>Many funds with high 1-year returns have moderate or low consistency scores — the headline return came from a concentrated period, not sustained outperformance.</li>
+      <li>Downside capture varies more than most investors expect. Within the same category, one fund might fall only 80% as much as the benchmark on bad days while another falls 115% as much. Both charge similar fees.</li>
+    </ul>
+    <p>The scatter plot in the Consistency Screener makes this visible immediately. Run it for your category and look at where most dots cluster. If the majority of dots sit below 65% on the X-axis, the category is difficult to beat consistently — and an index fund becomes the rational default. If a cluster of funds sits above 70% consistency with downside capture below 95%, the category rewards skilled active management.</p>
+    <p>This is your data, computed from AMFI's public records. No third-party reports, no survivorship bias from fund houses cherry-picking their best periods. You see every fund that currently exists in the category, ranked on the same objective criteria.</p>
   </div>
 
   <div class="content-section">
@@ -82,20 +89,20 @@ title: Active Funds vs Index Funds - Do You Get What You Pay For?
 
     <div class="phase-grid">
       <div class="phase-card">
-        <div class="phase-label">Large Cap: Weakest case for active</div>
-        <p>NIFTY 50 and NIFTY 100 stocks are extensively covered by analysts. Genuine information edges are rare. Most large-cap active funds underperform the NIFTY 50 TRI over 5+ year periods after fees. A low-cost NIFTY 50 index fund is the rational choice for this segment.</p>
+        <div class="phase-label">Large Cap: Hardest category to beat consistently</div>
+        <p>Large-cap stocks are extensively covered. Run the Consistency Screener on the Large Cap category with a 5Y rolling period — you will see that the median consistency score tends to cluster around 50 to 60%, and funds with genuine 70%+ consistency and downside protection below 95% are rare. Where they exist, they are worth keeping. Where they do not, a NIFTY 50 or NIFTY 100 index fund at 0.1 to 0.2% expense ratio is the rational default.</p>
       </div>
       <div class="phase-card">
-        <div class="phase-label">Mid Cap: Mixed — select active funds worth it</div>
-        <p>Less efficient. Some active mid-cap managers have demonstrated consistent edge. But the category is volatile and recovery from drawdowns is slow. The consistency screener is most useful here — a mid-cap fund with 70%+ consistency and downside capture below 95% is worth the fee.</p>
+        <div class="phase-label">Mid Cap: More opportunity for skilled active managers</div>
+        <p>Less covered, more volatile, more opportunity for stock-picking edge. Run the screener here and you will typically find a wider spread — some funds with strong consistency scores and good downside protection, many with inconsistent records. The ones that pass both tests are worth the fee. The rest are candidates for a mid-cap index fund.</p>
       </div>
       <div class="phase-card">
-        <div class="phase-label">Flexi Cap: Depends on manager skill</div>
-        <p>Active allocation across market caps in response to valuations is the theoretical advantage. Whether a specific fund manager actually uses this flexibility well — or just holds a closet large-cap portfolio — is what the consistency and factor analysis tools reveal.</p>
+        <div class="phase-label">Flexi Cap: Depends entirely on how the manager uses flexibility</div>
+        <p>The theoretical advantage is active allocation across market caps. Whether a specific fund uses this or just holds a closet large-cap portfolio is what the Factor Analysis tool reveals (R² close to 1 against a large-cap index = closet indexer). Use both tools together: Factor Analysis to check if the fund is genuinely active, Consistency Screener to check if that activity is adding value.</p>
       </div>
       <div class="phase-card">
-        <div class="phase-label">Small Cap: Strongest case for active</div>
-        <p>Most inefficient segment. Index funds in small cap are problematic (liquidity, rebalancing costs). Well-run active small-cap funds have shown durable outperformance. But drawdowns are severe and recovery times long — the downside capture metric matters most here.</p>
+        <div class="phase-label">Small Cap: Strongest case for active, but highest risk</div>
+        <p>Most inefficient segment, most opportunity for edge. But drawdowns are severe and recovery times long. Run the screener here with a focus on downside capture — a small-cap active fund with downside capture above 110% is taking significantly more risk than the index while charging active fees. The downside capture metric matters most in this category.</p>
       </div>
     </div>
   </div>

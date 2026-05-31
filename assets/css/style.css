@@ -970,3 +970,32 @@ nav a.nav-cta:hover { background: #0284c7; color: #fff !important; }
   .home-layout-main { padding-right: 0; }
   .home-layout-sidebar { display: none; }
 }
+
+/* ── Browse by topic grid ────────────────────────────────────── */
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.topic-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+.topic-icon { font-size: 1.4rem; margin-bottom: 10px; }
+.topic-card h3 {
+  font-size: 0.85rem; font-weight: 700; color: var(--text);
+  text-transform: uppercase; letter-spacing: 0.06em;
+  margin-bottom: 12px; padding-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+}
+.topic-card ul { list-style: none; margin: 0; padding: 0; }
+.topic-card li { margin-bottom: 6px; }
+.topic-card a {
+  font-size: 0.82rem; color: var(--muted); text-decoration: none; line-height: 1.4;
+}
+.topic-card a:hover { color: var(--accent); }
+@media (max-width: 900px) { .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .topic-grid { grid-template-columns: 1fr; } }

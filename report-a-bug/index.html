@@ -1,0 +1,120 @@
+---
+layout: default
+title: How to Report a Bug
+---
+
+<div class="content-page">
+  <div class="content-header">
+    <div class="legal-header-icon">🐛</div>
+    <h1>How to Report a Bug</h1>
+    <p class="content-lead">A well-written bug report gets the issue fixed in the next release. A vague one takes three back-and-forth emails to clarify. This page explains exactly what to include and how to send it.</p>
+  </div>
+
+  <div class="content-section">
+    <h2>The easiest way — use the built-in tool</h2>
+    <p>The software has a dedicated bug reporting page at <strong>Admin → Report a Bug</strong>. It automatically collects:</p>
+    <ul>
+      <li>Your app version</li>
+      <li>Your operating system and Python version</li>
+      <li>The last 50 lines of the app log (the most useful diagnostic data)</li>
+    </ul>
+    <p>Fill in the form, click Generate, and it produces a complete report you can download as a .txt file and email directly.</p>
+
+    <div style="background:#eff6ff;border-left:4px solid #3b82f6;padding:1rem 1.2rem;border-radius:4px;margin:1rem 0">
+      <strong>Send your report to:</strong> support@personalfinanceapp.in<br>
+      <strong>Subject line:</strong> Bug Report v[your version]: [one-line description]
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>What to include</h2>
+
+    <div class="gbi-effects">
+      <div class="gbi-effect">
+        <div class="gbi-effect-num">1</div>
+        <div>
+          <h3>The generated report (required)</h3>
+          <p>Use Admin → Report a Bug to generate it. It captures version, OS, and log automatically. This is the single most useful thing you can send — without the version number and log, most crashes are impossible to reproduce.</p>
+        </div>
+      </div>
+      <div class="gbi-effect">
+        <div class="gbi-effect-num">2</div>
+        <div>
+          <h3>Screenshot (strongly recommended)</h3>
+          <p>A screenshot of the error message, blank page, or incorrect number is worth several paragraphs of description. It shows exactly what you see.</p>
+          <p><strong>Windows:</strong> press <code>Win + Shift + S</code> to select an area, then paste into your email. Or press <code>PrtSc</code> for the full screen.</p>
+          <p><strong>Mac:</strong> press <code>Cmd + Shift + 4</code> to select an area. The screenshot saves to your Desktop automatically.</p>
+        </div>
+      </div>
+      <div class="gbi-effect">
+        <div class="gbi-effect-num">3</div>
+        <div>
+          <h3>Log file (for crashes)</h3>
+          <p>If the app crashed or showed a Python traceback, attach the log file. You will find it at:</p>
+          <p><strong>Windows:</strong> <code>C:\pages_app\logs\app.log</code><br>
+          <strong>Mac:</strong> <code>~/pages_app/logs/app.log</code></p>
+          <p>The generated report already includes the last 50 lines, but the full file is useful for crashes that happen on startup before the app fully loads.</p>
+        </div>
+      </div>
+      <div class="gbi-effect">
+        <div class="gbi-effect-num">4</div>
+        <div>
+          <h3>Steps to reproduce (required for non-crash bugs)</h3>
+          <p>Write down exactly what you did before the problem appeared — which page you were on, what you clicked, what you entered. The more specific the better:</p>
+          <p style="font-style:italic;color:#64748b">
+            Good: "1. Opened Goal Planning → Goal Dashboard. 2. Clicked 'Details — Child Education'. 3. Page went blank."<br>
+            Not useful: "Goal Dashboard isn't working."
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Severity — what to expect</h2>
+    <table class="content-table">
+      <thead>
+        <tr><th>Severity</th><th>Definition</th><th>Response time</th><th>Fix timeline</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🔴 <strong>Critical</strong></td>
+          <td>Core feature broken, app crashes on load, data appears incorrect in a way that affects decisions</td>
+          <td>Same day</td>
+          <td>Hotfix release as soon as possible</td>
+        </tr>
+        <tr>
+          <td>🟡 <strong>Non-critical</strong></td>
+          <td>Something looks wrong or behaves unexpectedly, but you can still use the app</td>
+          <td>Within 48 hours</td>
+          <td>Next scheduled release</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>When in doubt, report as non-critical — it is easy to upgrade. A critical report that turns out to be non-critical is not a problem.</p>
+  </div>
+
+  <div class="content-section">
+    <h2>What we do with bug reports</h2>
+    <p>Every report is logged in an internal tracker with the version it was reported in, severity, and how many users reported the same issue. When a bug is fixed, the fix version is recorded so buyers who reported it can verify the fix in their next update.</p>
+    <p>If multiple buyers report the same issue, that issue moves to the front of the queue regardless of severity classification. You help everyone by reporting — even if the fix takes a release or two, it is in the queue.</p>
+  </div>
+
+  <div class="content-section">
+    <h2>What we cannot help with</h2>
+    <ul>
+      <li><strong>PostgreSQL or Python installation issues</strong> — these are separate products with their own support channels. See the <a href="https://www.postgresql.org/docs/" target="_blank" rel="noopener">PostgreSQL docs</a> and <a href="https://docs.python.org/3/" target="_blank" rel="noopener">Python docs</a>.</li>
+      <li><strong>OS permissions and firewall configuration</strong> — these are machine-specific and outside the software's scope.</li>
+      <li><strong>Investment advice</strong> — the software is a tracking and analysis tool, not a financial advisor. The analysis it produces is for information only.</li>
+    </ul>
+  </div>
+
+  <div class="content-cta-block">
+    <h2>Ready to report?</h2>
+    <p>Open the software and go to <strong>Admin → Report a Bug</strong>. The tool generates everything you need in one click.</p>
+    <div class="content-cta-buttons">
+      <a href="{{ '/faq/' | relative_url }}" class="btn-secondary">FAQ</a>
+      <a href="{{ '/contact/' | relative_url }}" class="btn-secondary">Contact</a>
+    </div>
+  </div>
+</div>

@@ -102,7 +102,7 @@ The app is written entirely in Python. The database backend is PostgreSQL. The U
 
 The core logic — calculations, analytics, tax engine — is compiled into protected binary files before distribution. Buyers don't get source code; they get a working software.
 
-This has one known side effect: the compiled files trigger a false positive in a small number of antivirus engines. All 67 antivirus engines engines on VirusTotal flagged it — a completely clean result, including Windows Defender, Kaspersky, Sophos, McAfee, and BitDefender. Every release ships with a SHA256 integrity fingerprint so buyers can verify the files are untampered.
+All 67 antivirus engines on VirusTotal gave the compiled files a clean pass — including Windows Defender, Kaspersky, Sophos, McAfee, and BitDefender. Every release also ships with a SHA256 integrity fingerprint so buyers can verify the files are untampered.
 
 ---
 

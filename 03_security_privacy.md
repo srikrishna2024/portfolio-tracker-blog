@@ -124,9 +124,9 @@ One security concern that came up after launch: some antivirus engines flagged t
 
 The software's core logic is compiled into protected binary files before distribution. This protects the source code, but it caused heuristic detection in a small number of antivirus engines.
 
-This has been fully resolved. 0 out of 67 engines now flag the software — a completely clean result.
+This has been fully resolved. All 67 antivirus engines now give it a clean pass.
 
-**Current VirusTotal status:** 0 out of 67 engines clean, including Windows Defender, Kaspersky, Sophos, McAfee, BitDefender, ESET, Avast, and AVG.
+**Current VirusTotal status:** All 67 antivirus engines engines clean, including Windows Defender, Kaspersky, Sophos, McAfee, BitDefender, ESET, Avast, and AVG.
 
 **If VIPRE is blocking the software:** add the folder as an exclusion — standard AV feature, takes about 30 seconds:
 

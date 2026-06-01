@@ -61,7 +61,7 @@ The Privacy Audit page lets you verify that the files on your machine match that
 
 ## Antivirus Notice
 
-The software has been scanned by all major antivirus engines — 0 out of 67 flagged it on VirusTotal. If your AV still flags the file, update your AV definitions and re-scan.
+The software has been scanned by all major antivirus engines — All 67 antivirus engines flagged it on VirusTotal. If your AV still flags the file, update your AV definitions and re-scan.
 
 ---
 

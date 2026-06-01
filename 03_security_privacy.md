@@ -124,9 +124,9 @@ One security concern that came up after launch: some antivirus engines flagged t
 
 The software's core logic is compiled into protected binary files before distribution. This protects the source code, but it caused heuristic detection in a small number of antivirus engines.
 
-Originally BitDefender and several related products were affected. BitDefender has resolved their detection. Currently only **VIPRE** still show the flag — they share an engine with BitDefender and are expected to update shortly.
+This has been fully resolved. 0 out of 67 engines now flag the software — a completely clean result.
 
-**Current VirusTotal status:** 65 out of 66 engines clean, including Windows Defender, Kaspersky, Sophos, McAfee, BitDefender, ESET, Avast, and AVG.
+**Current VirusTotal status:** 0 out of 67 engines clean, including Windows Defender, Kaspersky, Sophos, McAfee, BitDefender, ESET, Avast, and AVG.
 
 **If VIPRE is blocking the software:** add the folder as an exclusion — standard AV feature, takes about 30 seconds:
 
@@ -172,7 +172,7 @@ The backup file should be treated like a financial document — copy it to a sec
 | AI data sharing | ✅ Opt-in only, scoped to portfolio structure |
 | File integrity verification | ✅ SHA256 fingerprint, fully offline |
 | License system | ✅ HMAC, no activation server |
-| Antivirus false positives | ⚠️ BitDefender family — add exclusion |
+| Antivirus scan (VirusTotal) | ✅ 0/67 engines — completely clean |
 | Source code protection | ✅ Compiled binaries (source not included in distribution) |
 | Security audit tool | ✅ Built into the app |
 

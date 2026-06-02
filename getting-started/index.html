@@ -111,9 +111,9 @@ title: Getting Started
   <div class="gs-step-block">
     <div class="gs-step-num">3</div>
     <div class="gs-step-content">
-      <h2>Run the Setup Wizard</h2>
+      <h2>Run the Setup tool</h2>
       <p class="gs-step-time">⏱️ 5 minutes</p>
-      <p>From the Home page, click <strong>Admin → Setup Wizard</strong>. The wizard asks for four things:</p>
+      <p>Open the <code>launcher\windows\</code> folder and double-click <strong>setup.pyw</strong>. A setup window opens and asks for four things:</p>
 
       <div class="gs-table-wrap">
         <table class="gs-table">
@@ -136,7 +136,8 @@ title: Getting Started
         </table>
       </div>
 
-      <p>Click <strong>Begin Setup</strong>. The wizard runs all steps automatically and shows a green tick for each one. It also installs everything else the software needs. You do not need to install anything manually beyond Python and PostgreSQL. If any step fails, the message tells you exactly what to fix. The most common cause is a wrong PostgreSQL password. Re-enter it and try again.</p>
+      <p>Click <strong>Test DB Connection</strong> first to confirm PostgreSQL is reachable and the password is correct. Once it shows a green tick, click <strong>Run Setup</strong>. It installs packages, saves your credentials, and creates the database automatically. When it shows "Setup Complete", close the window.</p>
+      <p class="gs-tip">After setup you can access <strong>Admin → Setup Wizard</strong> in the app to enable AI features or change settings.</p>
     </div>
   </div>
 

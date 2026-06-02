@@ -97,12 +97,54 @@ title: Known Issues & Workarounds
       If you are experiencing a problem, check the <a href="{{ '/faq/' | relative_url }}">FAQ</a> or use <strong>Admin → Report a Bug</strong> inside the app.</p>
     </div>
 
+    <!-- Known open issue — uncomment when confirmed on multiple machines -->
+    <!--
+    <div class="ki-issue ki-critical">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-critical">🔴 Critical</span>
+        <span class="ki-version">Reported in v7.1.1</span>
+        <h3 class="ki-title">Setup Wizard fails at "Database setup" step with an ImportError</h3>
+        <span class="ki-page">Setup Wizard → Database setup</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> Setup Wizard shows a red cross at the "Database setup" step with the message: <em>Tables could not be created: Traceback ... ImportError ... connect_to_db_super</em></p>
+        <div class="ki-workaround">
+          <strong>Workaround:</strong>
+          <ol style="margin:8px 0 0;padding-left:18px;font-size:0.88rem;color:#374151;line-height:1.8">
+            <li>Close the app (Stop App)</li>
+            <li>Move the app folder out of OneDrive to a local path such as <code>C:\pages_app</code> — OneDrive file locking can corrupt the compiled modules during extraction</li>
+            <li>Re-run Start DB and Start App from the new location</li>
+            <li>Run Setup Wizard again — the Database setup step should now succeed</li>
+          </ol>
+        </div>
+        <p class="ki-eta">🗓️ Fix planned for: <strong>v7.2.0</strong></p>
+      </div>
+    </div>
+    -->
+
   </div>
 
   <!-- ══ FIXED IN RECENT RELEASES ════════════════════════════════════════ -->
   <div class="content-section">
     <h2>Fixed in recent releases</h2>
     <p>Issues resolved in the last two releases. If you are still seeing one of these, update to the version shown.</p>
+
+    <div class="ki-issue ki-fixed">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
+        <span class="ki-version">Reported in v7.1.1 · Fixed in v7.2.0</span>
+        <h3 class="ki-title">Setup Wizard "Database setup" fails with ImportError on some machines</h3>
+        <span class="ki-page">Setup Wizard → Database setup</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>Was:</strong> On machines where the app is installed inside OneDrive, the compiled module could fail to load during Setup Wizard's database step, showing <em>"Tables could not be created: ImportError"</em>.</p>
+        <div class="ki-workaround">
+          <strong>Workaround if you are on v7.1.1:</strong>
+          <p>Move the app folder to a local path outside OneDrive — for example <code>C:\pages_app</code> — then run Setup Wizard again. OneDrive file syncing can interfere with the compiled module files.</p>
+        </div>
+        <p class="ki-fixed-note">Fixed in <strong>v7.2.0</strong> — the migration runner no longer depends on the compiled shared module and works regardless of install location.</p>
+      </div>
+    </div>
 
     <div class="ki-issue ki-fixed">
       <div class="ki-header">

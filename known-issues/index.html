@@ -39,7 +39,7 @@ title: Known Issues & Workarounds
         <span class="ki-version">👥 1 reporter</span>
       </div>
       <div class="ki-body">
-        <p><strong>What happens:</strong> On machines with the app installed inside OneDrive, the compiled shared/db.pyd does not export connect_to_db_super or get_db_params. run_migrations.py fails at the import line and the Setup Wizard shows: Tables could not be created: Traceback ... ImportError</p><p class="ki-fixed-note">Fixed in <strong>v7.1.2</strong>. Update the app to get this fix — go to <strong>Admin → Upgrade</strong>.</p>
+        <p><strong>What happens:</strong> Setup Wizard fails at Database setup with: Tables could not be created: ImportError connect_to_db_super from shared.db. Root cause: Windows internally shortens folder names containing dots+numbers (e.g. pages_app_v7.1.1_windows → PAGES_~1.1_W). This breaks Python loading of compiled .pyd modules. Affects all Windows versions when app is extracted to a path with dots in the folder name.</p><p class="ki-fixed-note">Fixed in <strong>v7.1.2</strong>. Update the app to get this fix — go to <strong>Admin → Upgrade</strong>.</p>
       </div>
     </div>
   </div>

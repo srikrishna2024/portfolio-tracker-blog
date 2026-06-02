@@ -18,24 +18,30 @@ title: Known Issues & Workarounds
   <div class="content-section">
     <h2>Open issues</h2>
     
-    <div class="ki-issue ki-critical">
-      <div class="ki-header">
-        <span class="ki-badge ki-badge-critical">🔴 Critical</span>
-        <span class="ki-version">Reported in v7.1.1</span>
-        <h3 class="ki-title">Setup Wizard fails at Database setup: ImportError connect_to_db_super from shared.db</h3>
-        <span class="ki-page">Setup Wizard → Database setup step (step 3)</span>
-        <span class="ki-version">👥 1 reporter</span>
-      </div>
-      <div class="ki-body">
-        <p><strong>What happens:</strong> On machines with the app installed inside OneDrive, the compiled shared/db.pyd does not export connect_to_db_super or get_db_params. run_migrations.py fails at the import line and the Setup Wizard shows: Tables could not be created: Traceback ... ImportError</p><div class="ki-workaround"><strong>Workaround until fixed:</strong><p>Rename app folder: pages_app_v7.1.1_windows → pages_app (remove dots). Windows 8.3 path truncation causes Python pyd import failure when folder name has dots+numbers.</p></div><p class="ki-eta">🗓️ Fix planned for: <strong>next release</strong></p>
-      </div>
+    <div class="ki-empty">
+      <span class="ki-empty-icon">✅</span>
+      <p>No open issues in the current release (<strong>v7.1.2</strong>).<br>
+      If you are experiencing a problem, check the <a href="{{ '/faq/' | relative_url }}">FAQ</a>
+      or use <strong>Admin → Report a Bug</strong> inside the app.</p>
     </div>
   </div>
 
   <div class="content-section">
     <h2>Fixed in recent releases</h2>
     <p>Issues resolved in the last two releases. If you are still seeing one of these, update to the version shown via <strong>Admin → Upgrade</strong>.</p>
-    <p style="color:#64748b;font-style:italic;font-size:0.9rem">No recently fixed issues to show yet.</p>
+    
+    <div class="ki-issue ki-fixed">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
+        <span class="ki-version">Fixed in v7.1.2</span>
+        <h3 class="ki-title">Setup Wizard fails at Database setup: ImportError connect_to_db_super from shared.db</h3>
+        <span class="ki-page">Setup Wizard → Database setup step (step 3)</span>
+        <span class="ki-version">👥 1 reporter</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> On machines with the app installed inside OneDrive, the compiled shared/db.pyd does not export connect_to_db_super or get_db_params. run_migrations.py fails at the import line and the Setup Wizard shows: Tables could not be created: Traceback ... ImportError</p><p class="ki-fixed-note">Fixed in <strong>v7.1.2</strong>. Update the app to get this fix — go to <strong>Admin → Upgrade</strong>.</p>
+      </div>
+    </div>
   </div>
 
   <div class="content-section">

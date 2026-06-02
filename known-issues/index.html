@@ -7,162 +7,35 @@ title: Known Issues & Workarounds
   <div class="content-header">
     <div class="legal-header-icon">🔧</div>
     <h1>Known Issues &amp; Workarounds</h1>
-    <p class="content-lead">Active issues we are aware of, with workarounds and planned fix versions. This page is updated immediately when a workaround is found — no app release needed. Check here before reporting a bug.</p>
+    <p class="content-lead">Active issues we are aware of, with workarounds and planned fix versions. This page is updated automatically — workarounds appear here the same day a bug is found, before the next release.</p>
   </div>
 
   <div class="content-section">
-    <p>When a bug is found, the workaround is posted here the same day. The fix ships in the release shown on each card. After that, the issue moves to the Fixed section below and stays there for two releases so you can confirm it is resolved on your machine.</p>
-    <p>If your issue is not listed here and is not covered in the <a href="{{ '/faq/' | relative_url }}">FAQ</a>, use <strong>Admin → Report a Bug</strong> inside the app.</p>
+    <p>Workarounds are posted here immediately. The fix ships in the next scheduled release. After a fix ships, the issue moves to the Fixed section below and stays visible for two releases so you can confirm it is resolved on your machine.</p>
+    <p>If your issue is not listed here, check the <a href="{{ '/faq/' | relative_url }}">FAQ</a> or use <strong>Admin → Report a Bug</strong> inside the app.</p>
   </div>
 
-  <!-- ══ OPEN ISSUES ══════════════════════════════════════════════════════ -->
   <div class="content-section">
     <h2>Open issues</h2>
-
-    <!--
-    ════════════════════════════════════════════════════════════════════
-    HOW TO ADD AN ISSUE
-    ════════════════════════════════════════════════════════════════════
-
-    For a CRITICAL issue (core feature broken):
-    ────────────────────────────────────────────
+    
     <div class="ki-issue ki-critical">
       <div class="ki-header">
         <span class="ki-badge ki-badge-critical">🔴 Critical</span>
         <span class="ki-version">Reported in v7.1.1</span>
-        <h3 class="ki-title">One-line description of the bug</h3>
-        <span class="ki-page">Goal Planning → Goal Dashboard</span>
+        <h3 class="ki-title">Setup Wizard fails at Database setup: ImportError connect_to_db_super from shared.db</h3>
+        <span class="ki-page">Setup Wizard → Database setup step (step 3)</span>
+        <span class="ki-version">👥 1 reporter</span>
       </div>
       <div class="ki-body">
-        <p><strong>What happens:</strong> Exactly what the user sees — error message, blank page, wrong number, etc.</p>
-        <div class="ki-workaround">
-          <strong>Workaround until fixed:</strong>
-          <ol style="margin:8px 0 0;padding-left:18px;font-size:0.88rem;color:#374151;line-height:1.8">
-            <li>Step one — what to click or do</li>
-            <li>Step two</li>
-            <li>This resolves the issue until the fix is released</li>
-          </ol>
-        </div>
-        <p class="ki-eta">🗓️ Fix planned for: <strong>v7.2.0</strong></p>
+        <p><strong>What happens:</strong> On machines with the app installed inside OneDrive, the compiled shared/db.pyd does not export connect_to_db_super or get_db_params. run_migrations.py fails at the import line and the Setup Wizard shows: Tables could not be created: Traceback ... ImportError</p><div class="ki-workaround ki-no-workaround"><strong>No workaround yet.</strong><p>We are investigating. Reply to your purchase email if you need urgent help.</p></div><p class="ki-eta">🗓️ Fix planned for: <strong>next release</strong></p>
       </div>
     </div>
-
-    For a NON-CRITICAL issue (unexpected behaviour but app still works):
-    ────────────────────────────────────────────────────────────────────
-    <div class="ki-issue ki-noncritical">
-      <div class="ki-header">
-        <span class="ki-badge ki-badge-noncritical">🟡 Non-critical</span>
-        <span class="ki-version">Reported in v7.1.1</span>
-        <h3 class="ki-title">One-line description</h3>
-        <span class="ki-page">Data Import → Equity Import</span>
-      </div>
-      <div class="ki-body">
-        <p><strong>What happens:</strong> Describe the symptom.</p>
-        <div class="ki-workaround">
-          <strong>Workaround:</strong>
-          <p>What the user can do to avoid or work around the issue.</p>
-        </div>
-        <p class="ki-eta">🗓️ Fix planned for: <strong>v7.2.0</strong></p>
-      </div>
-    </div>
-
-    ════════════════════════════════════════════════════════════════════
-    HOW TO MOVE AN ISSUE TO FIXED
-    ════════════════════════════════════════════════════════════════════
-
-    Cut the <div class="ki-issue ..."> block above and paste it into the
-    "Fixed in recent releases" section below. Change the class and content:
-
-    <div class="ki-issue ki-fixed">
-      <div class="ki-header">
-        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
-        <span class="ki-version">Fixed in v7.2.0</span>
-        <h3 class="ki-title">Same title as before</h3>
-        <span class="ki-page">Same page</span>
-      </div>
-      <div class="ki-body">
-        <p><strong>Was:</strong> Brief description of what the bug did.</p>
-        <p class="ki-fixed-note">Fixed in <strong>v7.2.0</strong>. Update the app to get the fix.</p>
-      </div>
-    </div>
-
-    Keep fixed issues visible for two releases (e.g. v7.2.0 and v7.3.0),
-    then remove them entirely to keep the page clean.
-    ════════════════════════════════════════════════════════════════════
-    -->
-
-    <div class="ki-empty">
-      <span class="ki-empty-icon">✅</span>
-      <p>No open issues in the current release (<strong>v7.1.1</strong>).<br>
-      If you are experiencing a problem, check the <a href="{{ '/faq/' | relative_url }}">FAQ</a> or use <strong>Admin → Report a Bug</strong> inside the app.</p>
-    </div>
-
-    <!-- Known open issue — uncomment when confirmed on multiple machines -->
-    <!--
-    <div class="ki-issue ki-critical">
-      <div class="ki-header">
-        <span class="ki-badge ki-badge-critical">🔴 Critical</span>
-        <span class="ki-version">Reported in v7.1.1</span>
-        <h3 class="ki-title">Setup Wizard fails at "Database setup" step with an ImportError</h3>
-        <span class="ki-page">Setup Wizard → Database setup</span>
-      </div>
-      <div class="ki-body">
-        <p><strong>What happens:</strong> Setup Wizard shows a red cross at the "Database setup" step with the message: <em>Tables could not be created: Traceback ... ImportError ... connect_to_db_super</em></p>
-        <div class="ki-workaround">
-          <strong>Workaround:</strong>
-          <ol style="margin:8px 0 0;padding-left:18px;font-size:0.88rem;color:#374151;line-height:1.8">
-            <li>Close the app (Stop App)</li>
-            <li>Move the app folder out of OneDrive to a local path such as <code>C:\pages_app</code> — OneDrive file locking can corrupt the compiled modules during extraction</li>
-            <li>Re-run Start DB and Start App from the new location</li>
-            <li>Run Setup Wizard again — the Database setup step should now succeed</li>
-          </ol>
-        </div>
-        <p class="ki-eta">🗓️ Fix planned for: <strong>v7.2.0</strong></p>
-      </div>
-    </div>
-    -->
-
   </div>
 
-  <!-- ══ FIXED IN RECENT RELEASES ════════════════════════════════════════ -->
   <div class="content-section">
     <h2>Fixed in recent releases</h2>
-    <p>Issues resolved in the last two releases. If you are still seeing one of these, update to the version shown.</p>
-
-    <div class="ki-issue ki-fixed">
-      <div class="ki-header">
-        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
-        <span class="ki-version">Reported in v7.1.1 · Fixed in v7.2.0</span>
-        <h3 class="ki-title">Setup Wizard "Database setup" fails with ImportError on some machines</h3>
-        <span class="ki-page">Setup Wizard → Database setup</span>
-      </div>
-      <div class="ki-body">
-        <p><strong>Was:</strong> On machines where the app is installed inside OneDrive, the compiled module could fail to load during Setup Wizard's database step, showing <em>"Tables could not be created: ImportError"</em>.</p>
-        <div class="ki-workaround">
-          <strong>Workaround if you are on v7.1.1:</strong>
-          <p>Move the app folder to a local path outside OneDrive — for example <code>C:\pages_app</code> — then run Setup Wizard again. OneDrive file syncing can interfere with the compiled module files.</p>
-        </div>
-        <p class="ki-fixed-note">Fixed in <strong>v7.2.0</strong> — the migration runner no longer depends on the compiled shared module and works regardless of install location.</p>
-      </div>
-    </div>
-
-    <div class="ki-issue ki-fixed">
-      <div class="ki-header">
-        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
-        <span class="ki-version">Reported in v7.1.1 · Fixed in v7.2.0</span>
-        <h3 class="ki-title">Start App.bat shows "App did not start within 30 seconds" even though the app is running</h3>
-        <span class="ki-page">Launcher → Start App.bat</span>
-      </div>
-      <div class="ki-body">
-        <p><strong>Was:</strong> On slower machines or first launch (when packages are loading), the bat file gave up after 30 seconds and showed an error — even though the app had actually started successfully in the background.</p>
-        <div class="ki-workaround">
-          <strong>Workaround if you are on v7.1.1:</strong>
-          <p>When you see this message, <strong>open your browser and go to <code>http://localhost:8501</code></strong> — the app is already running. The error is just the launcher timing out too early. On first launch, allow 2–3 minutes for packages to finish loading before trying again.</p>
-        </div>
-        <p class="ki-fixed-note">Fixed in <strong>v7.2.0</strong> — the launcher now waits 3 minutes instead of 30 seconds, and the error message tells you to open the browser manually.</p>
-      </div>
-    </div>
-
+    <p>Issues resolved in the last two releases. If you are still seeing one of these, update to the version shown via <strong>Admin → Upgrade</strong>.</p>
+    <p style="color:#64748b;font-style:italic;font-size:0.9rem">No recently fixed issues to show yet.</p>
   </div>
 
   <div class="content-section">
@@ -173,13 +46,12 @@ title: Known Issues & Workarounds
       <li>Fill in the form — it automatically collects your app version, OS, and error log</li>
       <li>Download the generated report and email it with any screenshots to <a href="mailto:support@personalfinanceapp.in">support@personalfinanceapp.in</a></li>
     </ol>
-    <p>Critical bugs are responded to the same day. Non-critical bugs are fixed in the next scheduled release and posted here with a workaround as soon as one is found — you do not need to wait for the release to work around it.</p>
+    <p>Critical bugs are responded to the same day. Non-critical bugs are fixed in the next scheduled release.</p>
   </div>
 
 </div>
 
 <style>
-/* ── Issue cards ─────────────────────────────────────────────────────────── */
 .ki-issue {
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -189,88 +61,52 @@ title: Known Issues & Workarounds
 .ki-issue.ki-critical    { border-left: 5px solid #e74c3c; }
 .ki-issue.ki-noncritical { border-left: 5px solid #f39c12; }
 .ki-issue.ki-fixed       { border-left: 5px solid #27ae60; opacity: 0.85; }
-
-/* ── Header strip ────────────────────────────────────────────────────────── */
 .ki-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 18px;
-  background: var(--surface2);
-  flex-wrap: wrap;
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 18px; background: var(--surface2); flex-wrap: wrap;
 }
 .ki-title {
-  margin: 0;
-  font-size: 0.97rem;
-  font-weight: 700;
-  color: var(--text);
-  flex: 1;
-  min-width: 180px;
+  margin: 0; font-size: 0.97rem; font-weight: 700;
+  color: var(--text); flex: 1; min-width: 180px;
 }
 .ki-page {
-  font-size: 0.76rem;
-  color: var(--muted);
-  font-family: monospace;
-  background: var(--bg);
-  padding: 2px 7px;
-  border-radius: 4px;
-  border: 1px solid var(--border);
-  white-space: nowrap;
+  font-size: 0.76rem; color: var(--muted); font-family: monospace;
+  background: var(--bg); padding: 2px 7px; border-radius: 4px;
+  border: 1px solid var(--border); white-space: nowrap;
 }
-.ki-version {
-  font-size: 0.78rem;
-  color: var(--muted);
-  white-space: nowrap;
-}
-
-/* ── Severity badges ─────────────────────────────────────────────────────── */
+.ki-version { font-size: 0.78rem; color: var(--muted); white-space: nowrap; }
 .ki-badge {
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 999px;
-  white-space: nowrap;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  font-size: 0.72rem; font-weight: 700; padding: 3px 10px;
+  border-radius: 999px; white-space: nowrap;
+  text-transform: uppercase; letter-spacing: 0.04em;
 }
 .ki-badge-critical    { background: #fde8e8; color: #c0392b; }
 .ki-badge-noncritical { background: #fef3cd; color: #9a6700; }
 .ki-badge-fixed       { background: #d5f5e3; color: #1a6b3c; }
-
-/* ── Body ────────────────────────────────────────────────────────────────── */
 .ki-body { padding: 14px 20px; }
-.ki-body p {
-  font-size: 0.9rem;
-  color: var(--text);
-  line-height: 1.65;
-  margin: 0 0 10px;
-}
-
-/* ── Workaround box ──────────────────────────────────────────────────────── */
+.ki-body p { font-size: 0.9rem; color: var(--text); line-height: 1.65; margin: 0 0 10px; }
 .ki-workaround {
-  background: #f0fdf4;
-  border: 1px solid #a7f3d0;
-  border-left: 4px solid #059669;
-  border-radius: 6px;
-  padding: 12px 16px;
-  margin: 10px 0 12px;
+  background: #f0fdf4; border: 1px solid #a7f3d0;
+  border-left: 4px solid #059669; border-radius: 6px;
+  padding: 12px 16px; margin: 10px 0 12px;
+}
+.ki-no-workaround {
+  background: #fef9e7; border: 1px solid #fcd34d;
+  border-left: 4px solid #f59e0b;
 }
 .ki-workaround strong { font-size: 0.85rem; color: #065f46; display: block; margin-bottom: 4px; }
-.ki-workaround p      { font-size: 0.88rem; color: #374151; margin: 4px 0 0; }
-
-/* ── Planned release + fixed note ────────────────────────────────────────── */
+.ki-no-workaround strong { color: #92400e; }
+.ki-workaround p { font-size: 0.88rem; color: #374151; margin: 4px 0 0; }
 .ki-eta        { font-size: 0.82rem; color: var(--muted); margin: 6px 0 0 !important; }
-.ki-fixed-note { font-size: 0.85rem; color: #1a6b3c !important; background: #d5f5e3; padding: 6px 10px; border-radius: 5px; }
-
-/* ── Empty state ─────────────────────────────────────────────────────────── */
+.ki-fixed-note {
+  font-size: 0.85rem; color: #1a6b3c !important;
+  background: #d5f5e3; padding: 6px 10px; border-radius: 5px;
+}
 .ki-empty {
-  text-align: center;
-  padding: 2.5rem 1rem;
-  color: var(--muted);
-  background: var(--surface2);
-  border-radius: 10px;
+  text-align: center; padding: 2.5rem 1rem; color: var(--muted);
+  background: var(--surface2); border-radius: 10px;
   border: 1px dashed var(--border);
 }
 .ki-empty-icon { font-size: 2.5rem; display: block; margin-bottom: 0.75rem; }
-.ki-empty p    { font-size: 0.95rem; line-height: 1.6; }
+.ki-empty p { font-size: 0.95rem; line-height: 1.6; }
 </style>

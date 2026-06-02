@@ -104,8 +104,22 @@ title: Known Issues & Workarounds
     <h2>Fixed in recent releases</h2>
     <p>Issues resolved in the last two releases. If you are still seeing one of these, update to the version shown.</p>
 
-    <!-- Fixed issues appear here. See template comments in the Open Issues section above. -->
-    <p style="color:#64748b;font-style:italic;font-size:0.9rem">No recently fixed issues to show yet.</p>
+    <div class="ki-issue ki-fixed">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
+        <span class="ki-version">Reported in v7.1.1 · Fixed in v7.2.0</span>
+        <h3 class="ki-title">Start App.bat shows "App did not start within 30 seconds" even though the app is running</h3>
+        <span class="ki-page">Launcher → Start App.bat</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>Was:</strong> On slower machines or first launch (when packages are loading), the bat file gave up after 30 seconds and showed an error — even though the app had actually started successfully in the background.</p>
+        <div class="ki-workaround">
+          <strong>Workaround if you are on v7.1.1:</strong>
+          <p>When you see this message, <strong>open your browser and go to <code>http://localhost:8501</code></strong> — the app is already running. The error is just the launcher timing out too early. On first launch, allow 2–3 minutes for packages to finish loading before trying again.</p>
+        </div>
+        <p class="ki-fixed-note">Fixed in <strong>v7.2.0</strong> — the launcher now waits 3 minutes instead of 30 seconds, and the error message tells you to open the browser manually.</p>
+      </div>
+    </div>
 
   </div>
 

@@ -17,13 +17,52 @@ title: Known Issues & Workarounds
 
   <div class="content-section">
     <h2>Open issues</h2>
-    
-    <div class="ki-empty">
-      <span class="ki-empty-icon">✅</span>
-      <p>No open issues in the current release (<strong>v7.2.0</strong>).<br>
-      If you are experiencing a problem, check the <a href="{{ '/faq/' | relative_url }}">FAQ</a>
-      or use <strong>Admin → Report a Bug</strong> inside the app.</p>
+
+    <div class="ki-issue ki-noncritical">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-noncritical">⚠️ Open</span>
+        <span class="ki-version">v7.2.0</span>
+        <h3 class="ki-title">Browser does not open automatically after clicking Start App.bat</h3>
+        <span class="ki-page">launcher/windows/Start App.bat</span>
+        <span class="ki-version">👥 1 reporter</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> After Start App.bat runs successfully, the browser does not open automatically. The app is running fine — only the auto-open step is missing.</p>
+        <div class="ki-workaround">
+          <strong>✅ Workaround</strong>
+          <p>Open your browser manually and go to <strong>http://localhost:8501</strong><br/>
+          Tip: bookmark this address so you don't have to type it each time.</p>
+        </div>
+        <p class="ki-eta">Fix scheduled for next release.</p>
+      </div>
     </div>
+
+    <div class="ki-issue ki-noncritical">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-noncritical">⚠️ Open</span>
+        <span class="ki-version">v7.2.0</span>
+        <h3 class="ki-title">Restore fund data fails on PostgreSQL 18 — incompatible flags error</h3>
+        <span class="ki-page">1_Admin_Tools/new_backup.py</span>
+        <span class="ki-version">👥 1 reporter</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> Restoring a backup using "Restore to this machine" fails with an error mentioning <code>--clean --create --single-transaction</code>. PostgreSQL 18 does not allow <code>--single-transaction</code> when combined with <code>--create</code> because CREATE DATABASE cannot run inside a transaction block.</p>
+        <div class="ki-workaround">
+          <strong>✅ Workaround — use the correct restore type for fund data</strong>
+          <p>When loading the pre-supplied fund data files (<code>fund_master_data.dump</code> and <code>nav_history.dump</code>), use this restore type instead:</p>
+          <ol style="font-size:0.88rem;color:#374151;margin:8px 0 0;padding-left:18px;line-height:1.8;">
+            <li>Go to <strong>Admin Tools → Backup → Restore</strong> tab</li>
+            <li>Upload <code>fund_master_data.dump</code></li>
+            <li>Select <strong>"Load fund prices from a backup (safe, does not touch your personal data)"</strong></li>
+            <li>Click <strong>Restore</strong> — wait for it to complete</li>
+            <li>Repeat steps 2–4 for <code>nav_history.dump</code></li>
+          </ol>
+          <p style="margin-top:8px;">This option is safe — your personal data and transactions are never affected.</p>
+        </div>
+        <p class="ki-eta">Fix scheduled for next release.</p>
+      </div>
+    </div>
+
   </div>
 
   <div class="content-section">

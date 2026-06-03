@@ -36,7 +36,7 @@ title: Known Issues & Workarounds
         <span class="ki-version">Fixed in v7.1.3</span>
         <h3 class="ki-title">setup.pyw writes DB_PASSWORD={passphrase}App instead of actual PostgreSQL password</h3>
         <span class="ki-page">launcher/windows/setup.pyw</span>
-        <span class="ki-version">👥 1 reporter</span>
+        <span class="ki-version">👥 2 reporters</span>
       </div>
       <div class="ki-body">
         <p><strong>What happens:</strong> _write_env() composed the app role password as passphrase+App but set DB_USER=pages_app which doesn't exist yet. App fails to connect on first launch with 'Database authentication failed'.</p><p class="ki-fixed-note">Fixed in <strong>v7.1.3</strong>. Update the app to get this fix — go to <strong>Admin → Upgrade</strong>.</p>
@@ -154,7 +154,7 @@ title: Known Issues & Workarounds
     <ol>
       <li>Open the software and go to <strong>Admin → Report a Bug</strong></li>
       <li>Fill in the form — it automatically collects your app version, OS, and error log</li>
-      <li>Download the generated report and email it with any screenshots to the address on the <a href="{{ '/contact/' | relative_url }}">Contact page</a></li>
+      <li>Download the generated report and email it with any screenshots to <a href="mailto:support@personalfinanceapp.in">support@personalfinanceapp.in</a></li>
     </ol>
     <p>Critical bugs are responded to the same day. Non-critical bugs are fixed in the next scheduled release.</p>
   </div>

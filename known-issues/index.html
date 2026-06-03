@@ -18,12 +18,24 @@ title: Known Issues & Workarounds
   <div class="content-section">
     <h2>Open issues</h2>
 
-    <div class="ki-empty">
-      <span class="ki-empty-icon">✅</span>
-      <p>No open issues in the current release (<strong>v7.2.0</strong>).<br>
-      If you are experiencing a problem, check the <a href="{{ '/faq/' | relative_url }}">FAQ</a>
-      or use <strong>Admin → Report a Bug</strong> inside the app.</p>
+    <div class="ki-issue ki-noncritical">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-noncritical">⚠️ Open</span>
+        <span class="ki-version">v7.2.0 / v7.2.1</span>
+        <h3 class="ki-title">Weekly Maintenance Step 1 fails — "Error: required argument is not an integer" after downloading 16,223 schemes</h3>
+        <span class="ki-page">2_MF_Data_Update/0.mf_data_pipeline.py</span>
+        <span class="ki-version">👥 1 reporter</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> Step 1 (Fetching master data from AMFI) downloads all 16,223 schemes successfully but then fails with <code>Error: required argument is not an integer</code> when inserting into the database. Caused by pandas Timestamp objects not being converted to plain Python date objects before passing to psycopg3.</p>
+        <div class="ki-workaround">
+          <strong>✅ Workaround</strong>
+          <p>Use the backup files instead of Weekly Maintenance to load fund data — go to <strong>Admin Tools → Backup → Restore</strong> and load <code>fund_master_data.dump</code> and <code>nav_history.dump</code> using "Load fund prices from a backup". This is faster (2 min) and avoids this issue entirely.</p>
+        </div>
+        <p class="ki-eta">Fix available as a hotfix — replace <code>2_MF_Data_Update/0.mf_data_pipeline.py</code> with the latest version (available on request). Ships in next release.</p>
+      </div>
     </div>
+
   </div>
 
   <div class="content-section">

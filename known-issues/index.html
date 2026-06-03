@@ -41,6 +41,31 @@ title: Known Issues & Workarounds
       <div class="ki-header">
         <span class="ki-badge ki-badge-noncritical">⚠️ Open</span>
         <span class="ki-version">v7.2.0</span>
+        <h3 class="ki-title">Backup &amp; Restore fails with "The system cannot find the file specified" — pg_restore.exe not detected</h3>
+        <span class="ki-page">1_Admin_Tools/new_backup.py → detect_postgresql_bin_path</span>
+        <span class="ki-version">👥 1 reporter</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> Restore fails immediately with <code>[WinError 2] The system cannot find the file specified</code> and the version shows "Unknown". This means the app cannot find <code>pg_restore.exe</code> — the PostgreSQL utility needed to load backup files. This happens when PostgreSQL is installed to a non-standard path or its <code>bin</code> folder is not on the system PATH.</p>
+        <p><strong>Note:</strong> This is separate from the database connection — the app can connect to PostgreSQL fine, but <code>pg_restore.exe</code> is a separate executable that must be located on disk.</p>
+        <div class="ki-workaround">
+          <strong>✅ Workaround — set the path manually in Settings</strong>
+          <ol style="font-size:0.88rem;color:#374151;margin:8px 0 0;padding-left:18px;line-height:1.9;">
+            <li>Open File Explorer and search for <code>pg_restore.exe</code> on your C: drive (or wherever PostgreSQL is installed)</li>
+            <li>Note the folder — e.g. <code>C:\Program Files\PostgreSQL\18\bin</code></li>
+            <li>Go to <strong>Admin Tools → Backup &amp; Restore → Settings</strong> tab</li>
+            <li>Paste the folder path into the <strong>"PostgreSQL bin folder"</strong> field and click <strong>Apply</strong></li>
+            <li>You should see "pg_restore.exe found ✅" — go back to the Restore tab and try again</li>
+          </ol>
+        </div>
+        <p class="ki-eta">Fix shipped in hotfix — replace <code>1_Admin_Tools/new_backup.py</code> with the latest version (available on request). Ships in v7.2.1.</p>
+      </div>
+    </div>
+
+    <div class="ki-issue ki-noncritical">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-noncritical">⚠️ Open</span>
+        <span class="ki-version">v7.2.0</span>
         <h3 class="ki-title">Restore shows "failed" error even when fund data loads successfully — PostgreSQL 18 exits non-zero on warnings</h3>
         <span class="ki-page">1_Admin_Tools/new_backup.py → do_restore</span>
         <span class="ki-version">👥 2 reporters</span>

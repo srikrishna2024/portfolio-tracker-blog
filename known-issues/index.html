@@ -66,6 +66,74 @@ title: Known Issues & Workarounds
   </div>
 
   <div class="content-section">
+    <h2>Common mistakes — not bugs, but frequently reported</h2>
+    <p>These are not software bugs — they are setup steps that are easy to get wrong. If something isn't working, check this list first.</p>
+
+    <div class="ki-issue" style="border-left:5px solid #6366f1;">
+      <div class="ki-header">
+        <span class="ki-badge" style="background:#ede9fe;color:#4c1d95;">📋 Common mistake</span>
+        <h3 class="ki-title">Wrong restore type selected when loading fund data — using "Restore to this machine" instead of "Load fund prices"</h3>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> User selects "Restore to this machine (replaces current data)" when loading <code>fund_master_data.dump</code> or <code>nav_history.dump</code>. This either wipes existing personal data or fails with an error.</p>
+        <div class="ki-workaround">
+          <strong>✅ Correct steps</strong>
+          <p>For loading the pre-supplied fund data files, always use:<br/>
+          <strong>"Load fund prices from a backup (safe, does not touch your personal data)"</strong><br/>
+          This adds the fund data to your existing database without touching your transactions, goals, or portfolio history.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ki-issue" style="border-left:5px solid #6366f1;">
+      <div class="ki-header">
+        <span class="ki-badge" style="background:#ede9fe;color:#4c1d95;">📋 Common mistake</span>
+        <h3 class="ki-title">setup.pyw double-click does nothing — window flashes and disappears</h3>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> Double-clicking <code>setup.pyw</code> opens a window that immediately disappears, or nothing happens at all. This occurs when the <code>.pyw</code> file association is not registered correctly — common with some Python 3.14 installations.</p>
+        <div class="ki-workaround">
+          <strong>✅ Workaround</strong>
+          <p>Use <strong>Run Setup.bat</strong> instead — it's in the same <code>launcher\windows\</code> folder and explicitly calls Python regardless of file associations. Double-click it and the setup window will open normally.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ki-issue" style="border-left:5px solid #6366f1;">
+      <div class="ki-header">
+        <span class="ki-badge" style="background:#ede9fe;color:#4c1d95;">📋 Common mistake</span>
+        <h3 class="ki-title">App folder name contains dots or version numbers — causes ImportError in Setup Wizard</h3>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> Extracting the zip to a folder like <code>C:\pages_app_v7.2.0_windows\</code> causes Windows to internally shorten the path (e.g. to <code>PAGES_~1.0_W</code>). This breaks Python's ability to load compiled modules and causes the Setup Wizard to fail with an ImportError.</p>
+        <div class="ki-workaround">
+          <strong>✅ Fix</strong>
+          <p>Rename the app folder to a simple name without dots — e.g. <code>C:\pages_app</code>. Then re-run setup.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ki-issue" style="border-left:5px solid #6366f1;">
+      <div class="ki-header">
+        <span class="ki-badge" style="background:#ede9fe;color:#4c1d95;">📋 Common mistake</span>
+        <h3 class="ki-title">Goal Dashboard shows no data after importing portfolio</h3>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> Portfolio imports fine and transactions are visible, but the Goal Dashboard shows zeros or empty charts.</p>
+        <div class="ki-workaround">
+          <strong>✅ Fix — two steps needed after import</strong>
+          <ol style="font-size:0.88rem;color:#374151;margin:8px 0 0;padding-left:18px;line-height:1.8;">
+            <li>Go to <strong>Goal Planning → Create a Goal</strong> and create at least one financial goal</li>
+            <li>Go to <strong>Goal Planning → Goal Fund Manager</strong> and assign your funds to goals</li>
+          </ol>
+          <p style="margin-top:8px;">The Goal Dashboard only shows data after funds are mapped to goals. This is the most commonly skipped step.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="content-section">
     <h2>Fixed in recent releases</h2>
     <p>Issues resolved in the last two releases. If you are still seeing one of these, update to the version shown via <strong>Admin → Upgrade</strong>.</p>
     

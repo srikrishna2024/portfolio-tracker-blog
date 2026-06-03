@@ -116,6 +116,21 @@ title: Known Issues & Workarounds
     <div class="ki-issue" style="border-left:5px solid #6366f1;">
       <div class="ki-header">
         <span class="ki-badge" style="background:#ede9fe;color:#4c1d95;">📋 Common mistake</span>
+        <h3 class="ki-title">"Add Python to PATH" not ticked during Python installation — Run Setup.bat or python commands not recognised</h3>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> During Python installation, the checkbox <strong>"Add Python to PATH"</strong> was left unticked. Windows cannot find Python when you run <code>Run Setup.bat</code> or any other launcher script, showing "Python not found" or "'python' is not recognised as an internal or external command".</p>
+        <div class="ki-workaround">
+          <strong>✅ Fix</strong>
+          <p>The easiest fix is to reinstall Python — run the Python installer again, and this time tick <strong>"Add Python to PATH"</strong> on the first screen before clicking Install. Then run <strong>Run Setup.bat</strong> again.</p>
+          <p style="margin-top:6px;">Alternatively, <strong>Run Setup.bat</strong> (v7.2.0+) searches the Windows registry and common install folders automatically, so it may find Python even without PATH being set.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ki-issue" style="border-left:5px solid #6366f1;">
+      <div class="ki-header">
+        <span class="ki-badge" style="background:#ede9fe;color:#4c1d95;">📋 Common mistake</span>
         <h3 class="ki-title">Goal Dashboard shows no data after importing portfolio</h3>
       </div>
       <div class="ki-body">

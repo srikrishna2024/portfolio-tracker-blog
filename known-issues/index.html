@@ -33,6 +33,71 @@ title: Known Issues & Workarounds
     <div class="ki-issue ki-fixed">
       <div class="ki-header">
         <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
+        <span class="ki-version">Fixed in v7.1.3</span>
+        <h3 class="ki-title">setup.pyw writes DB_PASSWORD={passphrase}App instead of actual PostgreSQL password</h3>
+        <span class="ki-page">launcher/windows/setup.pyw</span>
+        <span class="ki-version">👥 1 reporter</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> _write_env() composed the app role password as passphrase+App but set DB_USER=pages_app which doesn't exist yet. App fails to connect on first launch with 'Database authentication failed'.</p><p class="ki-fixed-note">Fixed in <strong>v7.1.3</strong>. Update the app to get this fix — go to <strong>Admin → Upgrade</strong>.</p>
+      </div>
+    </div>
+
+    <div class="ki-issue ki-fixed">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
+        <span class="ki-version">Fixed in v7.1.3</span>
+        <h3 class="ki-title">setup.pyw installs packages into system Python instead of venv — Access denied on corporate machines</h3>
+        <span class="ki-page">launcher/windows/setup.pyw</span>
+        <span class="ki-version">👥 1 reporter</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> On fresh install .venv doesn't exist yet so _find_python() falls back to sys.executable (system Python). pip install then fails with WinError 5 Access denied on corporate machines where system Python is locked.</p><p class="ki-fixed-note">Fixed in <strong>v7.1.3</strong>. Update the app to get this fix — go to <strong>Admin → Upgrade</strong>.</p>
+      </div>
+    </div>
+
+    <div class="ki-issue ki-fixed">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
+        <span class="ki-version">Fixed in v7.1.3</span>
+        <h3 class="ki-title">libpq library not found — psycopg installed but cannot connect without PostgreSQL on PATH</h3>
+        <span class="ki-page">shared/db.py / requirements.txt</span>
+        <span class="ki-version">👥 1 reporter</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> psycopg (pure Python) needs libpq.dll from PostgreSQL installation. On machines where PostgreSQL bin is not on PATH, psycopg fails with 'no pq wrapper available'. Affects corporate machines with non-standard PATH.</p><p class="ki-fixed-note">Fixed in <strong>v7.1.3</strong>. Update the app to get this fix — go to <strong>Admin → Upgrade</strong>.</p>
+      </div>
+    </div>
+
+    <div class="ki-issue ki-fixed">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
+        <span class="ki-version">Fixed in v7.1.3</span>
+        <h3 class="ki-title">Double-nested folder after extraction — app path has pages_app_v7_1_2_windows inside pages_app_v7_1_2_windows</h3>
+        <span class="ki-page">build_dist.py / zip extraction</span>
+        <span class="ki-version">👥 1 reporter</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> When zip was extracted, the zip had no top-level folder prefix so Windows created the outer folder from the zip name. Files ended up at pages_app_v7_1_2_windows/pages_app_v7_1_2_windows/. All paths were wrong causing run_migrations.py and all other scripts to fail.</p><p class="ki-fixed-note">Fixed in <strong>v7.1.3</strong>. Update the app to get this fix — go to <strong>Admin → Upgrade</strong>.</p>
+      </div>
+    </div>
+
+    <div class="ki-issue ki-fixed">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
+        <span class="ki-version">Fixed in v7.1.3</span>
+        <h3 class="ki-title">pg_dump/pg_restore port passed as int to subprocess — TypeError on Windows with PostgreSQL on PATH</h3>
+        <span class="ki-page">1_Admin_Tools/run_migrations.py</span>
+        <span class="ki-version">👥 1 reporter</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> subprocess.run() requires all args to be strings. params['port'] is an int. Works on machines where pg_dump is not found (skipped), fails on machines where PostgreSQL bin is on PATH (PostgreSQL 18).</p><p class="ki-fixed-note">Fixed in <strong>v7.1.3</strong>. Update the app to get this fix — go to <strong>Admin → Upgrade</strong>.</p>
+      </div>
+    </div>
+
+    <div class="ki-issue ki-fixed">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
         <span class="ki-version">Fixed in v7.1.2</span>
         <h3 class="ki-title">Setup Wizard fails at Database setup: ImportError connect_to_db_super from shared.db</h3>
         <span class="ki-page">Setup Wizard → Database setup step (step 3)</span>
@@ -40,6 +105,45 @@ title: Known Issues & Workarounds
       </div>
       <div class="ki-body">
         <p><strong>What happens:</strong> Setup Wizard fails at Database setup with: Tables could not be created: ImportError connect_to_db_super from shared.db. Root cause: Windows internally shortens folder names containing dots+numbers (e.g. pages_app_v7.1.1_windows → PAGES_~1.1_W). This breaks Python loading of compiled .pyd modules. Affects all Windows versions when app is extracted to a path with dots in the folder name.</p><p class="ki-fixed-note">Fixed in <strong>v7.1.2</strong>. Update the app to get this fix — go to <strong>Admin → Upgrade</strong>.</p>
+      </div>
+    </div>
+
+    <div class="ki-issue ki-fixed">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
+        <span class="ki-version">Fixed in v7.1.3</span>
+        <h3 class="ki-title">Backup &amp; Restore cannot find pg_restore.exe — WinError 2 on restore</h3>
+        <span class="ki-page">1_Admin_Tools/new_backup.py</span>
+        <span class="ki-version">👥 1 reporter</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> detect_postgresql_bin_path() only scanned hardcoded C:\Program Files\PostgreSQL. On machines with custom install paths or PostgreSQL 18, the path detection failed and pg_restore.exe was not found.</p><p class="ki-fixed-note">Fixed in <strong>v7.1.3</strong>. Update the app to get this fix — go to <strong>Admin → Upgrade</strong>.</p>
+      </div>
+    </div>
+
+    <div class="ki-issue ki-fixed">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
+        <span class="ki-version">Fixed in v7.1.3</span>
+        <h3 class="ki-title">Start App.bat timeout 30 seconds too short — shows error even when app is running</h3>
+        <span class="ki-page">launcher/windows/Start App.bat</span>
+        <span class="ki-version">👥 1 reporter</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> On first launch packages are loading which takes longer than 30s. Bat file gives up and shows error even though Uvicorn started successfully. User sees error but app is actually accessible at localhost:8501.</p><p class="ki-fixed-note">Fixed in <strong>v7.1.3</strong>. Update the app to get this fix — go to <strong>Admin → Upgrade</strong>.</p>
+      </div>
+    </div>
+
+    <div class="ki-issue ki-fixed">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
+        <span class="ki-version">Fixed in v7.1.3</span>
+        <h3 class="ki-title">launcher shows App: Not running even when app is accessible — IPv4/IPv6 mismatch</h3>
+        <span class="ki-page">launcher/windows/launch.pyw</span>
+        <span class="ki-version">👥 1 reporter</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> On Windows with IPv6 enabled, localhost resolves to ::1 but port probe checked only 127.0.0.1. Streamlit bound to ::1 so probe failed. Launcher showed Not running but app was accessible.</p><p class="ki-fixed-note">Fixed in <strong>v7.1.3</strong>. Update the app to get this fix — go to <strong>Admin → Upgrade</strong>.</p>
       </div>
     </div>
   </div>

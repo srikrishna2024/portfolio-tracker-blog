@@ -57,16 +57,19 @@ title: Getting Started
     <div class="gs-step-content">
       <h2>Unzip the download</h2>
       <p class="gs-step-time">⏱️ 2 minutes</p>
-      <p>Unzip the file you received to a permanent folder on your computer. Choose a location where it will stay. Do not use your Downloads folder.</p>
+      <p>Unzip the file to a permanent folder on your computer. Choose a location where it will stay — do not leave it in Downloads.</p>
       <div class="gs-platform-grid">
         <div class="gs-platform-card">
           <div class="gs-platform-label">🪟 Windows</div>
-          <p>Suggested location: <code>C:\pages_app</code></p>
-          <p>Right-click the zip file → Extract All → choose the destination.</p>
+          <p>Right-click the zip → Extract All → when asked for destination, type <code>C:\</code> and click Extract. This creates <code>C:\pages_app_vX_X_X_windows\</code> automatically. Then rename that folder to <code>C:\pages_app</code> for a shorter name.</p>
+          <div class="gs-note warning" style="margin-top:0.75rem;">
+            <strong>⚠️ Common mistake — double-nested folder:</strong> Do not extract <em>into</em> an existing folder like <code>C:\pages_app\</code>. If you do, files end up at <code>C:\pages_app\pages_app_vX_X_X_windows\</code> — a double-nested path that Windows shortens internally and breaks the app with an ImportError on startup.<br/><br/>
+            <strong>Fix if this happened:</strong> Open <code>C:\pages_app\pages_app_vX_X_X_windows\</code>, select all (Ctrl+A), cut (Ctrl+X), paste into <code>C:\pages_app\</code>, delete the empty subfolder, then re-run Run Setup.bat.
+          </div>
         </div>
         <div class="gs-platform-card">
           <div class="gs-platform-label">🍎 Mac</div>
-          <p>Suggested location: your home folder → <code>~/pages_app</code></p>
+          <p>Suggested location: <code>~/pages_app</code></p>
           <p>Double-click the zip file to extract it.</p>
         </div>
       </div>
@@ -77,43 +80,9 @@ title: Getting Started
   <div class="gs-step-block">
     <div class="gs-step-num">2</div>
     <div class="gs-step-content">
-      <h2>Launch the software</h2>
-      <p class="gs-step-time">⏱️ 2 minutes</p>
-      <p>Inside the extracted folder, open the <strong>launcher</strong> folder for your platform.</p>
-
-      <div class="gs-platform-grid">
-        <div class="gs-platform-card">
-          <div class="gs-platform-label">🪟 Windows</div>
-          <p>Open <code>launcher\windows\</code></p>
-          <ol>
-            <li>Double-click <strong>Start DB.bat</strong>. Windows will ask for permission; click Yes</li>
-            <li>Double-click <strong>Start App.bat</strong>. Your browser opens automatically</li>
-          </ol>
-          <p class="gs-tip">If the .bat files flash and disappear, use <strong>launch.pyw</strong> instead. It opens a graphical window with Start / Stop buttons.</p>
-        </div>
-        <div class="gs-platform-card">
-          <div class="gs-platform-label">🍎 Mac</div>
-          <p>Open <code>launcher/mac/</code></p>
-          <ol>
-            <li>First time only: double-click <strong>setup_mac_permissions.command</strong> (right-click → Open if Mac blocks it)</li>
-            <li>Double-click <strong>start_db.command</strong></li>
-            <li>Double-click <strong>start_app.command</strong>. Your browser opens automatically</li>
-          </ol>
-          <p class="gs-tip">If the .command files won't open, use <strong>launch_gui.command</strong> instead.</p>
-        </div>
-      </div>
-
-      <p>Your browser opens at <code>http://localhost:8501</code>. You will see the Home page. This address is your own computer. Nothing is going to the internet.</p>
-    </div>
-  </div>
-
-  <!-- Step 3 -->
-  <div class="gs-step-block">
-    <div class="gs-step-num">3</div>
-    <div class="gs-step-content">
       <h2>Run the Setup tool</h2>
       <p class="gs-step-time">⏱️ 5 minutes</p>
-      <p>Open the <code>launcher\windows\</code> folder and double-click <strong>setup.pyw</strong>. A setup window opens and asks for four things:</p>
+      <p>Open the <code>launcher\windows\</code> folder and double-click <strong>Run Setup.bat</strong>. A setup window opens and asks for four things:</p>
 
       <div class="gs-table-wrap">
         <table class="gs-table">
@@ -131,13 +100,41 @@ title: Getting Started
           </tr>
           <tr>
             <td>🔐 <strong>Reset passphrase</strong></td>
-            <td>Create one yourself (e.g. <code>MyFinance2025</code>) and write it down. This protects your settings page</td>
+            <td>Create one yourself (e.g. <code>MyFinance2025</code>) and write it down</td>
           </tr>
         </table>
       </div>
 
-      <p>Click <strong>Test DB Connection</strong> first to confirm PostgreSQL is reachable and the password is correct. Once it shows a green tick, click <strong>Run Setup</strong>. It installs packages, saves your credentials, and creates the database automatically. When it shows "Setup Complete", close the window.</p>
-      <p class="gs-tip">After setup you can access <strong>Admin → Setup Wizard</strong> in the app to enable AI features or change settings.</p>
+      <p>Click <strong>Test DB Connection</strong> first to confirm PostgreSQL is reachable. Once it shows a green tick, click <strong>Run Setup</strong>. It installs packages, saves your credentials, and creates the database automatically. When it shows "Setup Complete", close the window.</p>
+      <p class="gs-tip">If double-clicking Run Setup.bat opens and closes immediately, see the <a href="{{ '/known-issues/' | relative_url }}">Known Issues</a> page for the fix.</p>
+    </div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="gs-step-block">
+    <div class="gs-step-num">3</div>
+    <div class="gs-step-content">
+      <h2>Launch the app and apply any pending updates</h2>
+      <p class="gs-step-time">⏱️ 2 minutes</p>
+      <div class="gs-platform-grid">
+        <div class="gs-platform-card">
+          <div class="gs-platform-label">🪟 Windows</div>
+          <ol>
+            <li>Double-click <strong>Start DB.bat</strong> — click Yes when Windows asks for permission</li>
+            <li>Double-click <strong>Start App.bat</strong> — your browser opens automatically at <code>http://localhost:8501</code></li>
+          </ol>
+          <p class="gs-tip">If the browser doesn't open, go to <code>http://localhost:8501</code> manually and bookmark it.</p>
+        </div>
+        <div class="gs-platform-card">
+          <div class="gs-platform-label">🍎 Mac</div>
+          <ol>
+            <li>First time only: double-click <strong>setup_mac_permissions.command</strong></li>
+            <li>Double-click <strong>start_db.command</strong></li>
+            <li>Double-click <strong>start_app.command</strong></li>
+          </ol>
+        </div>
+      </div>
+      <p style="margin-top:1rem;">Once the app is open, go to <strong>Admin Tools → Setup Wizard</strong>. If you see a yellow <em>"Schema updates pending"</em> banner, click <strong>▶ Apply Now</strong>. This takes under a minute and ensures all features work correctly. If no banner appears, skip to the next step.</p>
     </div>
   </div>
 
@@ -145,15 +142,22 @@ title: Getting Started
   <div class="gs-step-block">
     <div class="gs-step-num">4</div>
     <div class="gs-step-content">
-      <h2>Download fund data</h2>
-      <p class="gs-step-time">⏱️ 10–20 minutes (mostly waiting)</p>
-      <p>Before you can import your portfolio, the software needs to download the full list of mutual fund schemes and their historical NAV prices from AMFI. This happens once and takes 10–20 minutes depending on your internet speed.</p>
+      <h2>Load fund data</h2>
+      <p class="gs-step-time">⏱️ 2 min (from backup) or 10–20 min (download)</p>
+      <p>Before importing your portfolio, the software needs the full list of fund schemes and historical NAV prices.</p>
+
+      <p><strong>Option 1 — From backup files (faster, recommended):</strong><br/>
+      You received two files with your welcome email: <code>fund_master_data.dump</code> and <code>nav_history.dump</code>. Go to <strong>Admin Tools → Backup → Restore</strong> tab.</p>
       <ol>
-        <li>Go to <strong>NAV Data Manager → Data Pipeline</strong></li>
-        <li>Click <strong>Weekly Maintenance</strong></li>
-        <li>A progress bar shows each step. Wait for it to complete.</li>
+        <li>Upload <code>fund_master_data.dump</code> → select <strong>"Load fund prices from a backup"</strong> → click Restore. Wait for Fund master row count to show ~16,000 ✅</li>
+        <li>Upload <code>nav_history.dump</code> → select <strong>"Load fund prices from a backup"</strong> → click Restore. Wait for NAV history row count to show 1,000,000+ ✅</li>
       </ol>
-      <p>After this first download, daily updates take 2–5 minutes using the <strong>Daily Refresh</strong> button on the same page.</p>
+      <div class="gs-note warning">
+        Always use <strong>"Load fund prices from a backup"</strong> for these files — not "Restore to this machine". The wrong restore type will overwrite your personal data.
+      </div>
+
+      <p style="margin-top:1rem;"><strong>Option 2 — Download fresh (if you don't have the backup files):</strong><br/>
+      Go to <strong>NAV Data Manager → Data Pipeline → Weekly Maintenance</strong>. Takes 10–20 min on first run.</p>
     </div>
   </div>
 
@@ -168,15 +172,16 @@ title: Getting Started
       <div class="gs-import-grid">
         <div class="gs-import-card">
           <div class="gs-import-label">📄 Mutual funds</div>
-          <p>Go to <strong>Data Import → Equity Import</strong>. Upload your CAMS PDF or MF Central PDF / Excel. The software reads all your transactions automatically. Review the preview, then confirm.</p>
-          <p class="gs-tip">To download your statement: CAMS → camsonline.com | MF Central → mfcentral.com → CAS Download</p>
+          <p>Go to <strong>Data Import → Equity Import</strong>. Upload your CAMS PDF or MF Central PDF / Excel. Review the preview, then confirm import.</p>
+          <p class="gs-tip">CAMS → camsonline.com | MF Central → mfcentral.com → CAS Download</p>
         </div>
         <div class="gs-import-card">
           <div class="gs-import-label">🏦 EPF / NPS / PPF / Super</div>
-          <p>Go to <strong>Data Import → Debt Import</strong>. Each tab handles one instrument type. Upload the statement PDF or CSV from your provider.</p>
-          <p class="gs-tip">EPF: UMANG app PDF | NPS: NSDL CRA statement | PPF: account statement PDF</p>
+          <p>Go to <strong>Data Import → Debt Import</strong>. Each tab handles one instrument type.</p>
+          <p class="gs-tip">EPF: UMANG app PDF | NPS: NSDL CRA statement | PPF: bank statement PDF</p>
         </div>
       </div>
+      <p class="gs-tip" style="margin-top:0.75rem;">If something looks wrong after importing (wrong fund names, missing values), use the <strong>Reset Equity Portfolio Data</strong> option at the bottom of the Equity Import page to clear and re-import cleanly.</p>
     </div>
   </div>
 
@@ -188,9 +193,9 @@ title: Getting Started
       <p class="gs-step-time">⏱️ 5 minutes</p>
       <ol>
         <li>Go to <strong>Goal Planning → Create a Goal</strong></li>
-        <li>Describe each goal in plain English. For example: <em>"Save ₹50 lakhs for my daughter's college in 12 years"</em> or <em>"Build a ₹2 crore retirement corpus in 20 years"</em></li>
-        <li>Review and confirm the details the software fills in, then save.</li>
-        <li>Repeat for each financial goal you want to track.</li>
+        <li>Describe each goal in plain English — e.g. <em>"Save ₹50 lakhs for my daughter's college in 12 years"</em> or <em>"Build a ₹2 crore retirement corpus in 20 years"</em></li>
+        <li>Review the details the software fills in, then save</li>
+        <li>Repeat for each financial goal you want to track</li>
       </ol>
     </div>
   </div>
@@ -202,14 +207,14 @@ title: Getting Started
       <h2>Assign your funds to goals</h2>
       <p class="gs-step-time">⏱️ 5 minutes</p>
       <div class="gs-note warning">
-        <strong>Do not skip this step.</strong> Without it, the software cannot calculate your goal progress, health score, or required SIP. The Goal Dashboard will show no meaningful data.
+        <strong>Do not skip this step.</strong> Without it, the Goal Dashboard, health score, and SIP adequacy check show no meaningful data.
       </div>
       <ol>
         <li>Go to <strong>Goal Planning → Goal Fund Manager</strong></li>
-        <li>For each fund you hold, select which goal it is saving towards. For example: this mid-cap fund is for education, this large-cap fund is for retirement.</li>
-        <li>A single fund can be split across multiple goals by percentage — useful if one fund is serving two goals simultaneously.</li>
+        <li>For each fund, select which goal it is saving towards</li>
+        <li>A single fund can be split across multiple goals by percentage</li>
       </ol>
-      <p>Once this is done, open <strong>Goal Planning → Goal Dashboard</strong> to see your portfolio health score and how each goal is tracking.</p>
+      <p>Once done, open <strong>Goal Planning → Goal Dashboard</strong> to see your health score and how each goal is tracking.</p>
     </div>
   </div>
 

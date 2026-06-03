@@ -139,6 +139,21 @@ title: Known Issues & Workarounds
     <div class="ki-issue" style="border-left:5px solid #6366f1;">
       <div class="ki-header">
         <span class="ki-badge" style="background:#ede9fe;color:#4c1d95;">📋 Common mistake</span>
+        <h3 class="ki-title">App extracted into a double-nested folder — path gets mangled by Windows causing ImportError</h3>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> When extracting the zip, Windows creates a subfolder from the zip filename. If you extract to <code>C:\pages_app\</code>, the files end up at <code>C:\pages_app\pages_app_v7_2_0_windows\</code> instead. Windows then shortens the nested path (e.g. to <code>C:\PAGES_~1\PAGES_~1\</code>), which breaks Python's compiled module loading and causes <code>ImportError: no pq wrapper available / libpq library not found</code>.</p>
+        <div class="ki-workaround">
+          <strong>✅ Fix</strong>
+          <p><strong>Option 1 (easiest):</strong> Extract the zip directly to <code>C:\pages_app</code> — right-click the zip → Extract All → type <code>C:\pages_app</code> as the destination. Files land in the right place immediately.</p>
+          <p style="margin-top:6px;"><strong>Option 2 (if already extracted wrong):</strong> Open <code>C:\pages_app\pages_app_v7_2_0_windows\</code>, select everything (Ctrl+A), cut (Ctrl+X), paste into <code>C:\pages_app\</code>, then delete the now-empty subfolder. Run <strong>Run Setup.bat</strong> again.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ki-issue" style="border-left:5px solid #6366f1;">
+      <div class="ki-header">
+        <span class="ki-badge" style="background:#ede9fe;color:#4c1d95;">📋 Common mistake</span>
         <h3 class="ki-title">Wrong restore type selected when loading fund data — "Restore to this machine" instead of "Load fund prices"</h3>
       </div>
       <div class="ki-body">

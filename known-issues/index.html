@@ -41,6 +41,31 @@ title: Known Issues & Workarounds
       <div class="ki-header">
         <span class="ki-badge ki-badge-noncritical">⚠️ Open</span>
         <span class="ki-version">v7.2.0</span>
+        <h3 class="ki-title">CAMS PDF parser picks up noise as scheme names — "Demat)", merger notes, "(Non Demat)" appear in import</h3>
+        <span class="ki-page">shared/debt_statement_parsers.py → _parse_cams_pdf</span>
+        <span class="ki-version">👥 1 reporter</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> Some CAMS statements include tags like <code>(Non Demat)</code>, fund merger notes like <code>Treasury Plan - PF Option, ST Gilt Fund merged)</code>, or fragment text like <code>Demat)</code> in the scheme listing. The parser picks these up as scheme names, which fail to match any AMFI code — resulting in missing NAV data and understated portfolio values.</p>
+        <div class="ki-workaround">
+          <strong>✅ Workaround — use the ISIN-based parser instead</strong>
+          <p>The ISIN-based parser resolves scheme names directly from AMFI using fund codes — it completely bypasses name matching and is unaffected by these tags.</p>
+          <ol style="font-size:0.88rem;color:#374151;margin:8px 0 0;padding-left:18px;line-height:1.8;">
+            <li>Go to <strong>Data Import → Equity Import</strong> and upload your CAMS PDF</li>
+            <li>Open the <strong>"📥 Parse &amp; Preview CSV (ISIN-based)"</strong> expander at the top of the page</li>
+            <li>Click <strong>Parse &amp; Resolve (ISIN)</strong> and review the resolved scheme names and codes</li>
+            <li>If the data looks correct, scroll to the bottom and use <strong>Reset Equity Portfolio Data</strong> (type RESET to confirm) to clear the previous bad import</li>
+            <li>Re-import using the ISIN-resolved data</li>
+          </ol>
+        </div>
+        <p class="ki-eta">Fix scheduled for next release.</p>
+      </div>
+    </div>
+
+    <div class="ki-issue ki-noncritical">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-noncritical">⚠️ Open</span>
+        <span class="ki-version">v7.2.0</span>
         <h3 class="ki-title">Restore fund data fails on PostgreSQL 18 — incompatible flags error</h3>
         <span class="ki-page">1_Admin_Tools/new_backup.py</span>
         <span class="ki-version">👥 1 reporter</span>

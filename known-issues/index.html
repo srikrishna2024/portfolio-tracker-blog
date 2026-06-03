@@ -22,6 +22,24 @@ title: Known Issues & Workarounds
       <div class="ki-header">
         <span class="ki-badge ki-badge-noncritical">⚠️ Open</span>
         <span class="ki-version">v7.2.0</span>
+        <h3 class="ki-title">Upgrade launcher buttons (Refresh Checks / Start Upgrade) not visible — window too small</h3>
+        <span class="ki-page">launcher/windows/upgrade_launcher.pyw</span>
+        <span class="ki-version">👥 2 reporters</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> The upgrade launcher window is not tall enough on some screen resolutions. The pre-flight checklist fills the window and the <strong>Refresh Checks</strong> and <strong>▶ Start Upgrade</strong> buttons are hidden below the visible area.</p>
+        <div class="ki-workaround">
+          <strong>✅ Workaround</strong>
+          <p>Drag the <strong>bottom edge of the window downward</strong> to make it taller — the buttons will appear. Alternatively, scroll down inside the window.</p>
+        </div>
+        <p class="ki-eta">Fix scheduled for next release — buttons will be moved to the top of the window so they are always visible.</p>
+      </div>
+    </div>
+
+    <div class="ki-issue ki-noncritical">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-noncritical">⚠️ Open</span>
+        <span class="ki-version">v7.2.0</span>
         <h3 class="ki-title">Browser does not open automatically after clicking Start App.bat</h3>
         <span class="ki-page">launcher/windows/Start App.bat</span>
         <span class="ki-version">👥 1 reporter</span>

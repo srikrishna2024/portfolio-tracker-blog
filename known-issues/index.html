@@ -59,6 +59,28 @@ title: Known Issues & Workarounds
       <div class="ki-header">
         <span class="ki-badge ki-badge-noncritical">⚠️ Open</span>
         <span class="ki-version">v7.2.0</span>
+        <h3 class="ki-title">Restore shows "failed" error even when fund data loads successfully — PostgreSQL 18 exits non-zero on warnings</h3>
+        <span class="ki-page">1_Admin_Tools/new_backup.py → do_restore</span>
+        <span class="ki-version">👥 2 reporters</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> After clicking Restore with "Load fund prices from a backup", the UI shows a red <em>Restore failed</em> error. This is caused by PostgreSQL 18 returning exit code 1 even when the restore completes successfully — it treats informational notices and harmless warnings as errors. The fund data may have actually loaded correctly despite the error message.</p>
+        <div class="ki-workaround">
+          <strong>✅ Workaround — verify using row counts and Data Pipeline</strong>
+          <p><strong>Step 1 — Check row counts on the Restore page:</strong><br/>
+          After the error, look at the row count metrics shown above the Restore button. If <strong>Fund master</strong> and <strong>NAV history</strong> show numbers greater than zero, the restore worked. Click <strong>🔄 Refresh row counts</strong> to update the display.</p>
+          <p style="margin-top:8px;"><strong>Step 2 — Verify in Data Pipeline:</strong><br/>
+          Go to <strong>NAV Data Manager → Data Pipeline</strong>. If fund names appear in the fund selector dropdowns, the master data loaded correctly. Run <strong>Daily Refresh</strong> — if it completes without "no funds found" errors, the NAV history is also in place.</p>
+          <p style="margin-top:8px;">If row counts are zero after refreshing, the restore genuinely failed — reply to your support email with the full error text shown in the restore log.</p>
+        </div>
+        <p class="ki-eta">Fix scheduled for next release — the app will distinguish real errors from harmless warnings so the success/failure message is accurate.</p>
+      </div>
+    </div>
+
+    <div class="ki-issue ki-noncritical">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-noncritical">⚠️ Open</span>
+        <span class="ki-version">v7.2.0</span>
         <h3 class="ki-title">CAMS PDF parser picks up noise as scheme names — "Demat)", merger notes, "(Non Demat)" appear in import</h3>
         <span class="ki-page">shared/debt_statement_parsers.py → _parse_cams_pdf</span>
         <span class="ki-version">👥 1 reporter</span>

@@ -20,7 +20,7 @@ title: Known Issues & Workarounds
     
     <div class="ki-empty">
       <span class="ki-empty-icon">✅</span>
-      <p>No open issues in the current release (<strong>v7.1.4</strong>).<br>
+      <p>No open issues in the current release (<strong>v7.2.0</strong>).<br>
       If you are experiencing a problem, check the <a href="{{ '/faq/' | relative_url }}">FAQ</a>
       or use <strong>Admin → Report a Bug</strong> inside the app.</p>
     </div>
@@ -92,6 +92,19 @@ title: Known Issues & Workarounds
       </div>
       <div class="ki-body">
         <p><strong>What happens:</strong> subprocess.run() requires all args to be strings. params['port'] is an int. Works on machines where pg_dump is not found (skipped), fails on machines where PostgreSQL bin is on PATH (PostgreSQL 18).</p><p class="ki-fixed-note">Fixed in <strong>v7.1.3</strong>. Update the app to get this fix — go to <strong>Admin → Upgrade</strong>.</p>
+      </div>
+    </div>
+
+    <div class="ki-issue ki-fixed">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
+        <span class="ki-version">Fixed in v7.1.2</span>
+        <h3 class="ki-title">Setup Wizard fails at Database setup: ImportError connect_to_db_super from shared.db</h3>
+        <span class="ki-page">Setup Wizard → Database setup step (step 3)</span>
+        <span class="ki-version">👥 1 reporter</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> Setup Wizard fails at Database setup with: Tables could not be created: ImportError connect_to_db_super from shared.db. Root cause: Windows internally shortens folder names containing dots+numbers (e.g. pages_app_v7.1.1_windows → PAGES_~1.1_W). This breaks Python loading of compiled .pyd modules. Affects all Windows versions when app is extracted to a path with dots in the folder name.</p><p class="ki-fixed-note">Fixed in <strong>v7.1.2</strong>. Update the app to get this fix — go to <strong>Admin → Upgrade</strong>.</p>
       </div>
     </div>
 

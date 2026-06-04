@@ -207,6 +207,36 @@ title: Known Issues & Workarounds
     <div class="ki-issue" style="border-left:5px solid #6366f1;">
       <div class="ki-header">
         <span class="ki-badge" style="background:#ede9fe;color:#4c1d95;">💡 First-time tip</span>
+        <h3 class="ki-title">Import shows "Missing — Historical Period (270)" and "Skipped / Unknown Type (1060)" — what to do</h3>
+      </div>
+      <div class="ki-body">
+        <div class="ki-workaround">
+          <strong>✅ Missing — Historical Period</strong>
+          <p>These are valid transactions from your statement that are not yet in the database (they predate your latest imported date). You should import all of them:</p>
+          <ol style="font-size:0.88rem;color:#374151;margin:8px 0 0;padding-left:18px;line-height:1.9;">
+            <li>Scroll to the <strong>"📂 Missing — Historical Period"</strong> section</li>
+            <li>The Import? checkboxes are pre-ticked — verify the transactions look correct</li>
+            <li>Click <strong>Import Selected</strong> — these won't create duplicates, the system already checked</li>
+          </ol>
+        </div>
+        <div class="ki-workaround" style="margin-top:12px;">
+          <strong>✅ Skipped / Unknown Type — how to fix</strong>
+          <p>Scroll to the <strong>"⚠️ Skipped / Unknown Type"</strong> section. In the table, click directly on the word <em>unknown</em> in the <strong>Type</strong> column — it becomes a dropdown. Use the <strong>Raw Type</strong> column to know what to pick:</p>
+          <ul style="font-size:0.88rem;color:#374151;margin:8px 0;padding-left:18px;line-height:1.9;">
+            <li>Dividend Reinvestment → <strong>invest</strong></li>
+            <li>SWP / Systematic Withdrawal → <strong>redeem</strong></li>
+            <li>Switch Out → <strong>switch_out</strong></li>
+            <li>Switch In → <strong>switch_in</strong></li>
+          </ul>
+          <p>Once all rows are fixed, click <strong>Apply Type Fixes</strong>. If there are hundreds of unknown rows, most are likely the same type repeated — fix one per unique Raw Type description and Apply Fixes handles the rest.</p>
+          <p style="margin-top:6px;"><strong>Tip:</strong> If you have many unknown types, the <strong>ISIN-based parser</strong> (📥 Parse &amp; Preview CSV expander at the top) handles non-standard transaction descriptions more accurately.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ki-issue" style="border-left:5px solid #6366f1;">
+      <div class="ki-header">
+        <span class="ki-badge" style="background:#ede9fe;color:#4c1d95;">💡 First-time tip</span>
         <h3 class="ki-title">Import shows "944 New", "269 No code match", "135 Unknown type" — what does it all mean?</h3>
       </div>
       <div class="ki-body">

@@ -20,7 +20,7 @@ title: Known Issues & Workarounds
     
     <div class="ki-empty">
       <span class="ki-empty-icon">✅</span>
-      <p>No open issues in the current release (<strong>v7.2.1</strong>).<br>
+      <p>No open issues in the current release (<strong>v7.2.2</strong>).<br>
       If you are experiencing a problem, check the <a href="{{ '/faq/' | relative_url }}">FAQ</a>
       or use <strong>Admin → Report a Bug</strong> inside the app.</p>
     </div>
@@ -198,74 +198,6 @@ title: Known Issues & Workarounds
         <p><strong>What happens:</strong> pg_restore fails on PostgreSQL 18 when using Restore to this machine. PostgreSQL 16+ does not allow --single-transaction combined with --create.</p><p class="ki-fixed-note">Fixed in <strong>v7.2.1</strong>. Update the app to get this fix — go to <strong>Admin → Upgrade</strong>.</p>
       </div>
     </div>
-  </div>
-
-  <div class="content-section">
-    <h2>First-time import tips</h2>
-    <p>These are not bugs — they are things that confuse first-time users during the initial portfolio import.</p>
-
-    <div class="ki-issue" style="border-left:5px solid #6366f1;">
-      <div class="ki-header">
-        <span class="ki-badge" style="background:#ede9fe;color:#4c1d95;">💡 First-time tip</span>
-        <h3 class="ki-title">Import shows "Missing — Historical Period (270)" and "Skipped / Unknown Type (1060)" — what to do</h3>
-      </div>
-      <div class="ki-body">
-        <div class="ki-workaround">
-          <strong>✅ Missing — Historical Period</strong>
-          <p>These are valid transactions from your statement that are not yet in the database (they predate your latest imported date). You should import all of them:</p>
-          <ol style="font-size:0.88rem;color:#374151;margin:8px 0 0;padding-left:18px;line-height:1.9;">
-            <li>Scroll to the <strong>"📂 Missing — Historical Period"</strong> section</li>
-            <li>The Import? checkboxes are pre-ticked — verify the transactions look correct</li>
-            <li>Click <strong>Import Selected</strong> — these won't create duplicates, the system already checked</li>
-          </ol>
-        </div>
-        <div class="ki-workaround" style="margin-top:12px;">
-          <strong>✅ Skipped / Unknown Type — how to fix</strong>
-          <p>Scroll to the <strong>"⚠️ Skipped / Unknown Type"</strong> section. In the table, click directly on the word <em>unknown</em> in the <strong>Type</strong> column — it becomes a dropdown. Use the <strong>Raw Type</strong> column to know what to pick:</p>
-          <ul style="font-size:0.88rem;color:#374151;margin:8px 0;padding-left:18px;line-height:1.9;">
-            <li>Dividend Reinvestment → <strong>invest</strong></li>
-            <li>SWP / Systematic Withdrawal → <strong>redeem</strong></li>
-            <li>Switch Out → <strong>switch_out</strong></li>
-            <li>Switch In → <strong>switch_in</strong></li>
-          </ul>
-          <p>Once all rows are fixed, click <strong>Apply Type Fixes</strong>. If there are hundreds of unknown rows, most are likely the same type repeated — fix one per unique Raw Type description and Apply Fixes handles the rest.</p>
-          <p style="margin-top:6px;"><strong>Tip:</strong> If you have many unknown types, the <strong>ISIN-based parser</strong> (📥 Parse &amp; Preview CSV expander at the top) handles non-standard transaction descriptions more accurately.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="ki-issue" style="border-left:5px solid #6366f1;">
-      <div class="ki-header">
-        <span class="ki-badge" style="background:#ede9fe;color:#4c1d95;">💡 First-time tip</span>
-        <h3 class="ki-title">Import shows "944 New", "269 No code match", "135 Unknown type" — what does it all mean?</h3>
-      </div>
-      <div class="ki-body">
-        <p>These numbers are normal on a first import. Here is what each means and what to do:</p>
-        <ul style="font-size:0.9rem;color:#374151;line-height:1.9;margin:10px 0;padding-left:20px;">
-          <li><strong>"New Transactions — Not in DB" (e.g. 944)</strong> — this is your full transaction history waiting to be imported. This is the target. On a first import this equals your total history. Nothing to worry about.</li>
-          <li><strong>"No code match" / Unmatched schemes</strong> — the parser found fund names it couldn't match to an AMFI code. Scroll to the <strong>⚠️ Unmatched Schemes</strong> panel. For each fund, pick the correct match from the dropdown or enter the 6-digit AMFI code manually, then click <strong>Apply Fixes</strong>.</li>
-          <li><strong>"Unknown type"</strong> — some transactions (e.g. dividend reinvestment, SWP) have a description the parser didn't recognise. Go to the <strong>Skipped / Unknown Type</strong> table, set the Type to invest / redeem / switch_in / switch_out for each row, then click <strong>Apply Type Fixes</strong>.</li>
-        </ul>
-        <div class="ki-workaround">
-          <strong>✅ Step-by-step order</strong>
-          <ol style="font-size:0.88rem;color:#374151;margin:8px 0 0;padding-left:18px;line-height:1.9;">
-            <li>Fix unmatched schemes → click Apply Fixes</li>
-            <li>Fix unknown types → click Apply Type Fixes</li>
-            <li>Click <strong>Import New</strong> in the "New Transactions" section</li>
-          </ol>
-          <p style="margin-top:8px;"><strong>To find an AMFI code:</strong> search by fund name at <a href="https://www.mfapi.in" style="color:#6366f1;font-weight:600;" target="_blank">mfapi.in</a> — shows the 6-digit code instantly, no login needed.</p>
-          <p style="margin-top:6px;"><strong>Faster alternative:</strong> Use the <strong>ISIN-based parser</strong> — open the "📥 Parse &amp; Preview CSV (ISIN-based)" expander at the top of Equity Import. It resolves funds from ISIN codes directly, bypassing name matching entirely — more accurate for renamed or merged funds.</p>
-        </div>
-        <div style="margin-top:14px;background:#f0f9ff;border-left:4px solid #0ea5e9;border-radius:0 7px 7px 0;padding:12px 16px;">
-          <p style="margin:0;font-size:0.88rem;color:#0c4a6e;line-height:1.7;">
-            <strong>Do I need to fix unmatched schemes every time I import?</strong><br/>
-            Only on the first import. On subsequent imports, your existing transactions show as <em>duplicates (already in DB)</em> and are skipped automatically — the same unmatched fund names won't appear again. Only genuinely new transactions (new SIP instalments etc.) need matching, and those typically have standard names the system handles automatically.<br/><br/>
-            If a fund keeps showing as unmatched on every import, use the <strong>ISIN-based parser</strong> — ISIN codes never change, so it resolves permanently without any manual fixing.
-          </p>
-        </div>
-      </div>
-    </div>
-
   </div>
 
   <div class="content-section">

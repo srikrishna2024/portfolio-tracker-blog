@@ -17,7 +17,7 @@ title: Known Issues & Workarounds
 
   <div class="content-section">
     <h2>Open issues</h2>
-
+    
     <div class="ki-empty">
       <span class="ki-empty-icon">✅</span>
       <p>No open issues in the current release (<strong>v7.2.1</strong>).<br>
@@ -29,256 +29,7 @@ title: Known Issues & Workarounds
   <div class="content-section">
     <h2>Fixed in recent releases</h2>
     <p>Issues resolved in the last two releases. If you are still seeing one of these, update to the version shown via <strong>Admin → Upgrade</strong>.</p>
-
-    <div class="ki-issue ki-fixed">
-      <div class="ki-header">
-        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
-        <span class="ki-version">Fixed in v7.2.1</span>
-        <h3 class="ki-title">NPS scheme switches counted as contributions — inflated "Total Invested" figure</h3>
-        <span class="ki-page">shared/debt_utils.py</span>
-        <span class="ki-version">👥 1 reporter</span>
-      </div>
-      <div class="ki-body">
-        <p><strong>What happened:</strong> Scheme switch transactions (inter-scheme transfers between NPS funds) were being included in the total contributed calculation, massively overstating "Total Invested". Partial withdrawals were also not being subtracted.</p>
-        <p class="ki-fixed-note">Fixed in <strong>v7.2.1</strong>. Update the app — go to <strong>Admin → Upgrade</strong>.</p>
-      </div>
-    </div>
-
-    <div class="ki-issue ki-fixed">
-      <div class="ki-header">
-        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
-        <span class="ki-version">Fixed in v7.2.1</span>
-        <h3 class="ki-title">CAMS import may miss redemption transactions or show them as "unknown" type</h3>
-        <span class="ki-page">shared/debt_statement_parsers.py</span>
-        <span class="ki-version">👥 1 reporter</span>
-      </div>
-      <div class="ki-body">
-        <p><strong>What happened:</strong> Redemption transactions described as "Repurchase", "SWP", "Systematic Withdrawal Plan Payout", or "Systematic Transfer Out" were not recognised by the standard parser and appeared as "unknown" type or were missed entirely.</p>
-        <p class="ki-fixed-note">Fixed in <strong>v7.2.1</strong> — additional redemption type variants added. Update the app — go to <strong>Admin → Upgrade</strong>. If redemptions still don't appear, use the ISIN-based parser (📥 Parse &amp; Preview CSV expander in Equity Import).</p>
-      </div>
-    </div>
-
-    <div class="ki-issue ki-fixed">
-      <div class="ki-header">
-        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
-        <span class="ki-version">Fixed in v7.2.1</span>
-        <h3 class="ki-title">Weekly Maintenance Step 1 fails — "Error: required argument is not an integer"</h3>
-        <span class="ki-page">2_MF_Data_Update/0.mf_data_pipeline.py</span>
-        <span class="ki-version">👥 1 reporter</span>
-      </div>
-      <div class="ki-body">
-        <p><strong>What happened:</strong> Step 1 (Fetching master data from AMFI) downloaded all 16,223 schemes successfully but then failed with <code>Error: required argument is not an integer</code> when inserting into the database. Caused by pandas Timestamp objects not being converted to plain Python date objects before passing to psycopg3.</p>
-        <p class="ki-fixed-note">Fixed in <strong>v7.2.1</strong>. Update the app — go to <strong>Admin → Upgrade</strong>.</p>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="content-section">
-    <h2>Fixed in recent releases</h2>
-    <p>Issues resolved in the last two releases. If you are still seeing one of these, update to the version shown via <strong>Admin → Upgrade</strong>.</p>
-
-    <div class="ki-issue ki-fixed">
-      <div class="ki-header">
-        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
-        <span class="ki-version">Fixed in v7.2.1</span>
-        <h3 class="ki-title">Browser does not open automatically after clicking Start App.bat</h3>
-        <span class="ki-page">run.py</span>
-        <span class="ki-version">👥 1 reporter</span>
-      </div>
-      <div class="ki-body">
-        <p><strong>What happens:</strong> After Start App.bat runs successfully, the browser does not open automatically. The app is running fine — only the auto-open step is missing.</p>
-        <p class="ki-fixed-note">Fixed in <strong>v7.2.1</strong>. Update the app to get this fix — go to <strong>Admin → Upgrade</strong>.</p>
-      </div>
-    </div>
-
-    <div class="ki-issue ki-fixed">
-      <div class="ki-header">
-        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
-        <span class="ki-version">Fixed in v7.2.1</span>
-        <h3 class="ki-title">Restore fund data fails on PostgreSQL 18 — --single-transaction incompatible flags / "already exists" errors</h3>
-        <span class="ki-page">1_Admin_Tools/new_backup.py</span>
-        <span class="ki-version">👥 2 reporters</span>
-      </div>
-      <div class="ki-body">
-        <p><strong>What happens:</strong> Restoring fund data fails with errors about <code>--single-transaction</code>, or shows "relation already exists" / "duplicate key" errors. Caused by PostgreSQL 18 rejecting certain flag combinations and by pg_restore trying to recreate tables that already exist from migrations.</p>
-        <p class="ki-fixed-note">Fixed in <strong>v7.2.1</strong>. The restore now uses <code>--data-only</code> when tables already exist, truncates before loading so re-runs are safe, and only fails on genuine errors. Update the app — go to <strong>Admin → Upgrade</strong>.</p>
-      </div>
-    </div>
-
-    <div class="ki-issue ki-fixed">
-      <div class="ki-header">
-        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
-        <span class="ki-version">Fixed in v7.2.1</span>
-        <h3 class="ki-title">Backup &amp; Restore fails with "The system cannot find the file specified" — pg_restore.exe not detected</h3>
-        <span class="ki-page">1_Admin_Tools/new_backup.py</span>
-        <span class="ki-version">👥 1 reporter</span>
-      </div>
-      <div class="ki-body">
-        <p><strong>What happens:</strong> Restore fails with <code>[WinError 2] The system cannot find the file specified</code> and version shows "Unknown". pg_restore.exe could not be located — happens when PostgreSQL is installed to a non-standard path or bin folder is not on PATH.</p>
-        <div class="ki-workaround">
-          <strong>✅ Workaround (v7.2.0 only)</strong>
-          <p>Go to <strong>Admin Tools → Backup &amp; Restore → Settings</strong> tab. Paste the full path to your PostgreSQL bin folder (e.g. <code>C:\Program Files\PostgreSQL\18\bin</code>) and click <strong>Apply</strong>.</p>
-        </div>
-        <p class="ki-fixed-note">Fixed in <strong>v7.2.1</strong> — Windows Registry scan now finds PostgreSQL regardless of install path. Update the app — go to <strong>Admin → Upgrade</strong>.</p>
-      </div>
-    </div>
-
-    <div class="ki-issue ki-fixed">
-      <div class="ki-header">
-        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
-        <span class="ki-version">Fixed in v7.2.1</span>
-        <h3 class="ki-title">Upgrade launcher buttons (Refresh Checks / Start Upgrade) not visible — window too small</h3>
-        <span class="ki-page">launcher/windows/upgrade_launcher.pyw</span>
-        <span class="ki-version">👥 2 reporters</span>
-      </div>
-      <div class="ki-body">
-        <p><strong>What happens:</strong> The pre-flight checklist fills the upgrade window and the Refresh Checks / Start Upgrade buttons are hidden below the visible area.</p>
-        <div class="ki-workaround">
-          <strong>✅ Workaround (v7.2.0 only)</strong>
-          <p>Drag the bottom edge of the window downward — the buttons appear at the bottom.</p>
-        </div>
-        <p class="ki-fixed-note">Fixed in <strong>v7.2.1</strong> — buttons moved to top of window, always visible. Also added inline Stop App button in checklist. Update the app — go to <strong>Admin → Upgrade</strong>.</p>
-      </div>
-    </div>
-
-    <div class="ki-issue ki-fixed">
-      <div class="ki-header">
-        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
-        <span class="ki-version">Fixed in v7.2.1</span>
-        <h3 class="ki-title">CAMS PDF parser picks up noise as scheme names — "Demat)", merger notes, "(Non Demat)" appear in import</h3>
-        <span class="ki-page">shared/debt_statement_parsers.py → _parse_cams_pdf</span>
-        <span class="ki-version">👥 1 reporter</span>
-      </div>
-      <div class="ki-body">
-        <p><strong>What happens:</strong> Fund merger notes like <code>Treasury Plan - PF Option, ST Gilt Fund merged)</code> or tags like <code>(Non Demat)</code> appear as scheme names in the import preview, failing to match any AMFI code and causing understated portfolio values.</p>
-        <div class="ki-workaround">
-          <strong>✅ Workaround (v7.2.0 only)</strong>
-          <p>Use the <strong>ISIN-based parser</strong> — open the "📥 Parse &amp; Preview CSV (ISIN-based)" expander at the top of Equity Import and use that flow instead.</p>
-        </div>
-        <p class="ki-fixed-note">Fixed in <strong>v7.2.1</strong> — noise suffixes are now stripped automatically. Update the app — go to <strong>Admin → Upgrade</strong>.</p>
-      </div>
-    </div>
-
-    <div class="ki-issue ki-fixed">
-      <div class="ki-header">
-        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
-        <span class="ki-version">Fixed in v7.2.1</span>
-        <h3 class="ki-title">setup.pyw double-click does nothing — setup window does not open</h3>
-        <span class="ki-page">launcher/windows/setup.pyw</span>
-        <span class="ki-version">👥 2 reporters</span>
-      </div>
-      <div class="ki-body">
-        <p><strong>What happens:</strong> Double-clicking setup.pyw opens a window that immediately disappears, or nothing happens. Caused by Windows .pyw file association not being registered correctly with some Python 3.14 installs.</p>
-        <div class="ki-workaround">
-          <strong>✅ Workaround (v7.2.0 only)</strong>
-          <p>Use <strong>Run Setup.bat</strong> in the same folder — it explicitly calls Python regardless of file associations.</p>
-        </div>
-        <p class="ki-fixed-note">Fixed in <strong>v7.2.1</strong> — Run Setup.bat now included by default and recommended as the primary setup method. Update the app — go to <strong>Admin → Upgrade</strong>.</p>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="content-section">
-    <h2>Common mistakes — not bugs, but frequently reported</h2>
-    <p>These are not software bugs — they are setup steps that are easy to get wrong. Check this list first before reporting an issue.</p>
-
-    <div class="ki-issue" style="border-left:5px solid #6366f1;">
-      <div class="ki-header">
-        <span class="ki-badge" style="background:#ede9fe;color:#4c1d95;">📋 Common mistake</span>
-        <h3 class="ki-title">App extracted into a double-nested folder — path gets mangled by Windows causing ImportError</h3>
-      </div>
-      <div class="ki-body">
-        <p><strong>What happens:</strong> When extracting the zip, Windows creates a subfolder from the zip filename. If you extract to <code>C:\pages_app\</code>, the files end up at <code>C:\pages_app\pages_app_v7_2_0_windows\</code> instead. Windows then shortens the nested path (e.g. to <code>C:\PAGES_~1\PAGES_~1\</code>), which breaks Python's compiled module loading and causes <code>ImportError: no pq wrapper available / libpq library not found</code>.</p>
-        <div class="ki-workaround">
-          <strong>✅ Fix</strong>
-          <p><strong>Option 1 (easiest):</strong> Extract the zip directly to <code>C:\pages_app</code> — right-click the zip → Extract All → type <code>C:\pages_app</code> as the destination. Files land in the right place immediately.</p>
-          <p style="margin-top:6px;"><strong>Option 2 (if already extracted wrong):</strong> Open <code>C:\pages_app\pages_app_v7_2_0_windows\</code>, select everything (Ctrl+A), cut (Ctrl+X), paste into <code>C:\pages_app\</code>, then delete the now-empty subfolder. Run <strong>Run Setup.bat</strong> again.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="ki-issue" style="border-left:5px solid #6366f1;">
-      <div class="ki-header">
-        <span class="ki-badge" style="background:#ede9fe;color:#4c1d95;">📋 Common mistake</span>
-        <h3 class="ki-title">Wrong restore type selected when loading fund data — "Restore to this machine" instead of "Load fund prices"</h3>
-      </div>
-      <div class="ki-body">
-        <p><strong>What happens:</strong> Using "Restore to this machine" for <code>fund_master_data.dump</code> or <code>nav_history.dump</code> wipes personal data or fails with errors.</p>
-        <div class="ki-workaround">
-          <strong>✅ Correct option</strong>
-          <p>Always use <strong>"Load fund prices from a backup (safe, does not touch your personal data)"</strong> for the pre-supplied fund data files.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="ki-issue" style="border-left:5px solid #6366f1;">
-      <div class="ki-header">
-        <span class="ki-badge" style="background:#ede9fe;color:#4c1d95;">📋 Common mistake</span>
-        <h3 class="ki-title">"Add Python to PATH" not ticked during Python installation</h3>
-      </div>
-      <div class="ki-body">
-        <p><strong>What happens:</strong> Launchers show "Python not found" or "'python' is not recognised". Setup fails to start.</p>
-        <div class="ki-workaround">
-          <strong>✅ Fix</strong>
-          <p>Reinstall Python 3.14 and tick <strong>"Add Python to PATH"</strong> on the first screen. Or use <strong>Run Setup.bat</strong> — it searches the registry and finds Python even without PATH being set.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="ki-issue" style="border-left:5px solid #6366f1;">
-      <div class="ki-header">
-        <span class="ki-badge" style="background:#ede9fe;color:#4c1d95;">📋 Common mistake</span>
-        <h3 class="ki-title">App folder name contains dots or version numbers — causes ImportError in Setup Wizard</h3>
-      </div>
-      <div class="ki-body">
-        <p><strong>What happens:</strong> Extracting to a folder like <code>C:\pages_app_v7.2.0_windows\</code> causes Windows to shorten the path, breaking compiled module loading.</p>
-        <div class="ki-workaround">
-          <strong>✅ Fix</strong>
-          <p>Rename the folder to a simple name without dots — e.g. <code>C:\pages_app</code> — then re-run setup.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="ki-issue" style="border-left:5px solid #6366f1;">
-      <div class="ki-header">
-        <span class="ki-badge" style="background:#ede9fe;color:#4c1d95;">📋 Common mistake</span>
-        <h3 class="ki-title">Goal Dashboard shows no data after importing portfolio</h3>
-      </div>
-      <div class="ki-body">
-        <p><strong>What happens:</strong> Portfolio imports fine but Goal Dashboard shows zeros or empty charts.</p>
-        <div class="ki-workaround">
-          <strong>✅ Two steps needed after import</strong>
-          <ol style="font-size:0.88rem;color:#374151;margin:8px 0 0;padding-left:18px;line-height:1.8;">
-            <li>Go to <strong>Goal Planning → Create a Goal</strong> and create at least one goal</li>
-            <li>Go to <strong>Goal Planning → Goal Fund Manager</strong> and assign your funds to goals</li>
-          </ol>
-        </div>
-      </div>
-    </div>
-
-    <div class="ki-issue" style="border-left:5px solid #6366f1;">
-      <div class="ki-header">
-        <span class="ki-badge" style="background:#ede9fe;color:#4c1d95;">📋 Common mistake</span>
-        <h3 class="ki-title">Fund Performance Analysis shows "No benchmark data found"</h3>
-      </div>
-      <div class="ki-body">
-        <p><strong>What happens:</strong> Fund Performance pages show "No benchmark data found" even though the app is working fine.</p>
-        <div class="ki-workaround">
-          <strong>✅ Fix — load NAV history first</strong>
-          <p><strong>Option 1 (faster):</strong> Go to <strong>Admin Tools → Backup → Restore</strong> → upload <code>nav_history.dump</code> → select "Load fund prices from a backup" → Restore.<br/>
-          <strong>Option 2:</strong> Go to <strong>NAV Data Manager → Data Pipeline → Weekly Maintenance</strong> (10–15 min first run).</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="content-section">
-    <h2>Fixed in older releases</h2>
-    <p>Issues resolved in v7.1.x. If you are still seeing one of these, update to the latest version via <strong>Admin → Upgrade</strong>.</p>
-
+    
     <div class="ki-issue ki-fixed">
       <div class="ki-header">
         <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
@@ -360,6 +111,32 @@ title: Known Issues & Workarounds
     <div class="ki-issue ki-fixed">
       <div class="ki-header">
         <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
+        <span class="ki-version">Fixed in v7.2.1</span>
+        <h3 class="ki-title">Browser does not open automatically after Start App.bat</h3>
+        <span class="ki-page">run.py</span>
+        <span class="ki-version">👥 1 reporter</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> After Start App.bat runs, browser does not open. App runs fine but --server.headless true suppresses Streamlits auto-open and run.py did not call webbrowser.open().</p><p class="ki-fixed-note">Fixed in <strong>v7.2.1</strong>. Update the app to get this fix — go to <strong>Admin → Upgrade</strong>.</p>
+      </div>
+    </div>
+
+    <div class="ki-issue ki-fixed">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
+        <span class="ki-version">Fixed in v7.2.1</span>
+        <h3 class="ki-title">Upgrade launcher buttons hidden — window too small on some screen resolutions</h3>
+        <span class="ki-page">launcher/windows/upgrade_launcher.pyw</span>
+        <span class="ki-version">👥 1 reporter</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> The upgrade launcher window height (700px) is not tall enough on some screens. The pre-flight checklist fills the window and Refresh Checks / Start Upgrade buttons are hidden below the visible area. Users cannot proceed with the upgrade.</p><p class="ki-fixed-note">Fixed in <strong>v7.2.1</strong>. Update the app to get this fix — go to <strong>Admin → Upgrade</strong>.</p>
+      </div>
+    </div>
+
+    <div class="ki-issue ki-fixed">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
         <span class="ki-version">Fixed in v7.1.3</span>
         <h3 class="ki-title">Backup &amp; Restore cannot find pg_restore.exe — WinError 2 on restore</h3>
         <span class="ki-page">1_Admin_Tools/new_backup.py</span>
@@ -393,6 +170,32 @@ title: Known Issues & Workarounds
       </div>
       <div class="ki-body">
         <p><strong>What happens:</strong> On Windows with IPv6 enabled, localhost resolves to ::1 but port probe checked only 127.0.0.1. Streamlit bound to ::1 so probe failed. Launcher showed Not running but app was accessible.</p><p class="ki-fixed-note">Fixed in <strong>v7.1.3</strong>. Update the app to get this fix — go to <strong>Admin → Upgrade</strong>.</p>
+      </div>
+    </div>
+
+    <div class="ki-issue ki-fixed">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
+        <span class="ki-version">Fixed in v7.2.1</span>
+        <h3 class="ki-title">CAMS PDF parser picks up noise as scheme names — Demat), merger notes, (Non Demat) appear in import</h3>
+        <span class="ki-page">shared/debt_statement_parsers.py _parse_cams_pdf</span>
+        <span class="ki-version">👥 1 reporter</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> Some CAMS statements include tags like (Non Demat), fund merger notes like Treasury Plan merged), or fragment text like Demat) in the scheme listing. Parser picks these up as scheme names, failing AMFI code match — NAV = 0, portfolio value understated.</p><p class="ki-fixed-note">Fixed in <strong>v7.2.1</strong>. Update the app to get this fix — go to <strong>Admin → Upgrade</strong>.</p>
+      </div>
+    </div>
+
+    <div class="ki-issue ki-fixed">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-fixed">✅ Fixed</span>
+        <span class="ki-version">Fixed in v7.2.1</span>
+        <h3 class="ki-title">Restore fails on PostgreSQL 18 — --single-transaction incompatible with --create</h3>
+        <span class="ki-page">1_Admin_Tools/new_backup.py do_restore restore_type=1clean</span>
+        <span class="ki-version">👥 1 reporter</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> pg_restore fails on PostgreSQL 18 when using Restore to this machine. PostgreSQL 16+ does not allow --single-transaction combined with --create.</p><p class="ki-fixed-note">Fixed in <strong>v7.2.1</strong>. Update the app to get this fix — go to <strong>Admin → Upgrade</strong>.</p>
       </div>
     </div>
   </div>

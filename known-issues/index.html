@@ -226,6 +226,13 @@ title: Known Issues & Workarounds
           <p style="margin-top:8px;"><strong>To find an AMFI code:</strong> search by fund name at <a href="https://www.mfapi.in" style="color:#6366f1;font-weight:600;" target="_blank">mfapi.in</a> — shows the 6-digit code instantly, no login needed.</p>
           <p style="margin-top:6px;"><strong>Faster alternative:</strong> Use the <strong>ISIN-based parser</strong> — open the "📥 Parse &amp; Preview CSV (ISIN-based)" expander at the top of Equity Import. It resolves funds from ISIN codes directly, bypassing name matching entirely — more accurate for renamed or merged funds.</p>
         </div>
+        <div style="margin-top:14px;background:#f0f9ff;border-left:4px solid #0ea5e9;border-radius:0 7px 7px 0;padding:12px 16px;">
+          <p style="margin:0;font-size:0.88rem;color:#0c4a6e;line-height:1.7;">
+            <strong>Do I need to fix unmatched schemes every time I import?</strong><br/>
+            Only on the first import. On subsequent imports, your existing transactions show as <em>duplicates (already in DB)</em> and are skipped automatically — the same unmatched fund names won't appear again. Only genuinely new transactions (new SIP instalments etc.) need matching, and those typically have standard names the system handles automatically.<br/><br/>
+            If a fund keeps showing as unmatched on every import, use the <strong>ISIN-based parser</strong> — ISIN codes never change, so it resolves permanently without any manual fixing.
+          </p>
+        </div>
       </div>
     </div>
 

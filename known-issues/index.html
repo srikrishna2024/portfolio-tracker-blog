@@ -22,6 +22,48 @@ title: Known Issues & Workarounds
       <div class="ki-header">
         <span class="ki-badge ki-badge-noncritical">⚠️ Open</span>
         <span class="ki-version">v7.2.0 / v7.2.1</span>
+        <h3 class="ki-title">NPS scheme switches counted as contributions — inflated "Total Invested" figure</h3>
+        <span class="ki-page">shared/debt_utils.py → get_nps_total_contributed</span>
+        <span class="ki-version">👥 1 reporter</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> Scheme switch transactions (inter-scheme transfers between NPS funds e.g. Scheme E to Scheme G) are being included in the total contributed calculation. Since both legs of the switch are recorded, the "Total Invested" figure is massively overstated (e.g. showing ₹47 trillion instead of the actual amount).</p>
+        <div class="ki-workaround">
+          <strong>✅ Workaround</strong>
+          <p>The inflated figure only affects the display of "Total Invested". The <strong>corpus value, CAGR, and goal projections are calculated from the actual statement balance</strong> — not the contributed total — so your goal tracking remains accurate. You can safely ignore the "Total Invested" figure in the NPS section until the fix ships.</p>
+        </div>
+        <p class="ki-eta">Fix ready — ships in next build.</p>
+      </div>
+    </div>
+
+    <div class="ki-issue ki-noncritical">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-noncritical">⚠️ Open</span>
+        <span class="ki-version">v7.2.0 / v7.2.1</span>
+        <h3 class="ki-title">CAMS PDF standard import may miss redemption transactions or show them as "unknown" type</h3>
+        <span class="ki-page">shared/debt_statement_parsers.py → _parse_cams_pdf / _TXTYPE_MAP</span>
+        <span class="ki-version">👥 1 reporter</span>
+      </div>
+      <div class="ki-body">
+        <p><strong>What happens:</strong> Redemption transactions from CAMS statements may either appear with "unknown" type in the import preview, or be absent entirely. This depends on the exact wording CAMS uses in the transaction description (e.g. "Repurchase", "SWP", "Systematic Withdrawal Plan Payout") which may not be recognised by the standard parser.</p>
+        <div class="ki-workaround">
+          <strong>✅ Workaround — use the ISIN-based parser instead</strong>
+          <p>The ISIN-based parser bypasses transaction type text matching entirely and resolves everything from AMFI fund codes directly:</p>
+          <ol style="font-size:0.88rem;color:#374151;margin:8px 0 0;padding-left:18px;line-height:1.9;">
+            <li>Go to <strong>Data Import → Equity Import</strong> and upload your CAMS PDF</li>
+            <li>Open the <strong>"📥 Parse &amp; Preview CSV (ISIN-based)"</strong> expander at the top of the page</li>
+            <li>Click <strong>Parse &amp; Resolve (ISIN)</strong> and verify all transactions including redemptions appear correctly</li>
+            <li>Use <strong>Reset Equity Portfolio Data</strong> (scroll to bottom) to clear any previous bad import, then re-import using this flow</li>
+          </ol>
+        </div>
+        <p class="ki-eta">Partial fix in v7.2.1 (additional redemption type variants added). Full fix requires seeing the exact transaction description from the affected statement — contact support if the ISIN-based workaround also doesn't capture redemptions.</p>
+      </div>
+    </div>
+
+    <div class="ki-issue ki-noncritical">
+      <div class="ki-header">
+        <span class="ki-badge ki-badge-noncritical">⚠️ Open</span>
+        <span class="ki-version">v7.2.0 / v7.2.1</span>
         <h3 class="ki-title">Weekly Maintenance Step 1 fails — "Error: required argument is not an integer" after downloading 16,223 schemes</h3>
         <span class="ki-page">2_MF_Data_Update/0.mf_data_pipeline.py</span>
         <span class="ki-version">👥 1 reporter</span>

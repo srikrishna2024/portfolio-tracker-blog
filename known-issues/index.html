@@ -201,6 +201,37 @@ title: Known Issues & Workarounds
   </div>
 
   <div class="content-section">
+    <h2>First-time import tips</h2>
+    <p>These are not bugs — they are things that confuse first-time users during the initial portfolio import.</p>
+
+    <div class="ki-issue" style="border-left:5px solid #6366f1;">
+      <div class="ki-header">
+        <span class="ki-badge" style="background:#ede9fe;color:#4c1d95;">💡 First-time tip</span>
+        <h3 class="ki-title">Import shows "944 New", "269 No code match", "135 Unknown type" — what does it all mean?</h3>
+      </div>
+      <div class="ki-body">
+        <p>These numbers are normal on a first import. Here is what each means and what to do:</p>
+        <ul style="font-size:0.9rem;color:#374151;line-height:1.9;margin:10px 0;padding-left:20px;">
+          <li><strong>"New Transactions — Not in DB" (e.g. 944)</strong> — this is your full transaction history waiting to be imported. This is the target. On a first import this equals your total history. Nothing to worry about.</li>
+          <li><strong>"No code match" / Unmatched schemes</strong> — the parser found fund names it couldn't match to an AMFI code. Scroll to the <strong>⚠️ Unmatched Schemes</strong> panel. For each fund, pick the correct match from the dropdown or enter the 6-digit AMFI code manually, then click <strong>Apply Fixes</strong>.</li>
+          <li><strong>"Unknown type"</strong> — some transactions (e.g. dividend reinvestment, SWP) have a description the parser didn't recognise. Go to the <strong>Skipped / Unknown Type</strong> table, set the Type to invest / redeem / switch_in / switch_out for each row, then click <strong>Apply Type Fixes</strong>.</li>
+        </ul>
+        <div class="ki-workaround">
+          <strong>✅ Step-by-step order</strong>
+          <ol style="font-size:0.88rem;color:#374151;margin:8px 0 0;padding-left:18px;line-height:1.9;">
+            <li>Fix unmatched schemes → click Apply Fixes</li>
+            <li>Fix unknown types → click Apply Type Fixes</li>
+            <li>Click <strong>Import New</strong> in the "New Transactions" section</li>
+          </ol>
+          <p style="margin-top:8px;"><strong>To find an AMFI code:</strong> search by fund name at <a href="https://www.mfapi.in" style="color:#6366f1;font-weight:600;" target="_blank">mfapi.in</a> — shows the 6-digit code instantly, no login needed.</p>
+          <p style="margin-top:6px;"><strong>Faster alternative:</strong> Use the <strong>ISIN-based parser</strong> — open the "📥 Parse &amp; Preview CSV (ISIN-based)" expander at the top of Equity Import. It resolves funds from ISIN codes directly, bypassing name matching entirely — more accurate for renamed or merged funds.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="content-section">
     <h2>How to report a new issue</h2>
     <p>If your issue is not listed here:</p>
     <ol>

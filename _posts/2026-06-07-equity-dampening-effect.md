@@ -153,6 +153,82 @@ This is the two-dial framework applied to monthly contributions: just as the equ
 
 ---
 
+## How to Know If You Have Crossed Over — The One Annual Check
+
+You do not need to calculate the crossover precisely. You need a simple signal you can check once a year.
+
+**The crossover has happened when your corpus falling 1% hurts you more in rupees than your entire month's SIP helps you.**
+
+### The One Ratio to Track
+
+**Ratio = Monthly SIP ÷ Total Corpus**
+
+Calculate this once a year. It takes two minutes.
+
+| Ratio | Zone | What It Means |
+|---|---|---|
+| Above 2% | SIP dominant | Averaging effect is strong. Aggressive equity is fine. |
+| 1%–2% | Transition | SIP weakening but still meaningful. Begin glide path thinking. |
+| Below 1% | Corpus dominant | Crossover confirmed. Portfolio structure must manage risk now. |
+| Below 0.5% | Well past crossover | Glide path execution is urgent, not optional. |
+
+### The Crossover Number in Plain English
+
+The crossover happens when the ratio hits 1% — which means corpus = 100 times your monthly SIP.
+
+- Monthly SIP ₹20,000 → crossover at ₹20 lakh corpus
+- Monthly SIP ₹30,000 → crossover at ₹30 lakh corpus
+- Monthly SIP ₹50,000 → crossover at ₹50 lakh corpus
+
+Write your crossover number down today. Check your corpus against it once a year.
+
+### Two Real Examples
+
+**Ravi — Year 3**
+Monthly SIP: ₹20,000 · Corpus: ₹10 lakh · Ratio: **2.0%**
+
+A 1% fall in corpus = ₹1,000. His SIP is 20x that. SIP is enormously powerful. Well pre-crossover. Hold aggressive equity confidently.
+
+**Suresh — Year 12**
+Monthly SIP: ₹20,000 · Corpus: ₹50 lakh · Ratio: **0.4%**
+
+A 1% fall in corpus = ₹5,000. His SIP covers only 4 months of a single 1% move — and markets can fall 1% in a day. Well past crossover. Portfolio structure must do the heavy lifting now.
+
+### The Three Zones (For ₹20,000 SIP)
+
+| Zone | Corpus Range | What to Do |
+|---|---|---|
+| SIP dominant | Below ₹10 lakh (below 50x SIP) | Hold aggressive equity. SIP is your shock absorber. |
+| Transition | ₹10–30 lakh (50x–150x SIP) | Begin glide path. Redirect new flows toward debt. No new mid/small cap. |
+| Corpus dominant | Above ₹30 lakh (above 150x SIP) | Execute glide path actively. Large cap only if equity held at all. |
+
+### The Annual Check — Two Steps
+
+On a fixed date every year (your investment anniversary, April 1st — whatever works):
+
+1. Note your total equity corpus value
+2. Divide your monthly SIP by that number
+
+Read the result against the table above. That is the entire check.
+
+### One Important Caveat
+
+The crossover ratio can temporarily improve during a crash — a corpus that was ₹50 lakh at Zone 3 becomes ₹30 lakh after a 40% crash, pushing the ratio back toward Zone 2. Do not use this as a reason to hold or add aggressive equity. The ratio improved only because your corpus shrank, which is not a good thing. During a crash, the glide path schedule overrides the ratio.
+
+### Write This Down
+
+> **My monthly SIP is ₹____**
+>
+> **My crossover corpus number is ₹____ (100 times the SIP)**
+>
+> **Every April, I check my corpus against this number**
+>
+> **Below it — SIP is my shock absorber. Aggressive equity is fine.**
+>
+> **Above it — my corpus is the risk. Portfolio structure must protect it.**
+
+---
+
 ## The Honest Summary
 
 The SIP averaging benefit — rupee cost averaging, equity dampening — is one of the most powerful forces in personal finance. It genuinely protects early-stage investors through market crashes and is a strong argument for staying invested.

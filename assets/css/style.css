@@ -54,6 +54,21 @@ nav a {
 }
 nav a:hover { color: var(--text); }
 
+/* ── Category nav row (below main nav) ───────────────────────── */
+.nav-categories {
+  display: flex; flex-wrap: wrap; gap: 4px 0;
+  padding: 6px 0 8px 0;
+  border-top: 1px solid var(--border, #e5e7eb);
+  margin-top: 6px;
+}
+.nav-categories a {
+  color: var(--accent); text-decoration: none;
+  font-size: 0.78rem; margin-left: 0; margin-right: 20px;
+  font-weight: 500; letter-spacing: 0.01em;
+  transition: color 0.15s;
+}
+.nav-categories a:hover { color: var(--text); }
+
 /* ── Footer ──────────────────────────────────────────────────── */
 .site-footer {
   border-top: 1px solid var(--border);

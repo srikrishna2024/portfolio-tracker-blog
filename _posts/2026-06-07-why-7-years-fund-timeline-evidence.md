@@ -182,4 +182,10 @@ What the framework gives you is a rational, evidence-based starting point. Adjus
 
 ---
 
-*The Fund Category to Goal Timeline Validator — which flags mismatches between fund volatility and remaining goal timeline, backed by actual rolling return data — is on our development roadmap. It will surface in Goal Fund Manager, Goal Creator, and Goal Dashboard.*
+## How the Tool Uses This Data
+
+The recovery-time thresholds derived in this post directly drive two features in the portfolio tracker:
+
+**Goal Planner — Glide Path Chart** — The equity allocation curve shown for each goal is now calibrated to the recovery-time framework. At 7 years remaining, the recommended equity drops to 15% (large cap only zone). At 5 years, zero equity. The curve reflects the 2008 worst-case recovery data, not a smooth mathematical function.
+
+**Fund Category to Goal Timeline Validator (on the roadmap)** — When this feature ships, it will use the minimum timeline thresholds from this post (7 years for large cap, 10 years for mid cap, 12 years for small cap) to flag mismatches. The warning will show the actual rolling return data from the tool's NAV database for that fund category over the goal's remaining years — the same evidence presented in this post, drawn from your actual portfolio data.

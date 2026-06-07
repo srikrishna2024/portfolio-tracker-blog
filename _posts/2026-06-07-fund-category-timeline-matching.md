@@ -209,4 +209,12 @@ Done on a schedule — not on a market view — it removes both the behavioural 
 
 ---
 
-*The Fund Category to Goal Timeline Validator feature — which flags mismatches between fund volatility and remaining goal timeline, backed by actual rolling return data from your portfolio — is on our development roadmap. It will surface in Goal Fund Manager, Goal Creator, and Goal Dashboard.*
+## How the Tool Supports This Framework
+
+**Goal Creator** — When creating a goal, the tool shows the Freefincal equity allocation recommendation (updated in v7.3.2 to match the recovery-time framework in this post): 0% equity under 5 years, 10-15% at 5-7 years, up to 25% at 10 years, up to 50% at 15 years.
+
+**Goal Fund Manager** — The Fund Category to Goal Timeline Validator (on the roadmap) will flag when a mapped fund's volatility is inappropriate for the remaining goal timeline. The warning will show actual rolling return data for that fund category over the goal's remaining horizon — not a text opinion, but evidence the user can evaluate.
+
+**Goal Dashboard** — The Fund-Goal Alignment section (on the roadmap) will show a green/amber/red indicator per mapped fund, showing whether each fund is in the right volatility tier for the remaining timeline. Amber and red indicators will show the worst-case rolling return data for that category over the remaining years.
+
+**Annual Review** — The Fund Category Glide Path Migration Scheduler (on the roadmap) will show when each category migration is due — when to move from small cap to mid cap, mid cap to large cap, large cap to debt — based on the countdown to the goal date, not market conditions.

@@ -265,5 +265,15 @@ Underperformance is not a signal to act. It is a signal to investigate. The inve
 
 ---
 
-*This framework is built into our portfolio tracker under Goal Fund Manager and Annual Review. The Fund Holding Thesis Storage, Fund Thesis Audit, Goal Drift Action Priority Engine, and LTCG Switch Cost Calculator features are on our roadmap — bringing this decision framework directly into your annual review workflow.*
+## How the Tool Supports This Framework
+
+The following features in the portfolio tracker are built around the principles in this post:
+
+**Goal Fund Manager** — When mapping a fund to a goal, the tool shows the Freefincal equity allocation recommendation for that goal's remaining timeline. The Fund Holding Thesis Storage feature (on the roadmap) will let you record why you are holding a fund and what return you expect, making future reviews structured rather than emotional.
+
+**Goal Dashboard** — The goal health score flags goals that are Drifting or At Risk. The When to Switch Funds Decision Engine (on the roadmap) will surface the three diagnostic questions (benchmark also down? category also down? fund internals changed?) and rank the three corrective actions with full cost quantification before any switch is enabled.
+
+**Annual Review** — The April review surfaces fund underperformance vs benchmark and tax-loss harvesting opportunities. The LTCG Switch Cost Calculator (on the roadmap) will show the exact after-tax cost of switching before the option is presented.
+
+**Alert Center** — The LTCG alert flags when gains approach the Rs1.25L annual exemption threshold and shows days to LTCG eligibility for holdings being considered for exit.
 

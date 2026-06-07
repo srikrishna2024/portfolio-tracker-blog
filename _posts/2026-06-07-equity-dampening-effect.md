@@ -243,4 +243,10 @@ Knowing which phase you are in is not optional for anyone serious about goal-bas
 
 ---
 
-*The Goal Drift Action Priority Engine — which ranks corrective actions (increase SIP, extend timeline, switch fund) and quantifies the impact of each, including the corpus-dominated phase analysis — is on our development roadmap.*
+## How the Tool Supports This Framework
+
+**Goal Dashboard** — The SIP Dampening Crossover Ratio Indicator (on the roadmap) will show your Monthly SIP / Total Corpus ratio per goal with a green/amber/red zone indicator. Green: SIP dominant, aggressive equity is fine. Amber: transition zone, begin glide path thinking. Red: corpus dominant, portfolio structure must manage risk. The indicator updates annually and alerts you when you first cross below 1%.
+
+**Goal Planner — Glide Path Chart** — The equity allocation recommendation already accounts for the corpus-dominated phase by reducing equity aggressively in the 5-10 year window. The chart now shows 10% equity at 5 years (down from the previous 20%) specifically because this is when SIP averaging has largely lost its dampening effect.
+
+**Alert Center** — The crossover alert (on the roadmap) will fire once when your corpus first exceeds 100 times your monthly SIP for a given goal — your personal crossover number — prompting you to review your equity category allocation.

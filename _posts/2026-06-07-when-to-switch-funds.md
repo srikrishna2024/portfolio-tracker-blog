@@ -153,36 +153,96 @@ If you are 11 months into a holding and considering a switch, waiting one month 
 
 ---
 
-## The Auto-Pilot Principle
+## Churn Has a Real Price — Quantify It First
 
-The goal is to design a portfolio that requires minimal intervention. Most situations should resolve themselves:
+Before any switch, run this calculation:
 
-| Situation | Auto-Pilot Response |
+| Cost | Typical Impact |
 |---|---|
-| One fund underperforms for one year | Nothing. Cycle continues. |
-| Market crashes 20–30% | SIP buys more units at lower NAV automatically. |
-| Goal still more than 7 years away | Time is the buffer. No action needed. |
-| Asset drifts 3–4% from target allocation | Monitor only. |
+| STCG tax (held under 1 year) | 20% of gains |
+| LTCG tax (held over 1 year, gains above ₹1.25L) | 12.5% of gains above exemption |
+| Exit load (most equity funds, within 1 year) | 1% of redemption amount |
+| Opportunity cost of being in cash during switch | 0.5–2% depending on timing |
+| Behavioural cost of next wrong decision triggered by this one | Unquantifiable but real |
 
-Intervention should be rare — once every 3–5 years for a well-constructed portfolio. If your annual review generates a change every year, the review process itself is producing behavioral churn.
+A switch that saves you 1–2% in fund returns but costs 1.5% in tax and exit load has a **negative expected value.**
+
+---
+
+## The Auto-Pilot Architecture — What Should Require Zero Action
+
+Design the portfolio so that most situations resolve themselves without intervention:
+
+| Situation | Auto-Pilot Response | Human Action Required? |
+|---|---|---|
+| Equity overweight after bull run | SIP continues buying debt — rebalancing happens naturally via new money | No |
+| One fund underperforms for 1 year | Nothing — cycle continues | No |
+| Market crashes 20–30% | SIP buys more units automatically at lower NAV | No |
+| Goal still 7+ years away | Time is the buffer — no action needed | No |
+| Asset drifts 3–4% from target | Monitor only | No |
+
+Intervention should be rare — once every 3–5 years at most for a well-constructed portfolio.
+
+---
+
+## The Churn Minimisation Rules
+
+**Rule 1 — New money before switching**
+
+Before redeeming anything, ask: can I fix the imbalance by directing new SIP money instead?
+
+- Portfolio overweight equity → stop equity SIP for 3 months, redirect to debt
+- One fund lagging → increase SIP in it to rupee-cost-average down
+- Zero tax. Zero exit load. Zero emotional trigger.
+
+**Rule 2 — The 2-year rule for fund switches**
+
+Never switch a fund you have held for less than 2 full market cycles (roughly 2–3 years minimum). One bad year is noise. The tax clock resets on every switch — switching at 11 months forfeits LTCG treatment entirely.
+
+**Rule 3 — Switch only to a specific destination, not "away from"**
+
+A switch triggered by "Fund X is bad" leads to another bad decision. A switch is only valid when you can complete this sentence: *"Fund X has a structural problem AND Fund Y is a demonstrably better fit for this goal AND the after-tax benefit exceeds the switch cost."* If you cannot complete that sentence, do not switch.
+
+**Rule 4 — Tax-loss harvesting is the only proactive churn worth doing**
+
+The one time churning is rational is when you have unrealised losses — selling and rebuying in a different but similar fund books a loss that offsets gains elsewhere. This is planned, not reactive.
+
+**Rule 5 — Annual review has a default answer of "no action"**
+
+The annual checklist should be designed so that "no action required" is the most common outcome. If every annual review generates a change, the review process itself is producing behavioural churn.
+
+---
+
+## The Auto-Pilot Portfolio Design
+
+Structure the portfolio so friction works *for* you:
+
+| Friction Type | How It Helps |
+|---|---|
+| Exit loads | Discourages impulsive short-term switches |
+| LTCG clock | Makes you wait 12 months before switching — often enough for the cycle to turn |
+| SIP mandate | Invests automatically without requiring a decision each month |
+| Annual review cadence | Limits decision points to once a year |
+| Written investment policy statement | Your past-rational-self overrides your present-emotional-self |
 
 ---
 
 ## The One-Page Investment Policy Statement
 
-Write this once per fund, review annually, let it make decisions for you:
+This is the most underused tool in investing. Write it once per fund, review it annually, let it make decisions for you:
 
 ```
-Fund: [Name]
+Fund: [Fund Name]
 Goal: [Specific goal name]
 Timeline: [N years remaining]
 Role: [Growth engine / Rebalancing buffer / etc.]
 Assumed return: [X% CAGR]
 Thesis: [Why I chose this fund in one sentence]
-Switch trigger: Fund-specific underperformance > 5% vs category median
-               for 2 consecutive years AND confirmed internal change
-Tax note: LTCG eligible from [date]. Do not switch before [date]
-         without calculating after-tax benefit.
+Switch trigger: Fund-specific underperformance > 5% vs category
+               median for 2 consecutive years AND internal change confirmed
+Exit trigger: [Specific condition]
+Tax note: LTCG eligible from [date].
+          Do not switch before [date] without calculating after-tax benefit.
 Last reviewed: [Date]
 Action taken: None / [specific action and reason]
 ```
@@ -193,10 +253,13 @@ When the urge to act comes — and it will come during every correction — open
 
 ## The Bottom Line
 
+The portfolio should run on SIP autopilot 95% of the time. The remaining 5% — annual review, genuine structural problems, tax-loss harvesting — should be governed by a written policy, not a feeling. Every unnecessary churn is a small tax on your future self.
+
 Underperformance is not a signal to act. It is a signal to investigate. The investigation should have a specific output: either the thesis still holds and you hold the fund, or the thesis has broken and you act — after accounting for the full cost of acting.
 
-Most of the time, the rational answer is to increase your SIP, not switch your fund. The best investors are not the most active. They are the most boring, the most systematic, and the most immune to the noise that sounds like signal.
+**The best investors are not the most active. They are the most boring.**
 
 ---
 
 *This framework is built into our portfolio tracker under Goal Fund Manager and Annual Review. The Fund Holding Thesis Storage, Fund Thesis Audit, Goal Drift Action Priority Engine, and LTCG Switch Cost Calculator features are on our roadmap — bringing this decision framework directly into your annual review workflow.*
+

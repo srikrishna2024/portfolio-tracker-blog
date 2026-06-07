@@ -3,7 +3,8 @@ layout: post
 title: "Stop Switching Funds Every Time They Underperform — Here Is a Framework That Actually Works"
 subtitle: "A structured, evidence-based approach to deciding when to act on underperformance, and when to do nothing"
 date: 2026-06-07
-tags: [mutual funds, goal-based investing, portfolio management, india, personal finance, anti-churn, LTCG, freefincal]
+categories: [investing-behaviour]
+tags: [mutual funds, goal-based investing, portfolio management, india, personal finance, anti-churn, LTCG, freefincal, investor-behaviour]
 ---
 
 Most investors switch funds at exactly the wrong time. The fund has been underperforming for a year, the pain is real, and the urge to do something feels rational. The new fund looks cleaner, shinier, and has better recent numbers. So you switch.

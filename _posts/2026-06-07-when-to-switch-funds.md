@@ -47,18 +47,22 @@ An emotional reason is not falsifiable. It shape-shifts to justify whatever you 
 
 ## Step 2 — Set a Return Assumption and Track It Honestly
 
-When you map a fund to a goal, record one number: your expected annual return. Not the last 5-year return. A defensible forward estimate based on fund category:
+When you map a fund to a goal, record one number: your expected annual return. Not the last 5-year return. A defensible, conservative forward estimate.
 
-| Fund Category | Conservative Estimate |
-|---|---|
-| Large cap index | 10–11% |
-| Flexi / Multi cap (active) | 10–12% |
-| Mid cap | 11–13% |
-| Small cap | 10–13% (wide spread) |
+A simple working assumption: **10% post-tax annual return for any equity fund category.** This is conservative enough that if you get more, it becomes a surplus. If you plan with a higher number hoping your mid-cap or small-cap will deliver more, you are taking a planning risk that compounds over time. The higher the category volatility, the wider the spread of outcomes — which is exactly why you should not plan with the optimistic end of that spread.
 
-Use the conservative number for goal planning. If you get more, that is a surplus. Planning with the historical stretch number is how people end up short.
+Choosing a higher-volatility fund and then planning for higher returns from it is a double error — it underestimates the downside scenario that your goal projection must survive.
 
-Now, at each annual review, check one thing: **What is the fund's actual 3-year rolling CAGR versus the assumption I recorded?**
+**The fund category also needs to match the goal timeline.** Equity allocation within a goal should follow the Freefincal framework:
+- Under 5 years to goal: 0% equity. The corpus protection window is too short to recover from a crash.
+- 5–10 years: up to 25% equity maximum. Even here, a volatile mid or small-cap fund does more harm than good — the volatility drag on a short window overwhelms the return advantage.
+- Over 10 years: up to 50–60% equity. Only here does the full equity return potential have time to manifest.
+
+A highly volatile fund for a goal under 10 years away — even if it is technically within your equity allocation limit — carries sequence-of-returns risk that a smoother large-cap or flexi-cap fund does not. The right question is not just "how much equity?" but "which equity, for this timeline?"
+
+Use 10% as your planning assumption across categories. If you get more, great. Plan for 10%.
+
+Now, at each annual review, check one thing: **What is the fund's actual 3-year rolling CAGR versus the 10% assumption I recorded?**
 
 ---
 

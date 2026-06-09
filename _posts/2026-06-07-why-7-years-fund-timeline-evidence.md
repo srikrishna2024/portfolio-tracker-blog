@@ -36,6 +36,43 @@ The 2008 global financial crisis is the right scenario. It was a genuine economi
 
 ---
 
+## The Asymmetry of Past Data — Why Risk History Is Different From Return History
+
+There is a principle that is rarely stated clearly in financial planning literature but matters enormously for goal-based investing:
+
+**Past returns cannot be extrapolated forward. Past risk can.**
+
+A fund that returned 18% CAGR over the last 5 years gives you no reliable basis to assume 18% for the next 5 years. Markets mean-revert, cycles turn, and the conditions that produced those returns may not recur. Every fund disclosure says "past performance is not indicative of future returns" — and this is genuinely true.
+
+But past risk data works in the opposite direction. A 61% maximum drawdown for a 100% equity portfolio over a 15-year period is not a ceiling — it is a floor. The next 15-year period may produce a worse drawdown. It will almost certainly not produce a milder one if a genuine economic crisis occurs.
+
+**History gives you the minimum risk you should plan for, not the maximum.**
+
+This asymmetry is the foundation of every number in this framework. When the 2008 drawdown data is used to set minimum timelines, it is not saying the next crash will be exactly like 2008. It is saying: the next crash will be at least as severe as the worst we have observed. Plan for that, and anything milder is a bonus.
+
+---
+
+## The Rupee Problem — Why Percentages Are Not Enough
+
+When risk is communicated as a percentage, it remains abstract. Most investors intellectually accept that equity can fall 50–60%. They have read it. They agree with it in principle. They have ticked the "I understand the risk" box on their investment form.
+
+None of this prepares them for what 50–60% actually looks like in their bank statement.
+
+Consider these two statements. They describe identical situations:
+
+- *"Your mid cap fund can fall 65% in a severe bear market."*
+- *"Your mid cap fund corpus of ₹18.9 lakh can fall to ₹6.6 lakh — a loss of ₹12.3 lakh — and may take 5–7 years to recover to ₹18.9 lakh."*
+
+The first statement is processed as a statistic. The second is processed as a loss. Research in behavioral finance consistently shows that the same risk information produces different decision-making depending on whether it is presented as a percentage or as an absolute rupee figure.
+
+The implication for goal-based planning: every stress test and risk communication should show both. The percentage is the analytical input. The rupee figure is the reality check.
+
+When you look at your portfolio and see ₹18.9 lakh in your mid cap fund, the relevant question is not "what is the maximum drawdown percentage for this category?" The relevant question is: "Am I prepared to watch this become ₹6.6 lakh, hold through 5–7 years of recovery, and not sell?" If the answer is yes — the fund is appropriate. If there is any uncertainty — the fund may be appropriate for the category but not for this investor at this corpus size.
+
+This is not a portfolio theory question. It is a question about your own psychology under financial stress. The honest answer can only be given by someone who has watched a significant sum fall sharply and held. Most investors have not had this experience with a corpus large enough to matter.
+
+---
+
 ## The Three Facts
 
 ### Fact 1 — The 2008 Drawdown and Recovery Data
@@ -184,8 +221,12 @@ What the framework gives you is a rational, evidence-based starting point. Adjus
 
 ## How the Tool Uses This Data
 
-The recovery-time thresholds derived in this post directly drive two features in the portfolio tracker:
+The recovery-time thresholds and asymmetric risk logic derived in this post drive several features in the portfolio tracker:
 
-**Goal Planner — Glide Path Chart** — The equity allocation curve shown for each goal is now calibrated to the recovery-time framework. At 7 years remaining, the recommended equity drops to 15% (large cap only zone). At 5 years, zero equity. The curve reflects the 2008 worst-case recovery data, not a smooth mathematical function.
+**Goal Planner — Glide Path Chart** — The equity allocation curve shown for each goal is calibrated to the recovery-time framework. At 7 years remaining, the recommended equity drops to 15% (large cap only zone). At 5 years, zero equity. The curve reflects the 2008 worst-case recovery data, not a smooth mathematical function.
 
-**Fund Category to Goal Timeline Validator (on the roadmap)** — When this feature ships, it will use the minimum timeline thresholds from this post (7 years for large cap, 10 years for mid cap, 12 years for small cap) to flag mismatches. The warning will show the actual rolling return data from the tool's NAV database for that fund category over the goal's remaining years — the same evidence presented in this post, drawn from your actual portfolio data.
+**Annual Fund Review — Goal-Level Risk Summary** — For each goal, the tool shows a downside risk box in rupee terms: "Your retirement goal corpus of ₹X can fall to ₹Y (Z% weighted drawdown) and take N years to recover." The weighted drawdown is calculated from the actual fund mix mapped to the goal — conservative hybrid contributes its 30% drawdown, mid cap contributes its 65%, blended by corpus weight. Risk is presented in rupees, not percentages, because rupee figures are processed as real losses rather than abstract statistics.
+
+**Annual Fund Review — Stress Test** — The corpus survival stress test uses category-specific worst-case drawdowns from the 2008 data, not a universal assumption. It also includes SIP contributions during the recovery period (the fixed-income stream that continues regardless of market conditions) before computing the stress-tested required return. This reflects the actual arithmetic of what happens to a disciplined investor who keeps SIP running through a crash.
+
+**Annual Fund Review — Timeline Zones** — The green, amber, and red zones on the goal timeline chart are fixed calendar boundaries derived from the minimum timeline thresholds in this post. They do not move with market conditions — the behavioral rationale being that the investor who pre-committed to migration dates at goal creation is the right decision-maker, not the investor watching a large corpus fall in real time.

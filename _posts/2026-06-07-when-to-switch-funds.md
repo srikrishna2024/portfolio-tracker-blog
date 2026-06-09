@@ -269,11 +269,11 @@ Underperformance is not a signal to act. It is a signal to investigate. The inve
 
 The following features in the portfolio tracker are built around the principles in this post:
 
-**Goal Fund Manager** — When mapping a fund to a goal, the tool shows the Freefincal equity allocation recommendation for that goal's remaining timeline. The Fund Holding Thesis Storage feature (on the roadmap) will let you record why you are holding a fund and what return you expect, making future reviews structured rather than emotional.
+**Goal Fund Manager** — When mapping a fund to a goal, the tool shows the Freefincal equity allocation recommendation for that goal's remaining timeline and flags immediately if the fund's category requires more years than the goal has remaining.
 
-**Goal Dashboard** — The goal health score flags goals that are Drifting or At Risk. The When to Switch Funds Decision Engine (on the roadmap) will surface the three diagnostic questions (benchmark also down? category also down? fund internals changed?) and rank the three corrective actions with full cost quantification before any switch is enabled.
+**Annual Fund Review** — The dual-gate scorecard directly operationalises the three diagnostic questions from this post. Gate 1 (fund quality) answers: is this fund genuinely underperforming its correct benchmark, or is the apparent underperformance category beta or a hybrid mandate effect? Gate 2 (timeline suitability) answers: is this fund's category appropriate for how much time is left? The 12-combination verdict matrix then routes to the correct action — hold, monitor, redirect SIP, phased exit, or exit — based on which gate failed and how badly. Importantly, the tool explicitly identifies when the correct action is *not* to switch: when Gate 1 is yellow but Gate 2 is green and the goal is on track, the output says "no action justified."
 
-**Annual Review** — The April review surfaces fund underperformance vs benchmark and tax-loss harvesting opportunities. The LTCG Switch Cost Calculator (on the roadmap) will show the exact after-tax cost of switching before the option is presented.
+**Goal Dashboard** — The goal health score and SIP adequacy check flag goals that are drifting or at risk. The corpus survival stress test runs for each goal — if a worst-case crash happened today, does the goal survive the recovery period? If yes, switching for performance reasons is unlikely to improve the outcome.
 
-**Alert Center** — The LTCG alert flags when gains approach the Rs1.25L annual exemption threshold and shows days to LTCG eligibility for holdings being considered for exit.
+**Alert Center** — The LTCG alert flags when gains approach the ₹1.25L annual exemption threshold and shows days to LTCG eligibility for holdings being considered for exit. The switch cost calculation is visible before any action is taken.
 

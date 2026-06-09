@@ -213,8 +213,8 @@ Done on a schedule — not on a market view — it removes both the behavioural 
 
 **Goal Creator** — When creating a goal, the tool shows the Freefincal equity allocation recommendation (updated in v7.3.2 to match the recovery-time framework in this post): 0% equity under 5 years, 10-15% at 5-7 years, up to 25% at 10 years, up to 50% at 15 years.
 
-**Goal Fund Manager** — The Fund Category to Goal Timeline Validator (on the roadmap) will flag when a mapped fund's volatility is inappropriate for the remaining goal timeline. The warning will show actual rolling return data for that fund category over the goal's remaining horizon — not a text opinion, but evidence the user can evaluate.
+**Goal Fund Manager** — The timeline match check flags when a mapped fund's category requires more years than the goal has remaining. For example, a mid cap fund mapped to a goal with 6 years remaining is flagged immediately — mid cap needs a minimum of 9-10 years.
 
-**Goal Dashboard** — The Fund-Goal Alignment section (on the roadmap) will show a green/amber/red indicator per mapped fund, showing whether each fund is in the right volatility tier for the remaining timeline. Amber and red indicators will show the worst-case rolling return data for that category over the remaining years.
+**Annual Fund Review (dev tool)** — Gate 2 of the dual-gate scorecard evaluates every fund against this framework. It computes the recovery buffer (years remaining minus category minimum), migration score, and runs a stress test — if a worst-case crash happened today, would the corpus survive the recovery period and still reach the goal target? The timeline zones on the goal chart (green / amber / red) are calendar-based, not market-based, derived directly from the thresholds in this post.
 
-**Annual Review** — The Fund Category Glide Path Migration Scheduler (on the roadmap) will show when each category migration is due — when to move from small cap to mid cap, mid cap to large cap, large cap to debt — based on the countdown to the goal date, not market conditions.
+**Goal Dashboard** — The goal health score and SIP adequacy check both incorporate the recovery-time logic. A fund that passes Gate 1 (quality) but fails Gate 2 (wrong category for remaining time) will surface here as a timeline mismatch requiring category migration, not fund replacement.

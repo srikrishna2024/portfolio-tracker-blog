@@ -263,4 +263,17 @@ Everything else is optional and additive only if you have a specific reason. Sim
 
 ---
 
-*The goal allocation recommendations in the portfolio tracker (Goal Planner glide path, Goal Creator equity nudge) are built on the recovery-time framework explained in this post series. The Fund Category to Goal Timeline Validator and SIP Dampening Crossover Ratio Indicator — which will automate the annual checks described above — are on our development roadmap.*
+## How the Tool Implements This Lifecycle
+
+**Goal Planner** — The glide path chart for each goal is built on the recovery-time framework from this post. The equity allocation curve follows the stage-by-stage percentages described above: 60% beyond 15 years, declining to 0% under 5 years. The curve is not a smooth mathematical function — it reflects the actual minimum timelines for each category.
+
+**Goal Fund Manager** — Maps each fund to a specific goal. Once mapped, the tool tracks whether the fund's category is appropriate for the years remaining to that goal. A fund appropriate at Stage 1 (20 years) may flag as a timeline mismatch at Stage 3 (10 years) — the tool surfaces this so the migration can be planned rather than discovered under pressure.
+
+**Annual Fund Review** — The full lifecycle plan described in this post is operationalised in the Annual Fund Review tool. For each goal, it shows:
+- The goal timeline chart with green/amber/red zones matching the stage boundaries above
+- The goal-level downside risk in rupee terms — how much corpus is at risk in a worst-case crash, and how long recovery would take
+- The corpus survival stress test — does the goal survive a 2008-scale crash at current equity allocation?
+- The recovery window alert — automatic notification when the goal is approaching the period where equity categories need to be migrated
+- Per-fund timeline match — whether each fund's category minimum years fits within the goal's remaining window
+
+**Goal Dashboard** — Tracks corpus progress toward the inflated target for each goal, with health score and SIP adequacy check. The annual step-up reminder (10% SIP increase) surfaces here if the last increase was more than 12 months ago.

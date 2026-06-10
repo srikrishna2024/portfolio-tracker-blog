@@ -255,6 +255,59 @@ When the urge to act comes — and it will come during every correction — open
 
 ---
 
+## The Question Nobody Asks — Where Should the SIP Increase Go?
+
+When the tool says "increase SIP by ₹4,200/month," most investors assume the increase goes into the fund they are already investing in. That assumption is almost always wrong — and acting on it can make the situation worse.
+
+**Increasing SIP into a high-volatility fund to close a return gap does not reduce risk. It increases the corpus exposed to that fund's drawdown. You are solving a contribution problem by adding more fuel to the volatility fire.**
+
+The gap-closing SIP should go into the instrument that is most appropriate for the goal's current position on the timeline — not into the fund that already has the largest corpus. These are almost always different instruments.
+
+---
+
+### How to Determine Where New SIP Goes
+
+The right category depends on three things evaluated together:
+
+**1. Where is the goal on the timeline?**
+The recovery zone and migration score in the Annual Fund Review tells you this precisely. A goal at 12 years is in a different position from the same goal at 7 years.
+
+**2. What does the goal still need?**
+If required return is above 10%, the goal needs growth. If required return is below 10%, it needs protection — not more growth. Adding equity SIP to a goal that is already on track is unnecessary exposure.
+
+**3. What is the SIP crossover ratio?**
+If SIP averaging is still working (Zone 1 — monthly SIP above 2% of corpus), additional equity SIP compounds the averaging benefit. If the corpus has grown to Zone 3 (monthly SIP below 1% of corpus), equity SIP averaging no longer meaningfully buffers crashes. Zone 3 means new SIP should go to debt to rebalance the portfolio organically — regardless of required return or timeline.
+
+---
+
+### The Decision Matrix
+
+| Goal timeline | Required return | Crossover zone | Additional SIP goes to |
+|---|---|---|---|
+| 10+ years | Above 10% | Zone 1 | Large cap index category — minimum-risk equity for the required return |
+| 10+ years | 7–10% | Zone 1 | Split — 70% large cap index, 30% debt to build rebalancing buffer |
+| 10+ years | Below 7% | Zone 1 or 2 | Debt — goal already funded, equity not needed |
+| 10+ years | Any | Zone 3 | Debt — corpus dominant, SIP averaging broken, rebalance organically |
+| 5–10 years | Above 10% | Any | Large cap index only — only equity with sufficient recovery buffer for this window |
+| 5–10 years | Below 10% | Any | Passive debt index fund matched to goal date |
+| Under 5 years | Any | Any | Liquid or money market fund only |
+
+The critical insight in Zone 3: when corpus dominates monthly SIP, redirecting new SIP to debt is more powerful than adding equity. When equity corrects, you sell the debt to buy equity at lower prices — this portfolio rebalancing mechanism replaces the SIP averaging that worked in the early years.
+
+---
+
+### The Two Jobs SIP Can Do — And Why They Split
+
+In the early years, a single equity fund can do both jobs: close a return gap and buffer crashes through SIP averaging. As the corpus grows, these jobs split.
+
+**Gap-closing SIP** needs the cheapest, most efficient equity for the required return — large cap index category, not active funds with higher costs and manager risk.
+
+**Risk-managing SIP** needs to reduce corpus volatility — debt instruments matched to the goal date, not more equity.
+
+The tool's gap closure recommendation accounts for both: it specifies not just the amount but the category, derived from timeline, required return, and crossover zone together.
+
+---
+
 ## The Bottom Line
 
 The portfolio should run on SIP autopilot 95% of the time. The remaining 5% — annual review, genuine structural problems, tax-loss harvesting — should be governed by a written policy, not a feeling. Every unnecessary churn is a small tax on your future self.
@@ -272,6 +325,8 @@ The following features in the portfolio tracker are built around the principles 
 **Goal Fund Manager** — When mapping a fund to a goal, the tool shows the Freefincal equity allocation recommendation for that goal's remaining timeline and flags immediately if the fund's category requires more years than the goal has remaining.
 
 **Annual Fund Review** — The dual-gate scorecard directly operationalises the three diagnostic questions from this post. Gate 1 (fund quality) answers: is this fund genuinely underperforming its correct benchmark, or is the apparent underperformance category beta or a hybrid mandate effect? Gate 2 (timeline suitability) answers: is this fund's category appropriate for how much time is left? The 12-combination verdict matrix then routes to the correct action — hold, monitor, redirect SIP, phased exit, or exit — based on which gate failed and how badly. Importantly, the tool explicitly identifies when the correct action is *not* to switch: when Gate 1 is yellow but Gate 2 is green and the goal is on track, the output says "no action justified."
+
+The gap closure section goes one step further than most tools: it specifies not just the SIP increase amount but the category the increase should go into. The category recommendation is derived from the decision matrix above — timeline, required return, and crossover zone evaluated together. A goal with required return above 10% and 12 years remaining gets a large cap index category recommendation. A goal already on track with a Zone 2 crossover ratio gets a debt category recommendation. The tool does not default to "invest more in the same funds."
 
 **Goal Dashboard** — The goal health score and SIP adequacy check flag goals that are drifting or at risk. The corpus survival stress test runs for each goal — if a worst-case crash happened today, does the goal survive the recovery period? If yes, switching for performance reasons is unlikely to improve the outcome.
 

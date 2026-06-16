@@ -72,5 +72,40 @@ title: Frequently Asked Questions
       <p><a href="{{ '/get-the-app/' | relative_url }}">Visit the Get the Software page</a> for purchase details.</p>
     </div>
 
+    <div class="faq-item">
+      <h3><span class="faq-icon">📊</span> The Portfolio Analysis page shows a very high Debt Value — much more than what I actually hold. Why?</h3>
+      <p>Portfolio Analysis shows <strong>all debt</strong> — your debt mutual funds (like money market, gilt, or short-duration funds) plus your EPF/NPS/PPF instruments. The Debt &amp; Fixed Income Tracker shows only the manual instruments (EPF/NPS/PPF). The difference is your debt mutual funds. If the number still looks too high, go to <strong>Goal Planning → Goal Fund Manager → Fix Fund Types</strong> — some funds may be incorrectly tagged as Debt when they are actually equity index funds or ETFs.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3><span class="faq-icon">🔄</span> I reassigned a fund to a different goal but the old goal is now showing an inflated value. What happened?</h3>
+      <p>This was a bug fixed in v7.5.1. After a reassignment, a stale record was left behind in the database and was being counted twice in the goal's value calculation. After updating, the old goal's value will show correctly. To update, download the latest version from your Google Drive link and run the upgrade.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3><span class="faq-icon">🎯</span> I cannot see the Retirement goal in the Re-assign dropdown. How do I assign funds to it?</h3>
+      <p>The Retirement goal is managed separately from all other goals. Go to <strong>Retirement Planning → Retirement Planner → Fund Mapping</strong> to assign funds to your retirement goal. Once done, use <strong>Goal Fund Manager → Re-assign / Remove → Remove mapping entirely</strong> to remove those funds from any other goals they were previously assigned to.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3><span class="faq-icon">📅</span> My PPF statement upload fails with "Unrecognised date" errors. What format should dates be in?</h3>
+      <p>The software accepts <strong>DD-MM-YYYY</strong> (e.g. 28-08-2021), <strong>DD-MM-YY</strong> (e.g. 28-08-21), <strong>DD/MM/YYYY</strong>, and <strong>DD-Mon-YYYY</strong> (e.g. 28-Aug-2021). If your CSV uses a different format, open it in Excel, select the date column, and reformat it to DD-MM-YYYY before uploading. Note: if both day and month are 12 or below (e.g. 12-01-12), the software assumes DD-MM-YY, which is the standard Indian date format.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3><span class="faq-icon">🏦</span> How do I create an Emergency Fund goal that does not have a target date?</h3>
+      <p>Name your goal "Emergency Fund", "Contingency Fund", or "Liquid Reserve" when creating it — the software automatically marks it as a perpetual goal with no target date. No timeline question is asked, no SIP estimate is shown, and the goal shows "♾️ Perpetual" instead of years remaining. On the Goal Dashboard you will see an "Update target to current value" button to keep the target in sync with your actual corpus.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3><span class="faq-icon">👨‍👩‍👧</span> My spouse and I both invest in the same funds. Importing both statements removes the duplicates. How do I handle this?</h3>
+      <p>This is a known limitation — the duplicate detection uses date + fund code + units, so identical investments by two people on the same date get merged. The workaround is to import one person's statement first, then add the second person's overlapping transactions manually via the Transactions tab. Multi-member portfolio support (each member's transactions tracked separately) is on the roadmap.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3><span class="faq-icon">📥</span> What is the best way to upload my statement for the first time, and how do I update it each year?</h3>
+      <p>Upload your <strong>complete statement from inception to today</strong> the first time — not just the current year. XIRR and return calculations need the full transaction history to be accurate. Each year after that, download a full statement again (from start to today) and upload it. Duplicates from previous uploads are automatically skipped, so re-uploading the full history is safe. AMFI code remapping only needs to be done once per fund, not on every upload.</p>
+    </div>
+
   </div>
 </div>

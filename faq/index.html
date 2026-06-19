@@ -107,5 +107,21 @@ title: Frequently Asked Questions
       <p>Upload your <strong>complete statement from inception to today</strong> the first time — not just the current year. XIRR and return calculations need the full transaction history to be accurate. Each year after that, download a full statement again (from start to today) and upload it. Duplicates from previous uploads are automatically skipped, so re-uploading the full history is safe. AMFI code remapping only needs to be done once per fund, not on every upload.</p>
     </div>
 
+
+    <div class="faq-item">
+      <h3><span class="faq-icon">🔄</span> After I upload my CAMS/NSDL statement the first time, how do I handle monthly updates when I have bought or sold funds?</h3>
+      <p>Just re-import. Go to <strong>Data Import → Equity Import</strong>, upload your new monthly statement (full history or just recent transactions), and the software automatically skips anything that already exists in the database — it only inserts transactions it has not seen before. No manual tracking needed. The duplicate detection matches on date + fund code + units, so re-uploading a full statement is completely safe. Most users download a fresh CAMS statement once a month and upload it — the whole process takes under a minute.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3><span class="faq-icon">📊</span> Can the software show my data across all asset classes together — direct equity, equity MFs, debt MFs, and hybrid all grouped?</h3>
+      <p>Partial support today. The <strong>Portfolio Analysis</strong> page shows your MF portfolio split by category (equity / debt / hybrid) with current values, allocation percentages, and XIRR per category. The <strong>Debt &amp; Fixed Income Tracker</strong> covers EPF, NPS, PPF, and FDs alongside debt MFs, and the <strong>Goal Dashboard</strong> shows the equity vs debt split per goal. What is not yet available is a single consolidated screen that adds direct equity stocks + equity MFs + debt MFs + EPF into one allocation pie — that is on the roadmap as the Net Worth Tracker feature.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3><span class="faq-icon">🔗</span> Does the software show mutual fund overlaps so I can decide whether to consolidate two funds into one?</h3>
+      <p>Yes — the <strong>My Portfolio → Correlation</strong> page shows an inter-fund correlation heatmap. Funds with correlation above 0.85 are flagged as largely redundant: they move together, so holding both gives little diversification benefit. The page ranks the most correlated pairs so you can make a consolidation decision. For example, if two large-cap funds show 0.90 correlation in your portfolio, you are effectively doubling up on the same exposure. What the current version does not show is stock-level overlap (e.g. &ldquo;both funds hold HDFC Bank at 8% each&rdquo;) — that would require AMC factsheet data. For most investors the correlation heatmap is sufficient to identify redundancy.</p>
+    </div>
+
   </div>
 </div>

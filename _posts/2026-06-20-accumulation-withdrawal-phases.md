@@ -121,7 +121,7 @@ There is no sudden shift. The journey from 65% equity at age 35 to 20% equity at
 
 **Withdrawal phase tools:**
 - **Bucket Strategy Simulator** — pre-filled from your actual mapped corpus, runs 30-year projection, bear market rule built into Smart Threshold strategy
-- **Planner tab** — bucket sizing calculator, annual review checklist, and a reference table showing safe withdrawal rate ranges for India (2.5–4%) so you can check whether your corpus multiple is in a safe zone
+- **Planner tab** — bucket sizing calculator, annual review checklist, and a reference table showing Initial Withdrawal Rate (IWR) zones for India — what your Day 1 withdrawal rate implies, and whether your corpus multiple is in a safe zone
 - **Goal Dashboard** — shows "Withdrawal Phase" status when you are at or past retirement age, links directly to the simulator
 - **Annual Fund Review** — continues for Bucket 3 equity funds, flagging timeline mismatches as the horizon shortens
 
@@ -131,7 +131,7 @@ There is no sudden shift. The journey from 65% equity at age 35 to 20% equity at
 
 The transition from accumulation to withdrawal is not a date. It is a readiness condition. Three signs you are ready:
 
-**Corpus ≥ 25× annual expenses at minimum.** Below 25×, the withdrawal rate is above 4% — historically fragile in India's inflation environment. The recommended target is 30× (Base tier), which gives a 3.3% withdrawal rate with meaningful safety margin.
+**Corpus ≥ 25× annual expenses at minimum.** This sets your Initial Withdrawal Rate (IWR) — the withdrawal rate on Day 1 of retirement. Below 25×, the IWR exceeds 4%, which is historically fragile under Indian inflation. The recommended target is 30× (Base tier), giving an IWR of 3.3%. After Day 1, your actual withdrawal rate changes every year as the corpus grows and expenses inflate — IWR is a planning benchmark for readiness, not a fixed rule for execution.
 
 **Monthly SIP returns are more than covering expenses.** When the portfolio's annual return exceeds your annual expenses, you could theoretically stop contributing and the corpus would continue growing. This is the functional definition of financial independence in the accumulation sense.
 
@@ -147,7 +147,7 @@ The accumulation phase ends on a date. The withdrawal phase ends only when the c
 
 The Bucket Strategy assumes you are fully dependent on your investment corpus for all expenses. Many retired Indians are not. If you have rental income, a pension, business dividends, or consulting fees, only the **gap between expenses and other income** needs to come from the corpus.
 
-Consider the difference. Annual expenses ₹6 lakh. No other income — effective withdrawal from corpus is ₹6 lakh per year. With ₹4 lakh in rental income — effective withdrawal drops to ₹2 lakh per year. On a ₹3 crore corpus, the SWR falls from 2% to 0.67%. The corpus is essentially perpetual in the second case.
+Consider the difference. Annual expenses ₹6 lakh. No other income — effective withdrawal from corpus is ₹6 lakh per year. With ₹4 lakh in rental income — effective withdrawal drops to ₹2 lakh per year. On a ₹3 crore corpus, the Day 1 IWR falls from 2% to 0.67%. The corpus is essentially perpetual in the second case.
 
 The Bucket Strategy Simulator now accepts other income directly: pension or annuity, rental income, business or consulting fees, and any other regular income. The simulation uses the effective withdrawal — not gross expenses. Bucket sizes in the Planner tab also recalculate based on the net draw, so your Bucket 1 and Bucket 2 are sized for what you actually need from the corpus, not for your total spending.
 

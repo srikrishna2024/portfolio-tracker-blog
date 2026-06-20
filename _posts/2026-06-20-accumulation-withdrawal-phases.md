@@ -121,7 +121,7 @@ There is no sudden shift. The journey from 65% equity at age 35 to 20% equity at
 
 **Withdrawal phase tools:**
 - **Bucket Strategy Simulator** — pre-filled from your actual mapped corpus, runs 30-year projection, bear market rule built into Smart Threshold strategy
-- **Planner tab** — bucket sizing calculator, annual review checklist, SWR guide
+- **Planner tab** — bucket sizing calculator, annual review checklist, and a reference table showing safe withdrawal rate ranges for India (2.5–4%) so you can check whether your corpus multiple is in a safe zone
 - **Goal Dashboard** — shows "Withdrawal Phase" status when you are at or past retirement age, links directly to the simulator
 - **Annual Fund Review** — continues for Bucket 3 equity funds, flagging timeline mismatches as the horizon shortens
 

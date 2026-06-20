@@ -140,3 +140,40 @@ The transition from accumulation to withdrawal is not a date. It is a readiness 
 When all three conditions are met, the transition is ready. The first action is not to stop SIPs — it is to open the Bucket Strategy Simulator and size the buckets before the first withdrawal happens. The structure needs to be in place before day one of the withdrawal phase, not after the first bear market.
 
 The accumulation phase ends on a date. The withdrawal phase ends only when the corpus does — or when you do. The goal of everything described in this post is to make sure the corpus outlasts its owner, not the other way around.
+
+---
+
+## Other Income Streams — Pension, Rent, Business
+
+The Bucket Strategy assumes you are fully dependent on your investment corpus for all expenses. Many retired Indians are not. If you have rental income, a pension, business dividends, or consulting fees, only the **gap between expenses and other income** needs to come from the corpus.
+
+Consider the difference. Annual expenses ₹6 lakh. No other income — effective withdrawal from corpus is ₹6 lakh per year. With ₹4 lakh in rental income — effective withdrawal drops to ₹2 lakh per year. On a ₹3 crore corpus, the SWR falls from 2% to 0.67%. The corpus is essentially perpetual in the second case.
+
+The Bucket Strategy Simulator now accepts other income directly: pension or annuity, rental income, business or consulting fees, and any other regular income. The simulation uses the effective withdrawal — not gross expenses. Bucket sizes in the Planner tab also recalculate based on the net draw, so your Bucket 1 and Bucket 2 are sized for what you actually need from the corpus, not for your total spending.
+
+Different income types carry different reliability:
+
+**Pension or annuity, inflation-linked** — enter as-is. It permanently reduces corpus dependency and its real value is stable.
+
+**Fixed rent, fixed pension** — enter today's amount but plan for the gap to widen over time. Your expenses will grow with inflation; the fixed income will not. The corpus takes on more of the load each year.
+
+**Rental income** — enter conservatively. Vacancy, maintenance, and property-related costs mean the actual inflow is lower than the headline rent. A 10–15% haircut on expected rental income is a reasonable planning assumption.
+
+**Business or consulting income** — enter current amount, but plan for it to reduce to zero by a target age. Most people scale back consulting in their 70s. Model the income declining, not persisting indefinitely.
+
+---
+
+## How the Tool Behaves: Under 60 vs Over 60
+
+**Under 60 — accumulation phase:**
+
+The Retirement Planner works fully. Enter your current age, planned retirement age, monthly expenses, and return assumptions. Save the baseline. The AI generates a glide path once and saves it permanently. The Check Progress tab shows actual vs projected corpus. The Goal Dashboard shows the Retirement card with On Track / At Risk / Behind status and the SIP-forward projection.
+
+**Over 60 or already retired — withdrawal phase:**
+
+The Retirement Planner now accepts your actual retirement age — including ages at or before your current age. When you set a retirement age at or below your current age, an inline message explains you are in the withdrawal phase and a direct link to the Bucket Strategy Simulator appears. The Goal Dashboard shows a "🏦 Withdrawal Phase" card instead of "Behind", with a direct link to the simulator. The corpus is pre-filled from your mapped Retirement goal funds.
+
+The tools that continue to be relevant in the withdrawal phase: Portfolio Analysis (XIRR, fund performance), Annual Fund Review (Hold/Exit verdicts for Bucket 3 equity funds, which still need quality review), Debt and Fixed Income Tracker (EPF, PPF, NPS balance tracking), Tax Corner (LTCG harvesting when you redeem from Bucket 3 in recovery), and Alert Center (concentration risk and goal health for non-retirement goals).
+
+The Bucket Strategy Simulator is the primary tool in withdrawal phase. Everything else is supporting context.
+
